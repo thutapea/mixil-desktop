@@ -7,7 +7,9 @@
 import json
 import os
 import sys
+import time
 from abc import ABC, abstractmethod # the langchain RAG tutorial uses this to speed up RAG developmenthttps://reference.langchain.com/python/langchain-classic/chains/api/base
+from datetime import datetime
 from pathlib import Path
 
 import chromadb
@@ -20,6 +22,18 @@ VECTORSTORE_ROOT = ROOT / "vectorstore"
 TOP_K = 6 # 
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 60
+
+LOG_PATH = ROOT / "chat_log.txt"
+
+
+def log_interaction(backend_name: str, user_input: str, ai_output: str, usage: dict, response_time: float):
+    with open(LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] backend={backend_name}\n")
+        f.write(f"USER: {user_input}\n")
+        f.write(f"AI: {ai_output}\n")
+        f.write(f"tokens_in={usage.get('input_tokens', '?')}  tokens_out={usage.get('output_tokens', '?')}  response_time={response_time:.2f}s\n")
+        f.write("-" * 80 + "\n")
+
 
 SYSTEM_PROMPT = """\
 You are a lab inventory assistant. When a user asks what they need for a task or setup, follow this  structure:
@@ -359,14 +373,21 @@ def chat(collection: chromadb.Collection, backend: Backend):
 
         print("\nAssistant: ", end="", flush=True)
         usage = {}
+        ai_output_parts = []
+        t_start = time.monotonic()
         for item in backend.stream_chat(prompt):
             if isinstance(item, dict):
                 usage = item
             else:
                 print(item, end="", flush=True)
+                ai_output_parts.append(item)
+        response_time = time.monotonic() - t_start
+
         if usage:
-            print(f"\n\n[tokens — in: {usage.get('input_tokens', '?')}  out: {usage.get('output_tokens', '?')}]")
+            print(f"\n\n[tokens — in: {usage.get('input_tokens', '?')}  out: {usage.get('output_tokens', '?')}  time: {response_time:.2f}s]")
         print()
+
+        log_interaction(backend.name, query, "".join(ai_output_parts), usage, response_time)
 
 
 
