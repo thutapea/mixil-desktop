@@ -92,13 +92,14 @@ class OllamaBackend(Backend):
                 model="mistral",
                 messages=[{"role": "user", "content": prompt}],
                 stream=True,
+                options={"stop": ["\nUser:", "\nYou:"]},
             )
             usage = {}
             # DEBUG
             for part in stream:
                 if part.get("done"):
                     usage = {
-                        "inputtokens": part.get("prompt_eval_count", "?"),
+                        "input_tokens": part.get("prompt_eval_count", "?"),
                         "output_tokens": part.get("eval_count", "?"),
                     }
                 else:
