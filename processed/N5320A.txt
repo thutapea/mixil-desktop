@@ -1,0 +1,1661 @@
+=== Page 1 ===
+Agilent  
+2-Port PNA-L Microwave Network Analyzer  
+
+N5230A  
+300 kHz to 6, 13.5 GHz  
+10 MHz to 20, 40, 50 GHz  
+
+Data Sheet  
+
+Note:  
+This document does not contain Agilent’s most up-to-date PNA-L network analyzer portfolio. This document is available for reference only for customers using Agilent’s legacy network analyzers. To view the current Agilent 2-port PNA-L Microwave Network Analyzer Data Sheet click here.  
+
+Note:  
+Specification information in this document is also available within the PNA-L network analyzer’s internal Help system.  
+
+Agilent Technologies
+
+=== Page 2 ===
+```
+Table of Contents
+
+Definitions ........................................................................... 3
+
+Corrected System Performance .................................................... 4
+Table 1. System dynamic range .................................................... 4
+Table 2. Extended dynamic range ................................................. 5
+N5230A Corrected system performance with 3.5mm connectors ...... 6
+Table 3. 850652B Calibration kit N5230A ................................. 6
+Configuration test set and extended power range (Option 025 or 125) . 6
+Table 4. 850652B Calibration kit N5230A ................................. 6
+Configuration test set and extended power range (Option 225) ...... 8
+Table 5. N4691A Electronic calibration module N5230A ............ 9
+Configuration test set and extended power range (Option 225) ...... 10
+Table 6. 850656A Calibration kit N5230A .................................. 10
+Configuration test set and extended power range 
+(Option 425 or 525) .................................................................... 12
+Table 7. N4693A Electronic calibration module N5230A ............ 14
+Configuration test set and extended power range 
+(Option 425 or 525) .................................................................... 14
+N5230A Corrected system performance with Type-N connectors ... 16
+Table 8. N5232B Calibration kit N5230A ................................. 16
+Configuration test set and extended power range (Option 025) .... 16
+Table 9. Uncorrected system performance ................................. 18
+Table 10. Test port output .......................................................... 19
+Table 11. Test port input ............................................................ 21
+
+Dynamic Accuracy ................................................................ 25
+Table 12. Test port input (group delay) ................................. 25
+
+General Information .............................................................. 26
+Table 13. Miscellaneous information ......................................... 26
+Table 14. Front panel information ............................................ 26
+Table 15. Rear panel information .............................................. 27
+Table 16. Analyzer environment and dimensions ........................ 28
+
+Measurement Throughput Summary ...................................... 29
+Table 17. Typical cycle time (ms) for measurement completion .. 29
+Table 18. Cycle time vs IF bandwidth (Options 000, 025, 120, 125) . 30
+Table 19. Cycle time vs IF bandwidth (Options 220, 225, 420, 425) . 31
+Table 20. Cycle time vs number of points (Options 020, 025, 120, 125) . 32
+Table 21. Cycle time vs number of points 
+(Options 220, 225,420, 425, 520, 525) .......................................... 33
+Table 22. Data transfer time (ms) ............................................ 34
+
+Specifications: Front-Panel Jumpers ................................... 35
+Table 23. Measurement receiver inputs (Recvr A In, Recvr B In) .... 35
+Table 24: Reference receiver inputs (Recvr R1, Recvr R2) ......... 36
+Table 25: Reference outputs (Reference 1 Source out,
+Reference 2 Source Out) .......................................................... 36
+Table 26: Source outputs (Port 1 Source out, Port 2 Source out) .... 37
+Table 27: Coupler inputs (port 1 Cplr Thru, Port 2 Cplr Thru) ..... 37
+Table 28: Coupler outputs (port 1 Cplr Am, Port 2 Cplr Am) ..... 37
+
+Test Set Block Diagrams ......................................................... 38
+N5230A Option 220, or 420, or 520 
+(standard test set and standard power range) network analyzer ... 38
+N5230A Option 225, or 425, or 525 
+(configurable test set and extended power range) network analyzer ... 38
+
+Web Resources ...................................................................... 39
+```
+
+=== Page 3 ===
+```
+This is a subset of technical specifications for the N5230A network analyzer.
+
+To view or print the N5230A technical specifications, visit our web site at www.agilent.com/find/pna
+
+This N5230A document provides technical specifications for the following calibration kits and ECal modules only: 85052B, 85056A, 85032E, N46191A, and N4693A. Please download our free Uncertainty Calculator from www.agilent.com/find/na_calculator to generate the curves for your calibration kit and PNA setup.
+
+Definitions
+
+All specifications and characteristics apply over a 25 °C ±5 °C range (unless otherwise stated) and 90 minutes after the instrument has been turned on.
+
+Specification (spec.): Warranted performance. Specifications include guardbands to account for the expected statistical performance distribution, measurement uncertainties, and changes in performance due to environmental conditions.
+
+Characteristic (char.): A performance parameter that the product is expected to meet before it leaves the factory, but that is not verified in the field and is not covered by the product warranty. A characteristic includes the use of guardbands as a specification.
+
+Typical (typ.): Expected performance of an average unit which does not include guardbands. It is not covered by the product warranty.
+
+Nominal (nom.): A general, descriptive term that does not imply a level of performance. It is not covered by the product warranty.
+
+Calibration: The process of measuring known standards to characterize a network analyzer's systematic (repeatable) errors.
+
+Corrected (residual): Indicates performance after error correction (calibration). It is determined by the quality of calibration standards and how well "known" they are, plus system repeatability, stability, and noise.
+
+Uncorrected (raw): Indicates instrument performance without error correction. The uncorrected performance affects the stability of a calibration.
+
+Standard: When referring to the analyzer, this includes no options unless noted otherwise.
+```
+
+=== Page 4 ===
+```
+Corrected System Performance
+The specifications in this section apply for measurements made with the N5230A analyzer with the following conditions:
+• 10 Hz IF bandwidth
+• No averaging applied to data
+• Isolation calibration with an averaging factor of 8
+
+Table 1. System dynamic range¹
+Standard configuration and standard power range
+Description                                          Specification (dB)                                    Typical (dB)
+at test port                                        Option       Option       Option       Option       Option       Option
+                                                    020, 120    220         420         520         020, 120    220         420         520
+300 kHz to 3 MHz²                                 93⁴
+3 to 10 MHz                                       113                                             103       89
+10 to 45 MHz                                      122
+45 to 70 MHz²                                    122       101       90        90
+70 to 500 MHz²                                   122       105       90        90
+500 MHz to 2 GHz                                 122       110       110       110
+2 to 6 GHz                                       122       110       110       110
+6 to 8 GHz                                       120       110       110       110
+8 to 9 GHz                                       120       100       100       100
+9 to 10.5 GHz                                    116       110       100       100
+10.5 to 12.5 GHz                                 111       110       100       100
+12.5 to 13.5 GHz                                 109       108       100       100
+13.5 to 20 GHz                                   108       100       100       100
+20 to 31.25 GHz                                   95       95       95
+31.25 to 40 GHz                                  90                                              90
+40 to 50 GHz                                     79
+
+Configurable test set and extended power range
+Description                                          Specification (dB)                                    Typical (dB)
+at test port                                        Option       Option       Option       Option       Option       Option
+                                                    025, 125    225         425         525         025, 125    225         425         525
+300 kHz to 3 MHz²                                 92⁴
+3 to 10 MHz                                       112                                             103       88
+10 to 45 MHz                                      121
+45 to 70 MHz²                                    121       101       90        90
+70 to 500 MHz²                                   121       105       90        90
+500 MHz to 2 GHz                                 121       110       110       110
+2 to 6 GHz                                       121       110       110       110
+6 to 8 GHz                                       120       110       110       110
+8 to 9 GHz                                       120       100       100       100
+9 to 10.5 GHz                                    116       110       100       100
+10.5 to 12.5 GHz                                 111       110       100       100
+12.5 to 13.5 GHz                                 108       108       100       100
+13.5 to 20 GHz                                   108       100       100       100
+20 to 31.25 GHz                                   92       92       92
+31.25 to 40 GHz                                  87                                              87
+40 to 50 GHz                                     79
+
+1. The system dynamic range is calculated as the difference between the noise floor and the specified source maximum output power. The effective dynamic range must take measurement uncertainties and interfering signals into account.
+2. May be degraded typically by 10 dB at particular frequencies (multiples of 5 MHz) below 500 MHz due to spurious receiver residuals. Methods are available to regain the full dynamic range.
+3. May be limited by crosstalk at certain frequencies below 3 MHz.
+4. Value and frequency band changed July 2006.
+```
+
+=== Page 5 ===
+```
+Table 2. Extended dynamic range¹
+
+Configurable test set and extended power range
+
+Description                         Specification (dB at             Typical (dB) at
+                                   direct receiver                   direct receiver
+                                   access input                     access input
+                                   Option                           Option
+                                   025, 125    225    425    525    025, 125    225    425    525
+
+300 kHz to 3 MHz²                   108⁴
+
+3 to 10 MHz                          128
+
+10 to 45 MHz                         137                              115      109
+
+45 to 70 MHz²                        137      113    111    111
+
+70 to 500 MHz²                       137      117    111    111
+
+500 MHz to 2 GHz                    137      122    122    122
+
+2 to 6 GHz                           137      122    122    122
+
+6 to 8 GHz                           136      122    122    122
+
+8 to 9 GHz                           136      122    122    122
+
+9 to 10.5 GHz                       132      122    112    112
+
+10.5 to 12.5 GHz                    127      122    112    112
+
+12.5 to 13.5 GHz                    124      120    112    112
+
+13.5 to 20 GHz                       120      112    112
+
+20 to 31.25 GHz                     103
+
+31.25 to 40 GHz                      98
+
+40 to 50 GHz                         83
+
+1. The direct receiver access input extended dynamic range is calculated as the difference between the direct receiver access input noise floor and the source maximum output power. The effective dynamic range must take measurement uncertainties and interfering signals into account. This set-up should only be used when the receiver input will never exceed its compression or damage level. When the analyzer is in segment sweep mode, it can have reduced frequency sensitivity, which will output a higher power level when the extended dynamic range is required (i.e. devices with high insertion loss), and reduced power when receiver compression or damage may occur (i.e. devices with low insertion loss). The extended range is only available in one-path transmission measurements.
+2. May be degraded typically by 10 dB at particular frequencies (multiples of 5 MHz) below 500 MHz due to spurious receiver residuals. Methods are available to regain the full dynamic range.
+3. May be limited by crosstalk at certain frequencies below 3 MHz.
+4. Value and frequency band changed July 2006.
+```
+
+=== Page 6 ===
+N5230A Corrected system performance with 3.5 mm connectors  
+Table 3. 85052B Calibration kit  
+N5230A – configurable test set and extended power range (Option 025, 125)  
+
+Configurable test set, extended power range  
+Applies to the N5230A Option 025.125 analyzers, 85052B (3.5 mm) calibration kit, 85137F flexible test port cable set, and a full 2-port calibration. Also applies to the following condition: Environmental temperature 23° ±3 °C, with < 1 °C deviation from calibration temperature.  
+
+Specification (dB)  
+| Description               | 300 kHz to 10 MHz | 2 GHz | 8 GHz | 13.5 GHz |  
+|--------------------------|-------------------|-------|-------|----------|  
+| Directivity               | 48                | 48    | 44    | 44       |  
+| Source match              | 40                | 40    | 33    | 31       |  
+| Load match                | 48                | 48    | 44    | 44       |  
+| Reflection tracking        | ±0.003 (±0.02°C)  | ±0.003 (±0.02°C) | ±0.006 (±0.03°C) | ±0.006 (±0.03°C) |  
+| Transmission tracking       | ±0.017 (±0.02°C)  | ±0.015 (±0.02°C) | ±0.075 (±0.03°C) | ±0.131 (±0.03°C) |  
+
+Transmission uncertainty (specifications)  
+
+Magnitude  
+N5230A 025/125 Full Two Port Cal Using 85052B  
+- 300 KHz to 10 MHz  
+- 10 MHz to 2 GHz  
+- 2 to 8 GHz  
+- 8 to 13.5 GHz  
+
+Phase  
+N5230A 025/125 Full Two Port Cal Using 85052B  
+- 300 KHz to 10 MHz  
+- 10 MHz to 2 GHz  
+- 2 to 8 GHz  
+- 8 to 13.5 GHz  
+
+=== Page 7 ===
+**Reflection uncertainty (specifications)**
+
+**Magnitude**  
+N5230A 025/125 with 850528  
+- 300 kHz to 10 MHz  
+- 10 MHz to 2 GHz  
+- 2 to 8 GHz  
+- 8 to 13.5 GHz  
+
+S21 = S12 = 0  
+Source power = 0 dBm  
+
+**Phase**  
+N5230A 025/125 with 850528  
+- 300 kHz to 10 MHz  
+- 10 MHz to 2 GHz  
+- 2 to 8 GHz  
+- 8 to 13.5 GHz  
+
+S21 = S12 = 0  
+Source power = 0 dBm  
+
+=== Page 8 ===
+```
+N5230A Corrected system performance with 3.5 mm connectors
+
+Table 4. 85052B Calibration kit
+N5230A – configurabled test set and extended power range (Option 225)
+
+Configurable test set, extended power range
+Applies to the N5230A Option 225 analyzers, 85052B (3.5mm) calibration kit, 85131F flexible test port cable set, and a full 2-port calibration. Also applies to the following condition: Environmental temperature 23 ± 3 °C, with < 1 °C deviation from calibration temperature.
+
+Specification (dB)
+Description                     45 to 500 MHz          2 to 8            8 to 20
+                               500 MHz   2 GHz       GHz     44 GHz
+Directivity                     48        48            44      44
+Source match                    40        40            33      31
+Load match                      48        48            44      44
+Reflection tracking              ±0.003   ±0.003        ±0.003  ±0.006
+                               (+0.02/°C) (+0.02/°C)  (+0.03/°C) (+0.03/°C)
+Transmission tracking             ±0.010   ±0.014        ±0.062  ±0.104
+                               (+0.02/°C) (+0.02/°C)  (+0.03/°C) (+0.03/°C)
+
+Transmission uncertainty (specifications)
+
+Magnitude
+                    N5230A 225 Full Two Port Cal Using 85052B
+                 10
+70    45 to 500 MHz
+      500 MHz to 2 GHz
+      2 to 8 GHz
+      8 to 20 GHz
+                 1
+                 0.1
+                 0.01
+10
+    -90      -80      -70      -60      -50      -40      -30      -20      -10     0     10
+                          Transmission coefficient (dB)
+
+Phase
+                    N5230A 225 Full Two Port Cal Using 85052B
+                 100
+     45 to 500 MHz
+     500 MHz to 2 GHz
+     2 to 8 GHz
+     8 to 20 GHz
+                 10
+                 0.1
+10
+    -90      -80      -70      -60      -50      -40      -30      -20      -10     0     10
+                          Transmission coefficient (dB)
+```
+
+=== Page 9 ===
+N4691A Electronic calibration module  
+N5230A – configurable test set and extended power range (Option 225)  
+
+Reflection uncertainty (specifications)  
+
+Magnitude  
+N5230A Option 225 with 85052B  
+| Reflection coefficient (linear) | 0 | 0.2 | 0.4 | 0.6 | 0.8 | 1 |  
+|-------------------------------|---|-----|-----|-----|-----|---|  
+| Uncertainty (linear)         | 0 | 0.01 | 0.02 | 0.03 | 0.04 | 0.05 |  
+
+- 45 to 500 MHz  
+- 500 MHz to 2 GHz  
+- 2 to 8 GHz  
+- 8 to 20 GHz  
+S21 = S12 = 0  
+Source Power = -5.6 dBm  
+
+Phase  
+N5230A Option 225 with 85052B  
+| Reflection coefficient (linear) | 0 | 0.2 | 0.4 | 0.6 | 0.8 | 1 |  
+|-------------------------------|---|-----|-----|-----|-----|---|  
+| Uncertainty (deg)            | 0 | 2 | 4 | 6 | 8 | 10 |  
+
+- 45 to 500 MHz  
+- 500 MHz to 2 GHz  
+- 2 to 8 GHz  
+- 8 to 20 GHz  
+S21 = S12 = 0  
+Source Power = -5 dBm  
+
+=== Page 10 ===
+```
+N5230A Corrected system performance with 3.5 mm connectors
+
+Table 5. N4691B Electronic calibration module
+N5230A – configurable test set and extended power range (Option 225)
+
+Configurable test set, extended power range
+Applies to the N5230A Option 225 analyzers, N4691B electronic calibration module, 85131F flexible test port cable set, and a full 2-port calibration. Also applies to the following condition: Environmental temperature 23° ± 3°C, with < 1 °C deviation from calibration temperature.
+
+Specification (dB)
+Description                |      45 to 500 MHz       |       2 to 2 GHz       |     8 to 8 GHz        |     20 GHz
+-------------------------|-------------------------|-----------------------|----------------------|-------------------
+Directivity                      |           46                          |          56                      |         54                     |           48
+Source match                  |           41                          |          47                      |         45                     |           44
+Load match                     |           41                          |          47                      |         44                     |           42
+Reflection tracking          |      ±0.050 ±0.02°C      |      ±0.020 ±0.02°C |      ±0.030 ±0.03°C |     ±0.040 ±0.03°C
+Transmission tracking     |      ±0.053 ±0.02°C      |      ±0.021 ±0.02°C |      ±0.034 ±0.03°C |     ±0.052 ±0.03°C
+
+Transmission uncertainty (specifications)
+
+Magnitude
+NS5230A 225 Full Two Port Cal Using N4691B
+         45 to 500 MHz
+         500 MHz to 2 GHz
+         2 to 8 GHz
+         8 to 20 GHz
+
+Phase 
+NS5230A 225 Full Two Port Cal Using N4691B
+         45 to 500 MHz
+         500 MHz to 2 GHz
+         2 to 8 GHz
+         8 to 20 GHz
+```
+
+=== Page 11 ===
+N4691A Electronic calibration module  
+N5230A – configurable test set and extended power range (Option 225)  
+
+Reflection uncertainty (specifications)  
+
+**Magnitude**  
+N5230A 225 with N4691B  
+S21 = S12 = 0  
+Source power = -5 dBm  
+
+| Reflection coefficient (linear) | Uncertainty (linear) |
+|---------------------------------|----------------------|
+| 0                               | 0.01                 |
+| 0.2                             | 0.03                 |
+| 0.4                             | 0.04                 |
+| 0.6                             | 0.04                 |
+| 0.8                             | 0.05                 |
+| 1                               | 0.05                 |
+
+**Phase**  
+N5230A 225 with N4691B  
+S21 = S12 = 0  
+Source power = -5 dBm  
+
+| Reflection coefficient (linear) | Uncertainty (deg) |
+|---------------------------------|-------------------|
+| 0                               | 0                 |
+| 0.2                             | 2                 |
+| 0.4                             | 6                 |
+| 0.6                             | 8                 |
+| 0.8                             | 9                 |
+| 1                               | 10                |
+
+=== Page 12 ===
+```
+N5230A Corrected system performance with 2.4 mm connectors
+
+Table 6. 85056A Calibration kit 
+N5230A - configurable test set and extended power range (Option 425 or 525)
+
+Configurable test set, extended power range
+Applies to the N5230A Option 425 or 525 analyzers, 85056A (2.4 mm) electronic calibration module, 85136B Flexible test port cable set, and a full 2-port calibration. Also applies to the following condition: Environmental temperature 23° ±3 °C, with < 1 °C deviation from calibration temperature.
+
+Specification (dB)
+Description                        45 MHz to      2 to       20 to      40 to       50 GHz
+                                 2 GHz          20 GHz    40 GHz    50 GHz
+Directivity                       42             42        38        36
+Source match                      41             38        33        31
+Load match                        42             42        37        35
+Reflection tracking                ±0.001        ±0.008    ±0.020    ±0.027
+                                   (±0.02°C)     (±0.02°C) (±0.02°C) (±0.03°C)
+Transmission tracking              ±0.019        ±0.057    ±0.124    ±0.211
+                                   (±0.02°C)     (±0.02°C) (±0.02°C) (±0.03°C)
+
+Transmission uncertainty (specifications)
+
+Magnitude
+N5230A 425 & 525 Full Two Port Cal Using 85056A
+
+Phase
+N5230A 425 & 525 Full Two Port Cal Using 85056A
+```
+
+=== Page 13 ===
+```
+Reflection uncertainty (specifications)
+
+Magnitude
+N5230A 425 & 525 with 85056A
+ 45 MHz to 2 GHz
+ 2 to 20 GHz
+ 20 to 40 GHz
+ 40 to 50 GHz
+ S21 = S12 = 0
+ Source power = 15 dBm
+
+Phase
+N5230A 425 & 525 with 85056A
+ 45 MHz to 2 GHz
+ 2 to 20 GHz
+ 20 to 40 GHz
+ 40 to 50 GHz
+ S21 = S12 = 0
+ Source Power = 15 dBm
+```
+
+=== Page 14 ===
+```plaintext
+Table 7. N4693A Electronic calibration module 
+N5230A – configurable test set and extended power range (Option 425 or 525)
+
+Configurable test set, extended power range
+Applies to the N5230A Option 425 or 525 analyzers, N4693A (2.4 mm) electronic calibration module, 85133F flexible test port cable set, and a full 2-port calibration. Also applies to the following condition: Environmental temperature 23° ±3 °C, with < 1 °C deviation from calibration temperature
+
+Typical (dB)          Specification (dB)
+Description                 10 to                 200 MHz               2 to                  20 to                  40 to
+                           200 MHz               2 GHz               20 GHz               40 GHz                50 GHz
+Directivity                   32                       55                       49                       43                       41
+Source match               25                       46                       42                       35                       30
+Load match                 24                       43                       41                       37                       36
+Reflection tracking      ±0.05                   ±0.030               ±0.040              ±0.060               ±0.080
+                              (+0.02/C)             (+0.02/C)            (+0.02/C)            (+0.02/C)             (+0.03/C)
+Transmission tracking   ±0.10                   ±0.056              ±0.078              ±0.107               ±0.130
+                              (+0.02/C)             (+0.02/C)            (+0.02/C)            (+0.02/C)             (+0.03/C)
+
+Transmission uncertainty (specifications)
+
+Magnitude
+NS5230A 425 & 525 Full Two Port Cal Using N4693A
+Uncertainty (dB)
+10
+1
+0.1
+0.01
+10          0         -10        -20       -30        -40       -50        -60        -70        -80        -90
+Transmission coefficient (dB)
+
+Phase
+NS5230A 425 & 525 Full Two Port Cal Using N4693A
+Uncertainty (degrees)
+100
+10
+1
+0.1
+10          0         -10        -20       -30        -40       -50        -60        -70        -80        -90
+Transmission coefficient (dB)
+```
+
+=== Page 15 ===
+```
+Reflection uncertainty (specifications)
+
+Magnitude
+N5230A 425 & 525 with N6933A
+  • 200 MHz to 2 GHz
+  • 2 to 20 GHz
+  • 20 to 40 GHz
+  • 40 to 50 GHz
+
+Phase
+N5230A 425 & 525 with N6933A
+  • 200 MHz to 2 GHz
+  • 2 to 20 GHz
+  • 20 to 40 GHz
+  • 40 to 50 GHz
+```
+
+=== Page 16 ===
+```
+N5230A Corrected system performance with Type-N connectors
+
+Table 8. 85032B Calibration kit 
+N5230A – configurable test set and extended power range (Option 025)
+
+Configurable test set, extended power range
+Applies to the N5230A Option 025 analyzer, 85032B (Type-N) calibration kit, 85132F flexible test port cable set with 85103C adapter set, and a full 2-port calibration. Also applies to the following condition: Environmental temperature 23° ±3 °C, with < 1 °C deviation from calibration temperature.
+
+Specification (dB)
+
+Description                   300 kHz to 1 MHz      1 to 10 MHz      10 to 45 MHz      45 MHz to 6 GHz
+Directivity                            50                         50                    47                        40
+Source match                      42                         42                    37                        31
+Load match                        50                         50                    49                        38
+Reflection tracking            ±0.009                        ±0.009            ±0.019                ±0.069 
+                                        (+0.01/°C)              (+0.01/°C)          (+0.01/°C)              (+0.02/°C)
+Transmission tracking       ±0.013                        ±0.007            ±0.021                ±0.101 
+                                        (+0.01/°C)              (+0.01/°C)          (+0.01/°C)              (+0.02/°C)
+
+Transmission uncertainty (specifications)
+
+Magnitude
+N5230A 025 Full Two Port Cal Using 85032B
+
+Phase
+N5230A 025 Full Two Port Cal Using 85032B
+```
+
+=== Page 17 ===
+Transmission uncertainty (specifications)
+
+Magnitude
+NS5230A 025 with 85032B
+- 300 kHz to 10 MHz
+- 10 to 500 MHz
+- 500 MHz to 2 GHz
+- 2 to 6 GHz
+
+S21 = S12 = 0  
+Source power = 0 dBm  
+
+Phase
+NS5230A 025 with 85032B
+- 300 kHz to 10 MHz
+- 10 to 500 MHz
+- 500 MHz to 2 GHz
+- 2 to 6 GHz
+
+S21 = S12 = 0  
+Source power = 0 dBm  
+
+=== Page 18 ===
+### Table 9. Uncorrected system performance
+
+**Directivity**  
+| Specifications        | Option | Option | Option | Option | Option | Option | Option | Option | Option | Option |  
+|----------------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|  
+|                      | 020, 025, 120, 225 | 420, 425 | 520, 525 | 020, 025, 120, 225 | 420, 425 | 520, 525 |  
+| 300 kHz to 10 MHz    | 18 dB  | 12 dB  | 11 dB  |        |        |        |        |        |        |        |  
+| 10 to 45 MHz         | 25 dB  | 220 dB | 17 dB  | 17 dB  |        |        |        |        |        |        |  
+| 45 to 500 MHz        | 28 dB  | 24 dB  | 23 dB  | 23 dB  | 23 dB  | 20 dB  | 20 dB  |        |        |        |  
+| 500 MHz to 1 GHz     | 28 dB  | 27 dB  | 23 dB  | 23 dB  | 23 dB  | 20 dB  | 20 dB  |        |        |        |  
+| 1 to 2 GHz           | 28 dB  | 27 dB  | 23 dB  | 23 dB  | 23 dB  | 20 dB  | 20 dB  |        |        |        |  
+| 2 to 3 GHz           | 25 dB  | 21 dB  | 21 dB  | 21 dB  | 21 dB  |        |        |        |        |        |  
+| 3 to 5 GHz           | 20 dB  | 21 dB  | 21 dB  | 21 dB  | 21 dB  |        |        |        |        |        |  
+| 5 to 8 GHz           | 17 dB  | 21 dB  | 21 dB  | 21 dB  | 21 dB  |        |        |        |        |        |  
+| 8 to 11.5 GHz        | 17 dB  | 16 dB  | 16 dB  | 16 dB  | 16 dB  |        |        |        |        |        |  
+| 11.5 to 13.5 GHz     | 15 dB  | 16 dB  | 16 dB  | 16 dB  | 16 dB  |        |        |        |        |        |  
+| 13.5 to 20 GHz       | 16 dB  | 16 dB  | 16 dB  | 16 dB  | 16 dB  |        |        |        |        |        |  
+| 20 to 40 GHz         | 15 dB  | 15 dB  |        |        |        |        |        |        |        |        |  
+| 40 to 50 GHz         | 13 dB  |        |        |        |        |        |        |        |        |        |  
+
+**Source match**  
+| Specifications        | Option | Option | Option | Option | Option | Option | Option | Option | Option | Option |  
+|----------------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|  
+|                      | 020, 025, 120, 225 | 420, 425 | 520, 525 | 020, 025, 120, 225 | 420, 425 | 520, 525 |  
+| 300 kHz to 10 MHz    | 18 dB  | 12 dB  | 11 dB  | 11 dB  |        |        |        |        |        |        |  
+| 10 to 45 MHz         | 25 dB  | 220 dB | 17 dB  | 17 dB  |        |        |        |        |        |        |  
+| 45 to 500 MHz        | 21 dB  | 17 dB  | 17 dB  | 17 dB  |        |        |        |        |        |        |  
+| 500 MHz to 2 GHz     | 21 dB  | 12 dB  | 12 dB  | 12 dB  |        |        |        |        |        |        |  
+| 2 to 3 GHz           | 12 dB  | 12 dB  | 12 dB  | 12 dB  |        |        |        |        |        |        |  
+| 3 to 8 GHz           | 10 dB  | 11 dB  | 11 dB  | 11 dB  |        |        |        |        |        |        |  
+| 8 to 9.5 GHz         | 10 dB  | 11 dB  | 11 dB  | 11 dB  |        |        |        |        |        |        |  
+| 12.5 to 13.5 GHz     | 8 dB   | 10 dB  | 11 dB  | 11 dB  |        |        |        |        |        |        |  
+| 13.5 to 20 GHz       | 9 dB   | 9 dB   | 9 dB   | 9.5 dB |        |        |        |        |        |        |  
+| 20 to 40 GHz         | 9 dB   | 8 dB   | 8.5 dB |        |        |        |        |        |        |  
+| 40 to 50 GHz         | 5 dB   | 5 dB   |        |        |        |        |        |        |        |        |  
+
+**Load match**  
+| Specifications        | Option | Option | Option | Option | Option | Option | Option | Option | Option | Option |  
+|----------------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|  
+|                      | 020, 025, 120, 225 | 420, 425 | 520, 525 | 020, 025, 120, 225 | 420, 425 | 520, 525 |  
+| 300 kHz to 10 MHz    | 17 dB  | 15 dB  | 13 dB  |        |        |        |        |        |        |        |  
+| 10 to 45 MHz         | 22 dB  | 22 dB  | 18 dB  | 18 dB  |        |        |        |        |        |        |  
+| 45 to 500 MHz        | 22 dB  | 20 dB  | 18 dB  | 18 dB  |        |        |        |        |        |        |  
+| 500 MHz to 2 GHz     | 17 dB  | 20 dB  | 18 dB  | 18 dB  |        |        |        |        |        |        |  
+| 2 to 3 GHz           | 14 dB  | 12 dB  | 14 dB  | 14 dB  |        |        |        |        |        |        |  
+| 3 to 8 GHz           | 10 dB  | 12 dB  | 12 dB  | 12 dB  |        |        |        |        |        |        |  
+| 8 to 9.5 GHz         | 9 dB   | 10 dB  | 12 dB  | 12 dB  |        |        |        |        |        |        |  
+| 9 to 12.5 GHz        | 9 dB   | 10 dB  | 12 dB  | 12 dB  |        |        |        |        |        |        |  
+| 12.5 to 13.5 GHz     | 7 dB   | 9 dB   | 9 dB   | 9.5 dB |        |        |        |        |        |        |  
+| 13.5 to 20 GHz       | 9 dB   | 9 dB   | 9.5 dB |        |        |        |        |        |        |  
+| 20 to 40 GHz         | 8 dB   | 8.5 dB |        |        |        |        |        |        |        |  
+| 40 to 50 GHz         | 5 dB   | 5 dB   |        |        |        |        |        |        |        |  
+
+**Crosstalk**  
+| Option                | Option | Option | Option | Option | Option | Option | Option | Option | Option | Option |  
+|----------------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|  
+|                      | 020, 025, 120, 225 | 420, 425 | 520, 525 | 020, 025, 120, 225 | 420, 425 | 520, 525 |  
+| 300 kHz to 10 MHz    | 75 dB² |        |        |        |        |        |        |        |        |        |  
+| 10 to 45 MHz         | 115 dB | 88 dB  | 88 dB  | 88 dB  |        |        |        |        |        |        |  
+| 45 to 500 MHz        | 122 dB | 95 dB  | 94 dB  | 94 dB  |        |        |        |        |        |        |  
+| 500 MHz to 2 GHz     | 122 dB | 96 dB  | 95 dB  | 95 dB  |        |        |        |        |        |        |  
+| 2 to 8 GHz           | 122 dB | 110 dB | 108 dB | 108 dB |        |        |        |        |        |        |  
+| 8 to 10.5 GHz        | 120 dB | 116 dB | 113 dB | 113 dB |        |        |        |        |        |        |  
+| 10.5 to 12.5 GHz     | 115 dB | 116 dB | 113 dB | 113 dB |        |        |        |        |        |        |  
+| 12.5 to 13.5 GHz     | 109 dB | 115 dB | 112 dB | 112 dB |        |        |        |        |        |        |  
+| 13.5 to 20 GHz       | 97 dB  |        |        |        |        |        |        |        |        |        |  
+| 20 to 40 GHz         | 89 dB  |        |        |        |        |        |        |        |        |        |  
+
+=== Page 19 ===
+```
+Table 10. Test port output¹
+
+Description                          Specifications                        Typical
+                                    Option   Option    Option   Option   Option    Option   Option   Option
+                                    020, 025 120, 125 220, 225 420, 425 520, 525 020, 025 220, 225 420, 425 520, 525
+
+Frequency range                     N52O30   300 kHz  300 kHz  10 MHz   10 MHz 
+                                   6 to 8 GHz to 13.5 GHz to 20 GHz to 40 GHz to 50 GHz
+
+Nominal power                       Preset power, attenuator switch point 10 dB below nominal power
+                                   0 dBm     -5 dBm   -10 dBm -15 dBm
+
+Frequency resolution                 1 Hz
+CW accuracy                           ±1 ppm
+Frequency stability                   ±0.05 ppm. -10° to 70° C
+                                    ±0.1 ppm/yr maximum
+
+Description                          Specifications                        Typical
+                                    Option   Option    Option   Option   Option    Option   Option
+                                    020, 025 120, 125 220, 225 420, 425 520, 525 020, 025 220, 225 420, 425 520, 525
+
+Power level accuracy                Variation from nominal power in range 0
+                                   300 kHz to 10 MHz ±1.0 dB  
+                                   10 to 45 MHz ±1.0 dB
+                                   45 MHz to 6 GHz ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB
+                                   6 to 8 GHz ±1.5 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB
+                                   9 to 10.5 GHz ±1.5 dB ±1.0 dB ±1.5 dB ±1.5 dB ±1.5 dB
+                                   10.5 to 13.5 GHz ±2.0 dB ±1.0 dB ±1.5 dB ±1.5 dB ±1.5 dB
+                                   13.5 to 20 GHz ±1.0 dB ±1.5 dB ±1.5 dB ±1.5 dB ±1.5 dB
+                                   20 to 40 GHz ±2.5 dB ±2.5 dB ±2.5 dB ±2.5 dB ±2.5 dB
+                                   40 to 50 GHz ±3.5 dB ±3.5 dB
+
+Description                          Specifications                        Typical
+                                    Option   Option    Option   Option   Option    Option   Option
+                                    020, 025 120, 125 220, 225 420, 425 520, 525 220, 225 
+
+Max leveled power                   300 kHz to 10 MHz 10 dBm  9 dBm
+                                   10 to 45 MHz 10 dBm
+                                   45 MHz to 6 GHz 10 dBm 5 dBm  0 dBm  0 dBm  0 dBm  0 dBm
+                                   6 to 9 GHz 8 dBm 8 dBm 5 dBm 5 dBm  0 dBm  0 dBm
+                                   9 to 12.5 GHz 4 dBm 4 dBm 5 dBm 0 dBm 0 dBm 0 dBm
+                                   12.5 to 13.5 GHz 2 dBm 1 dBm 3 dBm 0 dBm 0 dBm 0 dBm
+                                   13.5 to 20 GHz 0 dBm 0 dBm 0 dBm 0 dBm 0 dBm 0 dBm
+                                   20 to 40 GHz -5 dBm -8 dBm -5 dBm -15 dBm
+
+40 to 50 GHz                        -11 dBm -15 dBm 
+
+Power level linearity²              Test reference is at the nominal power level
+                                   Options as indicated 
+                                   300 kHz to 1 MHz ±4.5 dB ±4.5 dB 
+                                   1 to 10 MHz ±1.0 dB ±1.0 dB
+                                   10 to 45 MHz ±2.0 dB ±2.0 dB
+                                   45 MHz to 6 GHz ±1.5 dB ±1.5 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB 
+                                   1 to 12.5 GHz ±1.5 dB ±1.5 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB
+                                   12.5 to 13.5 GHz ±1.5 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB 
+                                   13.5 to 20 GHz ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB
+                                   20 to 40 GHz ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB
+                                   40 to 50 GHz ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB ±1.0 dB
+
+1. Performance specified on Part 1 only. Part 2 performance is a characteristic.
+2. Performance level specified on Part 1 only. Port 2 performance is typical. 
+   Test reference is at the nominal power level.
+```
+
+=== Page 20 ===
+```
+Table 10. Test port output1 (Continued)
+
+Specifications
+Description                Option    Option    Option    Option    Option    Option    Typical
+                           020, 120   025, 125   220, 425   420   425   520   525   225
+Power sweep range (ALC)2
+300 kHz to 10 MHz         37 dB
+10 to 45 MHz             37 dB
+45 MHz to 6 GHz          37 dB   36 dB   25 dB   25 dB   25 dB   25 dB   25 dB
+6 to 9 GHz               35 dB   35 dB   25 dB   25 dB   25 dB   25 dB   25 dB
+9 to 12.5 GHz            31 dB   31 dB   25 dB   25 dB   25 dB   25 dB   25 dB
+12.5 to 13.5 GHz         29 dB   28 dB   23 dB   25 dB   25 dB   25 dB   25 dB
+13.5 to 20 GHz           23 dB   25 dB   25 dB   25 dB   25 dB   25 dB   25 dB
+20 to 40 GHz             20 dB   17 dB   20 dB   17 dB
+40 to 50 GHz             14 dB   10 dB
+Power resolution
+Options as indicated
+0.01 dB (all options)
+
+Specification               Typical
+Description                Option    Option    Option    Option    Option    Option    Typical
+                           020, 120   025, 125   220   225   420   425   520   525
+Power range
+300 kHz to 10 MHz         –30 to +10 dBm   –90 to +9 dBm   –27 to +12 dBm   –87 to +12 dBm   –27 to +9 dBm   –87 to +8 dBm
+10 kHz to 40 GHz          –30 to +10 dBm   –90 to +9 dBm   –27 to +12 dBm   –27 to +12 dBm   –27 to +8 dBm   –87 to +8 dBm
+45 MHz to 6 GHz           –30 to +8 dBm    –90 to +8 dBm   –27 to +12 dBm   –87 to +12 dBm   –27 to +8 dBm   –87 to +8 dBm
+6 to 9 GHz                –30 to +8 dBm    –90 to +8 dBm   –27 to +12 dBm   –87 to +12 dBm   –27 to +8 dBm   –87 to +8 dBm
+9 to 12.5 GHz             –30 to +2 dBm    –90 to +1 dBm   –27 to +7 dBm   –87 to +7 dBm   –27 to +5 dBm   –87 to +4 dBm
+13.5 to 20 GHz            –27 to +4 dBm    –27 to +4 dBm   –27 to +1 dBm   –27 to +1 dBm   –27 to -2 dBm   –87 to -2 dBm
+20 to 40 GHz              –27 to -5 dBm    –27 to -9 dBm
+
+Phase noise (resolution at test port)
+10 kHz Offset            100 kHz Offset   1 MHz Offset   10 kHz Offset   100 kHz Offset   1 MHz Offset
+300 kHz to 10 MHz          –86 dBc/Hz      –86 dBc/Hz     –95 dBc/Hz      –17 dBc/Hz     –17 dBc/Hz      –89 dBc/Hz
+10 MHz to 15 GHz          –86 dBc/Hz      –91 dBc/Hz     –95 dBc/Hz      –17 dBc/Hz     –17 dBc/Hz      –89 dBc/Hz
+15.125 to 3.25 GHz        –83 dBc/Hz      –91 dBc/Hz     –95 dBc/Hz      –83 dBc/Hz     –91 dBc/Hz      –95 dBc/Hz
+3.125 to 6.25 GHz        –71 dBc/Hz      –85 dBc/Hz     –91 dBc/Hz      –71 dBc/Hz     –79 dBc/Hz      –83 dBc/Hz
+6.25 to 12.5 GHz         –71 dBc/Hz      –79 dBc/Hz     –83 dBc/Hz      –71 dBc/Hz     –79 dBc/Hz      –83 dBc/Hz
+12.5 to 13.5 GHz         –65 dBc/Hz      –73 dBc/Hz     –77 dBc/Hz      –73 dBc/Hz     –77 dBc/Hz      –77 dBc/Hz
+13.5 to 20 GHz             –59 dBc/Hz      –67 dBc/Hz     –71 dBc/Hz
+20 to 40 GHz             –59 dBc/Hz      –67 dBc/Hz     –71 dBc/Hz
+40 to 50 GHz             –59 dBc/Hz      –67 dBc/Hz     –71 dBc/Hz
+
+Non-harmonic spurious (at nominal output power)
+300 kHz to 10 MHz         –50 dBc for offset frequency > 1 kHz
+10 MHz to 13.5 GHz        –30 dBc for offset frequency > 1 kHz
+20 to 40 GHz             –22 dBc
+40 to 50 GHz             –22 dBc
+
+Specification               Typical
+Description                Option    Option    Option    Option    Option    Option    Typical
+                           020, 025, 120, 125   220   225   420   425   520   525
+Harmonics (2nd or 3rd) at maximum output power
+300 kHz to 10 MHz         –17 dBc
+10 to 500 MHz             –17 dBc   –22 dBc   –15 dBc   –15 dBc
+500 MHz to 1 GHz         –17 dBc   –22 dBc   –15 dBc   –15 dBc
+1 to 15 GHz               –20 dBc   –22 dBc   –20 dBc   –20 dBc
+13.5 to 20 GHz            –22 dBc
+20 to 40 GHz              –22 dBc
+40 to 50 GHz              –22 dBc
+```
+
+=== Page 21 ===
+```
+Table 11: Test port input
+
+Description                   Specifications                         Typicals
+                             Option Option Option Option Option Option
+                             020, 025, 220, 225 420, 425, 520, 525 020, 025, 120, 125 220, 225 420, 425 520, 525
+Test port noise floor1      10 Hz IF bandwidth2
+300 kHz to 3 MHz3         <–83 dBm                            <–94 dBm
+3 to 10 MHz                <–103 dBm                           <–110 dBm
+10 to 45 MHz               <–92 dBm                           <–116 dBm
+45 to 70 MHz               <–112 dBm <–96 dBm <–90 dBm <–90 dBm <–116 dBm
+70 to 500 MHz              <–112 dBm <–100 dBm <–90 dBm <–90 dBm <–116 dBm
+500 MHz to 2 GHz           <–112 dBm <–105 dBm <–110 dBm <–110 dBm <–120 dBm
+2 to 4 GHz                 <–112 dBm <–105 dBm <–110 dBm <–110 dBm <–120 dBm
+4 to 8 GHz                 <–112 dBm <–105 dBm <–110 dBm <–110 dBm <–119 dBm
+8 to 10.5 GHz              <–112 dBm <–105 dBm <–100 dBm <–100 dBm <–119 dBm
+10.5 to 13.5 GHz          <–107 dBm <–105 dBm <–100 dBm <–100 dBm <–114 dBm
+13.5 to 20 GHz             <–105 dBm <–100 dBm <–100 dBm
+20 to 21.25 GHz            <–95 dBm <–95 dBm
+40 to 50 GHz                <–90 dBm
+
+Test port noise floor1      1 kHz IF bandwidth
+300 kHz to 3 MHz3         <–73 dBm                            <–83 dBm
+3 to 10 MHz                <–83 dBm                            <–90 dBm
+10 to 45 MHz               <–92 dBm <–76 dBm <–70 dBm <–70 dBm
+45 to 70 MHz               <–92 dBm <–80 dBm <–70 dBm <–70 dBm <–96 dBm
+70 to 500 MHz              <–92 dBm <–85 dBm <–90 dBm <–90 dBm <–100 dBm
+500 MHz to 2 GHz           <–92 dBm <–85 dBm <–90 dBm <–90 dBm <–99 dBm
+2 to 4 GHz                 <–92 dBm <–85 dBm <–90 dBm <–90 dBm <–100 dBm
+4 to 8 GHz                 <–97 dBm <–85 dBm <–80 dBm <–80 dBm <–99 dBm
+8 to 10.5 GHz              <–98 dBm <–85 dBm <–80 dBm <–80 dBm <–94 dBm
+10.5 to 13.5 GHz          <–85 dBm <–80 dBm <–80 dBm <–80 dBm
+13.5 to 20 GHz            <–85 dBm <–80 dBm <–80 dBm
+20 to 21.25 GHz           <–80 dBm <–80 dBm
+21.25 to 40 GHz           <–80 dBm <–80 dBm
+31.25 to 40 GHz           <–85 dBm <–86 dBm
+40 to 50 GHz              <–78 dBm
+
+1. Total average (rms) noise power calculated as the mean value of a linear magnitude trace expressed in dBm.
+2. The 1 kHz RBW test port noise floor performance is mathematically derived from the 1 kHz IFBW noise floor performance. The performance could be limited by crosstalk below 3 MHz at certain frequencies. The measurement is defined as a single receiver measurement with loads on the ports at defined CW frequency with power set to the minimum plus 5 dB.
+3. Value and/or frequency changed July 2006.
+```
+
+=== Page 22 ===
+```
+Table 11: Test port input (Continued)
+
+Description                     Specifications                     Typical
+                            Option 220, 225     Option 420, 520     Option 425, 525     Typical Option 220, 225
+
+Compression level           Power Compression       Power Compression       Power Compression       Power Compression
+10 to 45 MHz               45 to 500 MHz        +5 dBm 0.10 dB       +5 dBm 0.40 dB       +5 dBm 0.40 dB
+                            500 MHz to 2 GHz     +5 dBm 0.15 dB       +5 dBm 0.77 dB       +5 dBm 0.67 dB
+                            2 to 8 GHz           +5 dBm 0.21 dB       +5 dBm 0.75 dB       +5 dBm 0.55 dB
+                            8 to 12.5 GHz        +5 dBm 0.21 dB       +5 dBm 0.56 dB       +5 dBm 0.51 dB
+                            12.5 to 20 GHz       +3 dBm 0.20 dB       +5 dBm 0.79 dB       +5 dBm 0.69 dB
+                            20 to 31.25 GHz      0 dBm 0.60 dB       0 dBm 0.50 dB       0 dBm 0.50 dB
+                            31.25 to 40 GHz      -3 dBm 0.55 dB      -3 dBm 0.60 dB      -3 dBm 0.60 dB
+                            40 to 50 GHz         -3 dBm 0.66 dB      -3 dBm 0.71 dB      -3 dBm 0.71 dB
+
+Description                     Specifications                     Typical
+                           Option 020, 120, 025, 125                Compression level – 0.1 dB
+Compression level           Power Compression                         Power Compression
+                            300 kHz to 10 MHz   +8 dBm 1.0 dB       300 kHz to 10 MHz       +5 dBm 0.1 dB
+                            10 to 50 MHz        +8 dBm 0.3 dB       10 MHz to 1 GHz         +9 dBm 0.1 dB
+                            50 MHz to 1 GHz     +3 dBm 0.35 dB      1 to 12.5 GHz           +10 dBm 0.1 dB
+                            1 to 6 GHz          +8 dBm 0.25 dB      12.5 to 13.5 GHz        +9 dBm 0.1 dB
+                            6 to 12.5 GHz       +8 dBm 0.40 dB
+                            12.5 to 13.5 GHz    +8 dBm 0.40 dB
+
+Description                     Specifications                     Typical
+                           Option 220, 225     Option 420, 520     Option 425, 525     Option 520, 525
+
+Test port compression -1 dB      300 kHz to 10 MHz    +10 dBm     negligible   negligible    negligible
+
+                            10 to 45 MHz        +10 dBm           +10 dBm    0.0 dBm     +1.0 dBm
+                            45 to 500 MHz       +10 dBm           +10 dBm    0.0 dBm     +1.0 dBm
+                            500 MHz to 2 GHz    +9 dBm            +9 dBm    0.0 dBm     +1.0 dBm
+                            2 to 12.5 GHz       +6 dBm            +6 dBm    0.0 dBm     +1.5 dBm
+                            12.5 to 13.5 GHz    +6 dBm            +6 dBm   -1.0 dBm     0.0 dBm
+                            20 to 31.25 GHz     +6 dBm            +6 dBm   -1.0 dBm     0.0 dBm
+                            31.25 to 40 GHz     -5.5 dBm          -3.0 dBm   -8.5 dBm    -7.5 dBm
+                            40 to 50 GHz        -10.0 dBm
+
+Trace noise magnitude3
+1 kHz IF bandwidth, rated measurement, nominal power at test port.
+300 kHz to 10 MHz
+
+                            10 to 45 MHz        0.004 dB rms   0.015 dB rms  0.015 dB rms
+                            45 to 500 MHz       0.004 dB rms   0.006 dB rms  0.010 dB rms
+                            500 MHz to 2 GHz    0.004 dB rms   0.006 dB rms  0.006 dB rms
+                            2 to 10.5 GHz       0.004 dB rms   0.006 dB rms  0.006 dB rms
+                            10.5 to 13.5 GHz    0.004 dB rms   0.010 dB rms  0.010 dB rms
+                            13.5 to 20 GHz      0.006 dB rms   0.010 dB rms  0.010 dB rms
+                            20 to 31.25 GHz     0.010 dB rms   0.010 dB rms  0.010 dB rms
+                            31.25 to 40 GHz     0.020 dB rms   0.020 dB rms  0.020 dB rms
+                            40 to 50 GHz        0.020 dB rms
+
+1. Total average (rms) noise power calculated as the mean value of a linear magnitude trace expressed in dBm.
+2. For options 225, 420, 425, 520, and 525 coupler roll-off will reduce compression to a negligible level below 45 MHz.
+3. 1 kHz IF BW, rated measurement, nominal power at the test port.
+4. Stability is defined as a ratio measurement made at the test port.
+```
+
+=== Page 23 ===
+```
+Table 11: Test port input (Continued)
+
+Description                    Specifications                              Typical
+                              Option 020, 120, 025, 125                  Option 020, 120, 025, 125
+Trace noise magnitude1 (continued)
+100 kHz IF bandwidth, rated measurement, nominal power at test port.
+300 kHz to 10 MHz          12 mB
+10 MHz to 6 GHz            4 mB
+6 to 10.5 GHz              4 mB
+10.5 to 13.5 GHz           8 mB
+600 kHz IF bandwidth, rated measurement, nominal power at test port.
+300 kHz to 10 MHz          20 mB
+10 MHz to 6 GHz            8 mB
+6 to 10.5 GHz              8 mB
+10.5 to 13.5 GHz          10 mB
+
+Description                    Specifications                      Typical
+                              Option           Option           Option             Option          Option
+                              220, 225       420, 425        520, 525        220, 225        420, 425
+                                                                                              520, 525
+Trace noise phase3
+1 kHz IF bandwidth, rated measurement, nominal power at test port.
+300 kHz to 10 MHz          0.025 rms         0.100 rms       0.100 rms      
+45 to 50 MHz               0.060 rms         0.100 rms       0.100 rms      
+500 MHz to 2 GHz           0.060 rms         0.060 rms       0.060 rms      
+2 to 10.5 GHz              0.060 rms         0.060 rms       0.060 rms      
+10.5 to 13.5 GHz           0.100 rms         0.100 rms       0.100 rms      
+21.5 to 21.5 GHz           0.100 rms         0.100 rms       0.100 rms      
+31.25 to 40 GHz            0.200 rms         0.200 rms       0.200 rms      
+40 to 50 GHz               0.200 rms         0.200 rms       0.200 rms      
+
+Description                    Specifications                      Typical
+                              Option 020, 120, 025, 125            Option 020, 120, 025, 125
+Trace noise phase3
+100 kHz IF bandwidth, rated measurement, nominal power at test port.
+300 kHz to 10 MHz          80 mdeg
+10 MHz to 6 GHz            30 mdeg
+6 to 10.5 GHz              30 mdeg
+10.5 to 13.5 GHz           60 mdeg
+600 kHz IF bandwidth, rated measurement, nominal power at test port.
+300 kHz to 10 MHz          100 mdeg
+10 MHz to 6 GHz            60 mdeg
+6 to 10.5 GHz              60 mdeg
+10.5 to 13.5 GHz           80 mdeg
+
+Description                    Specifications                      Typical
+                              Option                         Option
+                              020, 025, 120, 125, 225, 420, 425, 520, 525           020, 025, 120, 125, 225, 420, 425, 520, 525
+Reference level magnitude
+Range                       ±200 dB
+Resolution                  0.001 dB
+Reference level phase
+Range                       ±500°
+Resolution                  0.01°
+1. Total average (rms) noise power calculated as the mean value of a linear magnitude trace expressed in dBm.
+2. For Options 225, 420, 425, 520, and 525 coupler roll-off will reduce compression to a negligible level below 45 MHz.
+3. 1 kHz IF BW, rated measurement, nominal power at the test port.
+4. Stability is defined as a ratio measurement made at the test port.
+```
+
+=== Page 24 ===
+```
+Table 11: Test port input (Continued)
+
+Description              Specifications                                   Typical
+                         Option     Option     Option     Option     Option     Option
+                         020, 025, 220, 225  420, 425, 520, 525  020, 025, 120, 125  220, 225  420, 425, 520, 525
+Stability magnitudea     300 kHz to 10 MHz      ±0.015 dB/°C
+                         10 to 45 MHz            ±0.010 dB/°C      ±0.015 dB/°C      ±0.015 dB/°C
+                         45 to 500 MHz          ±0.010 dB/°C      ±0.010 dB/°C      ±0.010 dB/°C
+                         500 MHz to 2 GHz       ±0.010 dB/°C      ±0.010 dB/°C      ±0.010 dB/°C
+                         2 to 4 GHz             ±0.015 dB/°C      ±0.020 dB/°C      ±0.010 dB/°C
+                         4 to 8 GHz             ±0.020 dB/°C      ±0.020 dB/°C      ±0.010 dB/°C
+                         8 to 13.5 GHz          ±0.020 dB/°C      ±0.030 dB/°C      ±0.015 dB/°C
+                         13.5 to 20 GHz         ±0.030 dB/°C      ±0.040 dB/°C
+                         20 to 40 GHz           ±0.040 dB/°C
+                         40 to 50 GHz           ±0.060 dB/°C
+
+                         Stability phasea      300 kHz to 10 MHz   ±0.30°/°C
+                                               10 to 45 MHz       ±0.025°/°C
+                                               45 to 500 MHz      ±0.035°/°C      ±0.20°/°C      ±0.25°/°C
+                                               500 MHz to 2 GHz   ±0.050°/°C      ±0.15°/°C      ±0.22°/°C
+                                               2 to 4 GHz         ±0.10°/°C       ±0.15°/°C      ±0.10°/°C
+                                               4 to 8 GHz         ±0.105°/°C      ±0.45°/°C      ±0.15°/°C
+                                               8 to 13.5 GHz      ±0.30°/°C
+                                               13.5 to 20 GHz     ±0.45°/°C      ±0.15°/°C
+                                               20 to 40 GHz       ±0.40°/°C
+                                               40 to 50 GHz       ±0.60°/°C
+
+Description              Specifications                                   Typical
+                         Option     Option     Option     Option     Option     Option
+                         020, 220  420, 520  025, 125  225, 425, 525
+Damage input level      Test port 1 and 2        +27 dBm or       +30 dBm or      +30 dBm or      +27 dBm or      +27 dBm or
+                         ±16 VDC    ±25 VDC    ±40 VDC
+                         R1, R2 in                  +15 dBm or       +15 dBm or
+                         A, B in                    +15 dBm or       +15 dBm or      ±16 VDC      +7 VDC
+Coupler thru             +27 dBm or      +30 dBm or
+                         ±16 VDC    ±40 VDC
+Coupler arm             +15 dBm or      +30 dBm or
+                         ±0 VDC     +7 VDC
+Source out (reference)  +20 dBm or      +20 dBm or
+                         ±0 VDC     ±20 dBm or      +7 VDC
+Source out (test ports) +27 dBm or      +30 dBm or
+                         ±16 VDC    ±7 VDC
+
+1. Total average (rms) noise power calculated as the mean value of a linear magnitude trace expressed in dBm.
+2. For Options 225, 420, 425, 520, and 525 coupler roll-off will reduce compression to a negligible level below 45 MHz.
+3. 1 kHz IF BW, rated measurement, nominal power at the test port.
+4. Stability is defined as a ratio measurement made at the test port.
+```
+
+=== Page 25 ===
+**Dynamic Accuracy**
+
+Note: Dynamic accuracy uncertainty curves are available within the PNA-L network analyzer's internal Help system. The Help system is also available online at www.agilent.com. Navigate to the home page for your PNA model, then click on manuals & guides. Please download our free uncertainty calculator from www.agilent.com/find/na_calculator to generate the curves for your calibration kit and PNA setup.
+
+**Table 12. Test port input (group delay)¹**
+
+| Description                | Specification                                                   | Supplemental information (typ.)        |
+|----------------------------|---------------------------------------------------------------|----------------------------------------|
+| Aperture (selectable)      | (frequency span)/(number of points –1)                        |                                        |
+| Maximum aperture            | 20% of frequency span                                         |                                        |
+| Range                       | 0.5 × (1/minimum aperture)                                    |                                        |
+| Maximum delay               | Limited to measuring no more than 180° of phase change within the minimum aperture |                               |
+| Accuracy                    | See graph below. Char.                                       |                                        |
+
+The following graph shows characteristic group delay accuracy with full 2-port calibration and a 10 Hz IF bandwidth. Insertion loss is assumed to be < 2 dB and electrical length to be ten meters.
+
+**Group delay (typical)**
+
+N5230A Option 220 Full Two Port Cal Using 85052B
+
+**[Graph Here]**
+
+In general, the following formula can be used to determine the accuracy, in seconds, of specific group delay measurement:
+
+±Phase Accuracy (deg)/(360° Aperture (Hz))
+
+Depending on the aperture and device length, the phase accuracy used is either incremental phase accuracy or worst case phase accuracy.
+
+¹ Group delay is computed by measuring the phase change within a specified frequency step (determined by the frequency span and the number of points per sweep).
+
+=== Page 26 ===
+```
+General Information
+
+Table 13. Miscellaneous information
+Description                               Supplemental information
+System IF bandwidth range                 Option 020, 025, 120, 125
+                                          1 Hz to 600 kHz, nominal
+                                          Option 220, 225, 420, 425, 520, 525
+                                          1 Hz to 250 kHz, nominal
+CPU                                       Intel® 1.1 GHz Pentium® M with 1 GByte RAM
+
+Table 14. Front panel information
+Description                               Supplemental information
+RF connectors                             N5320A
+Type                                      Option 020, 025, 120, 125, 220 or 225: 3.5 mm (male), 50 ohm, (nominal)
+                                          Option 420, 425, 520, or 525: 2.4 mm (male), 50 ohm, (nominal)
+Center pin recession                       0.002 in. (characteristic)
+Display                                   Size
+                                          21.3 cm (8.4 in) diagonal color active matrix LCD;
+                                          640 (horizontal) X 480 (vertical) resolution
+Refresh rate                               Vertical 59.83 Hz; Horizontal 31.41 kHz
+Pixels                                    A display is considered faulty if:
+                                          • A complete row or column of "stuck" or "dark" pixels.
+                                          • More than six "stack on" pixels (but not more than three green) or
+                                            more than 0.002% of the total pixels are within the LCD specifications.
+                                          • More than twelve "dark" pixels (but not more than three of the same color)
+                                            or more than 0.004% of the total pixels are within the specifications.
+                                          • Two or more consecutive "stuck on" pixels or three or more
+                                            consecutive "dark" pixel (but not more than one set of two consecutive
+                                            dark pixels) "Stuck on" of "dark" pixels less than 6.5 mm apart
+                                            (excluding consecutive pixels)
+
+Display range                             The PNA display must remain in the 16-bit color setting in order to
+                                          comply with international emissions regulations
+Magnitude                                  ±500 dB (at 20 dB/div), max
+Phase                                      ±500° max
+Polar                                      10 μUnits, min
+                                          1000 Units, max
+Display resolution                         Magnitude 0.001 dB/div, min
+                                          Phase 0.10°/ div, min
+Marker resolution                          Magnitude 0.001 dB, min
+                                          Phase 0.01° min
+                                          Polar 0.01 μUnit, min; 0.01°, min
+
+1. Any PNA Service Guide contains instructions for running the analyzer's built-in Display Test. You can view a PDF file of a Service Guide on the Web at www.agilent.com/find/pna. After opening the PDF file, look in the left-side column and then click on the "Index" bookmark. From the index, click on "Display Test".
+```
+
+=== Page 27 ===
+```
+Table 15. Rear panel information
+
+Description                 Supplemental information
+Trigger inputs/outputs       BNC (f), TTL/CMOS compatible
+10 MHz Reference in
+Connector                   BNC, female
+Input frequency             10 MHz ± 10 ppm, typical
+Input level                 –15 to +20 dBm, typical
+Input impedance             200 Ω, nominal.
+10 MHz Reference out
+Connector                   BNC, female
+Output frequency            10 MHz ± 1 ppm, typical
+Signal type                Sine Wave, typical
+Output level                +10 dBm ± 4 dB into 50 W, typical
+Output impedance            50 Ω, nominal
+Harmonics                  < –40 dBc, typical
+VGA Video output
+Connector                   15-pin mini D-Sub; Drives VGA compatible monitors
+Test set IO
+Connector                   25-pin D-Sub connector, available for external test set control
+Aux IO
+Connector                   25-pin D-Sub connector, male, analog and digital I/O
+Handler IO
+Connector                   36-pin parallel I/O port; all input/output signals are default set to negative logic; can be reset to positive logic via GPIB command
+GPIB
+Two ports: dedicated Controller and dedicated Talker/Listener.
+USB Port
+1 port on front panel and 4 ports on rear panel.
+LAN
+10/100BaseT Ethernet, 8-pin configuration; auto selects between the two data rates
+Line power (single phase)
+Frequency, voltage          50/60 Hz/400 Hz for 100 to 120V, 50/60 Hz for 220 to 240 V, (power supply is auto switching)
+Maximum                    350 Watts
+
+Note: Option H08 and Option H11 specifications are not provided in this N5230A specifications document.
+```
+
+=== Page 28 ===
+```
+Table 16. Analyzer environment and dimensions
+
+Description                    Supplemental information
+General environmental
+EMC                            Complies with European EMC directive 89/336/EEC, amended
+                               by 93/68/EEC
+                               • IEC/EN 61326
+                               • CISPR Pub 11 Group 1, class A
+                               • AS/NZS CISPR11:2002
+                               • ICES/NMB-001
+Safety                         Complies with European Low Voltage Directive 73/23/EEC, amended by
+                               93/68/EEC
+                               • IEC/EN 61010-1:2001
+                               • Canada: CSA C22.2 No. 61010-1:2001
+                               • USA: UL 61010.1
+
+Operating environment
+Temperature                    0 to +40 °C
+                               Instrument powers up and displays no error messages within this
+                               temperature range (except for "source unlevelled" error message that
+                               may occur at temperatures outside the specified performance
+                               temperature range of 25 ± 5 °C).
+Error-corrected temperature range 23 °C ± 3 °C with less than 1 °C deviation from calibration temp.
+Relative humidity               Type-tested to 95% at 40 °C, non-condensing
+Altitude                       0 to 4600 m (15,000 ft.)
+
+Non-operating storage environment
+Temperature                    −40 to +70 °C
+
+Cabinet dimensions
+                               Height         Width         Depth
+Excluding front and rear panel hardware and feet    267 mm     426 mm     427 mm
+As shipped - includes front panel connectors, 
+rear panel bumpers, and feet.                      10.5 in     16.75 in    16.8 in
+As shipped plus handles                              280 mm      435 mm     470 mm
+                                                   11 in       17.10 in    18.5 in
+As shipped plus rack-mount flanges                  280 mm      458 mm     501 mm
+                                                   11 in       18 in      19.7 in
+As shipped plus handles and rack-mount flanges      280 mm      483 mm     470 mm
+                                                   11 in       19 in      18.5 in
+
+Weight
+Net
+N5230A                       24.9 kg (55 lb), nominal
+Shipping
+N5230A                       36.3 kg (80 lb), nominal
+```
+
+=== Page 29 ===
+N5230A
+
+Measurement Throughput Summary  
+Table 17. Typical cycle time¹² (ms) for measurement completion  
+
+| Number of Points |  
+|------------------|  
+| 201  | 401  | 801  | 1601  | 16,001  |  
+|------------------|  
+| Start 8 GHz, stop 18 GHz, 30 kHz IF bandwidth |  
+| Uncorrected  | 97.5  | 102.7  | 103.8  | 108.2  | 683.9  |  
+| 2-Port cal  | 203.7  | 213.5  | 218.5  | 234.6  | 1504.3  |  
+| Start 10 MHz, stop 10 GHz, 30 kHz IF bandwidth |  
+| Uncorrected  | 112.6  | 120.6  | 124.8  | 138.2  | 738.4  |  
+| 2-Port cal  | 232.8  | 251.8  | 265.2  | 304.3  | 1623.4  |  
+| Start 10 MHz, stop 20 GHz, 30 kHz IF bandwidth |  
+| Uncorrected  | 146  | 199.3  | 210.9  | 217.2  | 793.5  |  
+| 2-Port cal  | 302.3  | 410.5  | 438.7  | 462.5  | 1660.5  |  
+| Start 8 GHz, stop 18 GHz, 50 kHz IF bandwidth |  
+| Uncorrected  | 79.1  | 81.7  | 86.6  | 482  |  
+| 2-Port cal  | 164.5  | 170.3  | 175.3  | 193.5  | 1014.7  |  
+| Start 10 MHz, stop 10 GHz, 50 kHz IF bandwidth |  
+| Uncorrected  | 96.8  | 101.7  | 108.8  | 122.2  | 524.6  |  
+| 2-Port cal  | 202.1  | 215.6  | 236.7  | 276.7  | 1198.8  |  
+| Start 10 MHz, stop 20 GHz, 50 kHz IF bandwidth |  
+| Uncorrected  | 141.6  | 163.9  | 179.7  | 546.5  |  
+| 2-Port cal  | 293.6  | 341  | 360  | 389.5  | 1248.8  |  
+
+1. Typical performance.  
+2. Includes sweep time, retrace time and band-crossing time. Analyzer display turned off with DISPLAY:ENABLE OFF. Add 21 ms for display on. Data for one trace (S11) measurement.
+
+=== Page 30 ===
+```
+Table 18. Cycle Time vs IF bandwidth1 (Options 020, 025, 120, 125 only)
+
+Applies to the preset condition (201 points, corrective off) except for the following changes:
+• CF = 10 GHz
+• Span = 100 MHz
+• Display off (add 21 ms for display on)
+
+Description                       Typical performance
+IF Bandwidth (Hz)  Cycle time (ms)2  Trace noise (dB rms)
+600,000              7                    0.0035
+360,000              7                    0.0026
+280,000              7                    0.0022
+200,000              7                    0.0021
+150,000              7                    0.0016
+100,000              7                    0.0012
+70,000               7                    0.0011
+50,000               9                    0.0009
+30,000               11                   0.0008
+20,000               14                   0.0006
+15,000               17                   0.0005
+10,000               28                   0.0004
+7,000                37                   0.0004
+5,000                48                   0.0003
+3,000                72                   0.0003
+2,000                102                  0.002
+1,500                130                  0.0001
+1,000                218                  0.0001
+700                  294                  0.0001
+500                  399                  0.0001
+300                  636                  0.0001
+200                  932                  negligible
+100                  1.826                negligible
+30                   6.004                negligible
+10                   17.903               negligible
+1                    178,398              negligible
+
+1. Typical performance.
+2. Cycle time includes sweep and retrace time.
+
+Table 21. Cycle time vs number of points1 (Options 220, 225, 420, 425, 520, 525 only)
+```
+
+=== Page 31 ===
+```
+Table 19. Cycle Time vs IF bandwidth1 (Options 220, 225, 420, 425, 520, 525 only)
+
+Applies to the preset condition (201 points, correction off) except for the following changes:
+• CF = 10 GHz
+• Span = 100 MHz
+• Display off (add 21 ms for display on)
+
+Description                    Typical performance
+IF Bandwidth (Hz)            Cycle time (ms)2      Cycle time (ms) Option 080 enabled
+250.000                      8                     37
+200.000                      9                     39
+150.000                      9                     40
+100.000                      10                    41
+70.000                       11                    43
+50.000                       12                    45
+30.000                       15                    50
+20.000                       18                    53
+15.000                       21                    57
+10.000                       27                    65
+7.000                        34                    75
+5.000                        48                    93
+3.000                        72                    124
+2.000                        108                   169
+1.500                        126                   187
+1.000                        272
+700                          357
+500                          460
+300                          697
+200                          1003
+150                          1307
+100                          1917
+30                           6173
+10                           18214
+1                            181699
+
+1. Typical performance.
+2. Cycle time includes sweep and retrace time.
+```
+
+=== Page 32 ===
+```
+Table 20. Cycle time vs number of points1 (Options 020, 025, 120, 125 only)
+
+Applies to the preset condition (201 points, correction off) except for the following changes:
+• CF = 10 GHz
+• Span = 100 MHz
+• Display off (add 21 ms for display on)
+
+Description              Typical performance
+IF Bandwidth (Hz)       Number of points      Cycle time (ms)2
+30,000                  3                     6
+                        11                     7
+                        51                     6
+                        101                    7
+                        201                    11
+                        401                    18
+                        801                    32
+                        1,601                  59
+                        6,401                  224
+                        16,001                 556
+
+300,000                 3                     6
+                        11                     6
+                        51                     6
+                        101                    7
+                        201                    7
+                        401                    9
+                        801                    13
+                        1,601                  22
+                        6,401                  75
+                        16,001                 180
+
+600,000                 3                     6
+                        11                     6
+                        51                     6
+                        101                    6
+                        201                    7
+                        401                    8
+                        801                    9
+                        1,601                  12
+                        6,401                  27
+                        16,001                 59
+
+1. Typical performance.
+2. Cycle time includes sweep and retrace time.
+```
+
+=== Page 33 ===
+Applies to the preset condition (correction off) except for the following changes:
+- CF = 10 GHz
+- Span = 100 MHz
+- Display off (add 21 ms for display on)
+
+IF Bandwidth (Hz)  | Number of points | Cycle time (ms)²
+--------------------|------------------|-------------------
+30,000              | 3                | 8                 
+                    | 11               | 8                 
+                    | 51               | 9                 
+                    | 101              | 11                
+                    | 201              | 15                
+                    | 401              | 23                
+                    | 801              | 39                
+                    | 1,601            | 71                
+                    | 6,401            | 265               
+                    | 16,001           | 650               
+
+50,000              | 3                | 7                 
+                    | 11               | 7                 
+                    | 51               | 8                 
+                    | 101              | 10                
+                    | 201              | 13                
+                    | 401              | 18                
+                    | 801              | 29                
+                    | 1,601            | 52                
+                    | 6,401            | 184               
+                    | 16,001           | 448               
+
+250,000             | 101              | 8                 
+                    | 201              | 9                 
+                    | 401              | 10                
+                    | 801              | 14                
+                    | 1,601            | 21                
+                    | 6,401            | 61                
+                    | 16,001           | 147               
+
+1. Typical performance.  
+2. Cycle time includes sweep and retrace time.
+
+Note: Specifications for recall and sweep speed are not provided for the N5230A analyzers.
+
+=== Page 34 ===
+Table 22. Data transfer time (ms)¹
+
+| Number of points |      |
+|------------------|------|
+|                  | 201  | 401  | 1601 | 16,001 |
+| SCPI over GPIB (program executed on external PC) |      |      |      |      |
+| 32-bit floating point | 7    | 12   | 43   | 435   |
+| 64-bit floating point | 12   | 22   | 84   | 856   |
+| ASCII            | 64   | 124  | 489  | 5054  |
+| SCPI (program executed in the analyzer) |      |      |      |      |
+| 32-bit floating point | 1    | 2    | 3    | 30    |
+| 64-bit floating point | 2    | 2    | 4    | 40    |
+| ASCII            | 29   | 56   | 222  | 2220  |
+| COM (program executed in the analyzer) |      |      |      |      |
+| 32-bit floating point | < 0.4 | 0.4  | 0.5  | 1.9   |
+| Variant type     | 0.7  | 1    | 3    | 32    |
+| DCOM over LAN (program executed on external PC) |      |      |      |      |
+| 32-bit floating point | < 0.8 | 1.5  | 7.1  |      |
+| Variant type     | 1.8  | 2.7  | 8.5  | 80    |
+
+1. Typical performance. 
+
+Note: Specifications for recall and sweep speed are not provided for the N5230A analyzers.
+
+=== Page 35 ===
+```
+Specifications: Front-Panel Jumpers
+
+Model N5230A Option 025, 125, 225, 425, or 525
+
+Note: The N5230A Option 020, 120, 220, 420, or 520 (standard test set and standard power range) has no front-panel jumpers.
+
+Table 23: Measurement receiver inputs (rcvr A In, rcvr B In)
+0-1 dB Typical Compression
+
+Description                         Specification               Option 025, 125         Option 225          Options 425, 525
+Maximum input level                300 kHz to 10 MHz        –11 dBm                   –2 dBm              –20 dBm
+                                    10 to 45 MHz              –7 dBm                    –2 dBm              –19 dBm
+                                    45 to 500 MHz             –7 dBm                    –2 dBm              –19 dBm
+                                    500 MHz to 2 GHz          –6 dBm                    –3 dBm              –14 dBm
+                                    2 to 12.5 GHz             –6 dBm                    –6 dBm              –14 dBm
+                                    12.5 to 13.5 GHz          –7 dBm                    –6 dBm              –15 dBm
+                                    13.5 to 20 GHz            –6 dBm                    –6 dBm              –15 dBm
+                                    31.25 to 40 GHz           –21 dBm                   –21 dBm             –24 dBm
+                                    40 to 45 GHz              –24 dBm                   –22 dBm
+                                    45 to 50 GHz              –22 dBm
+
+Damage level                       N5230A                    +15 dBm                  +15 dBm             +15 dBm
+Maximum DC level                  N5230A                    ±16 V                    ±7 V                ±7 V
+```
+
+=== Page 36 ===
+```
+Table 24: Reference receiver inputs (rcvr R1, rcvr R2)
+at maximum specified output power
+
+Description             Specification           Typicals
+                        Option 025, 125        Option 225        Options 425, 525
+Maximum input level
+300 kHz to 10 MHz      –15 dBm                                   
+10 to 500 MHz          –13 dBm            –18 dBm            –28 dBm
+500 to 2 MHz          –14 dBm            –18 dBm            –28 dBm
+2 to 8 GHz            –14 dBm            –19 dBm            –28 dBm
+6 to 8 GHz            –16 dBm            –19 dBm            –28 dBm
+8 to 9 GHz            –16 dBm            –21 dBm            –27 dBm
+9 to 10.5 GHz         –20 dBm            –21 dBm            –27 dBm
+10.5 to 12.5 GHz      –22 dBm            –21 dBm            –27 dBm
+12.5 to 13.5 GHz      –24 dBm            –23 dBm            –26 dBm
+13.5 to 20 GHz        –23 dBm            –26 dBm
+20 to 31.25 GHz       –33 dBm
+31.25 to 40 GHz       –27 dBm
+40 to 45 GHz          –29 dBm
+45 to 50 GHz          –28 dBm
+Damage level           N5230A              +15 dBm            +15 dBm            +15 dBm
+Maximum DC level       N5230A              ±16 V              ±7 V              ±7 V
+
+Table 25: Reference Outputs (reference 1 source out, reference 2 source out)
+at maximum specified output power
+
+Description             Specification           Typicals
+                        Option 025, 125        Option 225        Options 425, 525
+Maximum output level
+300 kHz to 10 MHz      –15 dBm                                   
+10 to 500 MHz          –13 dBm            –18 dBm            –28 dBm
+500 MHz to 2 GHz      –14 dBm            –18 dBm            –28 dBm
+2 to 6 GHz            –14 dBm            –19 dBm            –28 dBm
+6 to 8 GHz            –16 dBm            –19 dBm            –28 dBm
+8 to 9 GHz            –16 dBm            –20 dBm            –27 dBm
+9 to 10.5 GHz         –20 dBm            –20 dBm            –27 dBm
+10.5 to 12.5 GHz      –22 dBm            –20 dBm            –27 dBm
+12.5 to 13.5 GHz      –24 dBm            –23 dBm            –26 dBm
+13.5 to 20 GHz        –23 dBm            –32 dBm
+20 to 31.25 GHz       –26 dBm
+31.25 to 40 GHz       –26 dBm
+40 to 45 GHz          –29 dBm
+45 to 50 GHz          –28 dBm
+Damage level           N5230A              +20 dBm            +20 dBm            +20 dBm
+Maximum DC level       N5230A              ±16 V              ±7 V              ±7 V
+```
+
+=== Page 37 ===
+```
+Table 26: Source outputs (port 1 source out, port 2 source out) at maximum specified output power
+
+Description            Specification                     Typical
+                        Option 025, 125     Option 225     Options 425, 525
+Maximum output level
+300 kHz to 10 MHz      +11 dBm              +6 dBm        +1 dBm
+10 to 500 MHz          +11 dBm              +7 dBm        +1 dBm
+500 MHz to 6 GHz       +11 dBm              +7 dBm        +1 dBm
+6 to 9 GHz             +10 dBm              +7 dBm        +1 dBm
+9 to 12.5 GHz          +8 dBm               +7 dBm        +1 dBm
+12.5 to 13.5 GHz       +5 dBm               +5 dBm        +3 dBm
+13.5 to 20 GHz        +5 dBm               –5 dBm        –3 dBm
+20 to 31.25 GHz       –5 dBm               –4 dBm        –4 dBm
+31.25 to 40 GHz       –4 dBm               –11 dBm       –11 dBm
+40 to 45 GHz          –11 dBm              –11 dBm       –11 dBm
+45 to 50 GHz          –11 dBm              –11 dBm       –11 dBm
+Damage level
+N5230A                +27 dBm              +30 dBm       +30 dBm
+Maximum DC level
+N5230A                ±16 V               ±7 V          ±7 V
+
+Table 27: Coupler inputs (port 1 Cplr Thru, port 2 Cplr Thru)
+
+Description            Specification                     Typical
+                        Option 025, 125     Option 225     Options 425, 525
+Insertion loss to test port
+30 kHz to 10 MHz       2 dB                 2 dB          0.6 dB
+10 to 500 MHz          2 dB                 3 dB          1.6 dB
+500 MHz to 2 GHz       3 dB                 1.8 dB        1.0 dB
+2 to 8 GHz             3 dB                 1.8 dB        1.0 dB
+8 to 9 GHz             3 dB                 1.9 dB        1.0 dB
+9 to 12.5 GHz          4 dB                 1.9 dB        1.0 dB
+12.5 to 13.5 GHz       4 dB                 2.0 dB        2.0 dB
+13.5 to 20 GHz         2.0 dB               2.0 dB       
+20 to 31.25 GHz        3.0 dB               
+31.25 to 50 GHz        4.0 dB               
+Damage level
+N5230A                +27 dBm              +30 dBm       +30 dBm
+Maximum DC level
+N5230A                ±16 V               ±40 V         ±40 V
+
+Table 28: Coupler outputs (port 1 Cplr Arm, port 2 Cplr Arm)
+
+Description            Specification                     Typical
+                        Option 025, 125     Option 225     Options 425, 525
+Damage level
+N5230A                +15 dBm              +30 dBm       +30 dBm
+Maximum DC level
+N5230A                +0 Vdc              +7 Vdc        +7 Vdc
+```
+
+=== Page 38 ===
+```
+Test Set Block Diagrams
+
+N5230A Option 020, 120, 220, 420, or 520
+(standard test set and standard power range) network analyzer
+
+Source out
+  RcvR R1         Cplr thru       Port 1       Cplr arm      RcvR A in
+       O
+       R1
+          |               |
+          |---------A----| 
+          |               |
+       O                    O
+       B                    R2
+       |                |---|          
+       |----------------|   |        
+ Cplr arm          Port 2       Cplr thru      SRC out      RcvR R2 in
+
+N5230A Option 025, 125, 225, 425, or 525
+(configurable test set and extended power range) network analyzer
+
+Source out
+  RcvR R1         Cplr thru       Port 1       Cplr arm      RcvR A in
+       O
+       R1
+          |               |
+          |---------A----| 
+          |               |
+       O                    O
+       B                    R2
+       |                |---|          
+       |----------------|   |        
+ Cplr arm          Port 2       Cplr thru      SRC out      RcvR Source out in
+```
+
+=== Page 39 ===
+Web Resources  
+Visit our Web sites for additional product information and literature.  
+
+PNA Microwave network analyzers:  
+www.agilent.com/find/pna  
+
+PNA-L network analyzers:  
+www.agilent.com/find/pnal  
+
+Electronic calibration (ECal):  
+www.agilent.com/find/ecal  
+
+Test and measurement solutions:  
+www.agilent.com/find/accessories  
+
+=== Page 40 ===
+```
+Agilent Email Updates
+www.agilent.com/find/emailupdates
+Get the latest information on the products and applications you select.
+
+AXIe
+www.axiestandard.org
+AdvancedTCA® Extensions for Instrumentation and Test (AXIe) is an open standard that extends the AdvancedTCA for general purpose and semiconductor test. Agilent is a founding member of the AXIe consortium.
+
+LXI
+www.lxistandard.org
+LAN eXtensions for Instruments puts the power of Ethernet and the Web inside your test systems. Agilent is a founding member of the LXI consortium.
+
+PXI
+www.pxisa.org
+PCI eXtensions for Instrumentation (PXI) modular instrumentation delivers a rugged, PC-based high-performance measurement and automation system.
+
+Agilent Channel Partners
+www.agilent.com/find/channelpartners
+Get the best of both worlds: Agilent’s measurement expertise and product breadth, combined with channel partner convenience.
+
+Agilent Advantage Services
+Agilent Advantage Services is committed to your success throughout your equipment’s lifetime. To keep you competitive, we continually invest in tools and processes that speed up calibration and repair and reduce your cost of ownership. You can also use Infoline Web Services to manage equipment and services more effectively. By sharing our measurement and service expertise, we help you create the products that change our world.
+
+Americas
+Canada (877) 894 4414
+Brazil (11) 4197 3500
+Mexico 01800 504 800
+United States (800) 829 4444
+
+Asia Pacific
+Australia 1 800 629 485
+China 800 810 6189
+Hong Kong 800 938 693
+India 1 800 112 929
+Japan 0120 (421) 345
+Korea 080 769 080
+Malaysia 1 800 888 848
+Singapore 1 800 375 8100
+Taiwan 0800 047 866
+Other AP Countries (65) 375 8100
+
+Europe & Middle East
+Belgium +32 (0) 2 404 93 40
+Denmark +45 70 13 15 15
+Finland +358 (0) 10 855 2100
+France 0825 010 700* 
+Germany 49 (0) 7331 464 6333
+Ireland 1890 924 204
+Israel 972-2-928-504/544
+Italy 39 02 92 50 8484
+Netherlands 31 (0) 20 547 2111
+Spain 34 (91) 631 3300
+Sweden 0200-88 22 55
+United Kingdom 44 (0) 131 452 0200
+
+For other unlisted countries: www.agilent.com/find/contactus
+Revised: June 8, 2011
+
+Product specifications and descriptions in this document subject to change without notice.
+
+© Agilent Technologies, Inc. 2008, 2009, 2011
+Published in USA, October 12, 2011
+5989-0514EN
+```

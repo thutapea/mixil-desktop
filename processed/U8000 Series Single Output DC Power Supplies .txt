@@ -1,0 +1,368 @@
+=== Page 1 ===
+U8000 Series  
+Single Output DC Power Supplies  
+
+**Specifications**  
+
+| Model  | U8002A |  
+|--------|--------|  
+| Output Voltage | 0-30 V |  
+| Output Current | 0-5 A |  
+
+**Features**  
+- High-accuracy output  
+- Lightweight and compact design  
+- Reliable performance  
+
+**Dimensions**  
+- Height: 3.5 in (88.5 mm)  
+- Width: 10.1 in (256 mm)  
+- Depth: 11.8 in (300 mm)  
+
+**Weight**  
+- 5.5 lb (2.5 kg)  
+
+**Power Requirements**  
+- AC Input: 100 to 240 VAC ±10%, 50/60 Hz  
+
+**Ordering Information**  
+- U8002A: 0-30 V, 5 A Single Output DC Power Supply  
+- Accessories:  
+  - Line Cord  
+  - User Manual  
+
+=== Page 2 ===
+**Key Features**
+
+- Excellent load and line regulation:  
+  (CV: <0.01% +2 mV; CC: <0.02% + 2mA)
+
+- Low output noise: 1 mVrms (20 Hz to 20 MHz)
+
+- Over Voltage and Over Current Protection
+
+- LCD display with backlight capability
+
+- Standby output for safety purposes
+
+- Save-and-recall function upto three memory states
+
+- Security features: keypad lock and physical lock mechanism
+
+---
+
+**More Protection, More Convenience — For Less**
+
+It’s often difficult to find a power supply that is just right for your test requirements and your budget. Whether you’re manufacturing consumer products, testing electronic components, or simply looking for reliable, affordable power, the Keysight Technologies, Inc. family of basic power supplies now includes single output, non-programmable models in the 90 W to 150 W power range. With capabilities typically found only in programmable supplies, you get excellent value along with great efficiency in your work. As a result, you can minimize setup time and measurement errors and maximize device reliability. You’ll get the right power with a difference — backed by stringent safety certifications and Keysight quality standards — at an affordable price.
+
+The Keysight U8000 Series offers 90 W to 150 W single output, non-programmable DC power supplies that include features typically found only in costly programmable supplies. The U8000 Series delivers excellent value by providing reliable DC power, efficient setup capabilities, and important security features that let you address a variety of applications in electronics manufacturing and educational settings.
+
+---
+
+**Power That’s Suitable for Your Application Requirements**
+
+The Keysight U8000 Series with power ranging from 90 W to 150 W provides performance that is suitable for electronics manufacturing for computers and peripherals, communication systems and peripherals, aircraft/avionics systems, electronic components, and more. The U8000 Series complements the Keysight E3600 DC power supplies family to provide a wider range of power source alternatives.
+
+=== Page 3 ===
+```
+Work Efficiently with
+Great Features and Solid
+Performance —
+Within Budget
+
+Differentiated features typically
+found only in programmable power
+supplies
+
+The U8000 Series offers fully
+integrated over voltage protection
+(OVP) and over current protection
+(OCP) to prevent damage to the
+device-under-test (DUT). Using the
+capability to save and recall three
+memory states, you can minimize
+errors and reduce set-up time. The
+U8000 Series also provides security
+features such as keypad lock to
+prevent measurement errors due to
+accidental front panel usage.
+When the keypad lock is activated,
+the knob and all the buttons on the
+front panel are disabled except the
+keypad lock button. The physical
+lock mechanism found at the rear
+panel of the power supply provides
+secure instrument storage. The LCD
+display with backlight on/off options
+enables brighter display for data
+viewing (see Figure 2).
+
+Solid, reliable performance in its class
+
+The U8000 Series provides excellent
+load and line regulation (Constant
+Voltage, CV: < 0.01% +2 mV;
+Constant Current, CC: < 0.02% +2
+mA) to ensure stable output even
+when the load changes. With the
+fast 50 µsec transient response, test
+times and manufacturing cost are
+significantly reduced.
+
+The U8000 Series comes with low
+output noise of 1 mVrms, 3 mArms
+from 20 Hz to 20 MHz, providing
+clean output and minimizing the
+interference in the DUT.
+
+Get That Something Extra:
+Safety and Security
+
+The U8000 Series has been
+stringently tested according to
+various industrial safety standards:
+CSA (for US and CA regulatory
+requirements), C-tick (Australia),
+and CE (Europe). The U8000 Series
+is fully integrated with OVP and
+OCP in order to prevent damage
+to the DUT. The security features
+offered in the U8000 Series prevent
+measurement errors and also ensure
+safety storage of the power supply.
+Security features such as
+keypad locking capability preclude
+accidental front panel usage while
+the physical lock mechanism
+provides secure instrument storage.
+
+Front Panel Operation
+
+An easy-to-use rotary knob and
+self-guiding keypads allow you
+to set the output at your desired
+resolution without any effort. Also,
+both voltage and current levels can
+be set to a maximum resolution of
+10 mV/10 mA from the front panel.
+In addition, you can save and recall
+for up to three operating states
+that are stored in the internal non-
+volatile memory.
+
+Easy-to-use control functions:
+• Enabling or disabling OVP and
+OCP
+• Setting the OVP and OCP trip
+levels
+• Clearing OVP and OCP
+conditions
+• Setting and displaying the
+voltage and current limit values
+• Operating state storage/recall
+• Resetting the power supply to
+power-on state
+• Calibrating the power supply
+• Enabling or disabling the output
+
+Backlight ON
+
+Figure 2. Backlight on/off options for LCD display
+
+Backlight OFF
+
+Compliant to several safety standards—CSA, C-tick, CE
+
+Figure 3.
+
+Physical lock mechanism
+
+Find us at www.keysight.com
+```
+
+=== Page 4 ===
+```
+Features of the U8000 Series
+
+- Three storage locations (M1, M2, and M3) for user-defined operating states with save-and-recall capability
+- Highly visible LCD displaying actual values of output voltage and current in meter mode and limit values of voltage and current in limit mode
+- Fully integrated over voltage and over current protection to prevent damages to the DUT
+- Setting and display of the voltage and current limit values
+- Rotary knob for quick and analog-like control of voltage and current
+- Backlight On/Off options enabling brighter data display
+- Keypad Lock/Unlock options to prevent accidental front panel usage
+- Selects the knob control function for voltage and current adjustment
+- Versatile binding posts offer flexibility to use safety test leads, banana plugs or stripped wires
+- Control for enabling and disabling the output of the power supply
+```
+
+=== Page 5 ===
+```
+Performance Specifications
+
+Electrical Specifications
+
+Parameter                  U8001A              U8002A
+Output Ratings (at 0 °C to 40 °C) 
+                           0 to +30 V         0 to +30 V
+                           0 to 3 A          0 to 5 A
+
+Line and Load Regulation  
+                           CV: <0.01% +2 mV  
+                           CC: <0.02% +2 mA
+
+Ripple and Noise (25 °C ±5 °C)  
+                           CV: 12 mVp-p, <1 mVrms;  
+                           CC: 3 mArms
+
+Load Transient Response Time  
+                           (within 15 mV from full load to half 
+                           load and from half load to full load)  
+                           <50 µs 
+
+Programming Accuracy1 (25 °C ±5 °C)  
+                           <0.35% +20 mV  
+                           <0.35% +20 mA
+
+Readback Accuracy1 (25 °C ±5 °C)  
+                           <0.35% +20 mV  
+                           <0.35% +20 mA
+
+Meter Resolution  
+                           Voltage: 10 mV  
+                           Current: 10 mA
+
+Maximum Output Float Voltage  
+                           ±240 Vdc 
+```
+
+=== Page 6 ===
+```
+Supplemental Characteristics
+
+Parameter                     U8001A           U8002A
+Temperature Coefficient
+(for 12 months)              CV: <100 ppm/ °C  CC: <380 ppm/ °C  CC: <300 ppm/ °C
+
+Output Voltage Overshoot
+(during turn-on or turn-off of AC power state with the output control set to less than 1 V) <1 V
+
+Voltage Programming Speed, to within 1% of total excursion
+                            Up                 Full Load       150 ms
+                                                No Load         100 ms
+                            Down               Full Load       30 ms
+                                                No Load         450 ms
+
+Last Memory Setting Enabled   Yes
+
+Over Voltage Protection Response Time
+                            <1.5 ms when the trip voltage is equal to or greater than 3 V and <10 ms when the trip voltage is less than 3 V (average time for output to drop from 90% of output voltage to 1 V after OVP condition occurred)
+
+Protection Features
+Parameter                     U8001A           U8002A
+Over Voltage Protection Accuracy
+± (% of output + offset)     <0.5% +0.5 V
+
+Over Voltage Protection Programmable
+Range                        1 V to 33 V
+
+Over Current Protection Accuracy
+± (% of output + offset)     <0.5% +0.5 A
+
+Over Current Protection Programmable
+Range                        1 A to 3.3 A     1 A to 5.5 A
+
+AC Power Input Specifications
+Parameter                     U8001A           U8002A
+Input Power Option (selectable)  100 Vac ± 10%, 47 to 63 Hz
+                                115 Vac ± 10%, 47 to 63 Hz
+                                230 Vac ± 10%, 47 to 63 Hz
+
+Maximum Input Power          330 VA           500 VA
+
+Fuse                         External, customer assessable
+
+Physical Specifications
+Parameter                     U8001A           U8002A
+Dimensions (H x W x L)      88.1 mm x 212.3 mm x 394.3 mm
+Weight                       7.3 kg           8.3 kg
+```
+
+=== Page 7 ===
+```
+General Characteristics
+Display
+• Liquid Crystal Display (LCD)
+
+Operating Environment
+• Operating temperature from 0 °C to 40 °C (for full rated output) and 40 °C to 55 °C (for derated output)
+• Relative humidity up to 95%
+• Altitude up to 2000 meters
+
+Storage Compliance
+• -20 °C to 70 °C
+
+Safety and EMC Compliance
+Certified with:
+• IEC 61326:2002/
+EN61326:1997+
+A1:1998+A3:2003
+• CISPR 11:1990/
+EN55011:1990
+• Canada: ICES-001:2004
+• Australia/New Zealand: AS/
+NZS CISPR11:2004
+• IEC 61010-1:2001/EN61010-1:2001 (2nd Edition)
+• Canada: CAN/CSA-C22.2 No. 61010-1-04
+• USA: ANSI/UL 61010-1:2004
+
+Memory Operations
+Up to three operating states
+
+Calibration Cycle
+One year
+
+Warm-up time
+• 60 minutes
+
+Ordering Information
+• U8001A DC Power Supply, 30 V, 3 A
+• U8002A DC Power Supply, 30 V, 5 A
+
+Included Documentation:
+• U8001A-0B0 No documentation
+• package
+
+Additional Documentation:
+• U8001A-AB0 Traditional Chinese User’s and Service Guide
+• U8001A-AB2 China – Simplified
+• Chinese printed User’s and Service Guide
+• U8001A-ABA English User’s and Service Guide
+• U8001A-ACF Japanese User’s and Service Guide
+
+Calibration Document:
+• U8001A-UK6 Commercial calibration with test result data
+
+Power Options
+• Opt 0E9 90 to 110 Vac, 47 to 63 Hz
+• Opt 0EM 104 to 126 Vac, 47 to 63 Hz
+• Opt 0E3 207 to 253 Vac, 47 to 63 Hz
+
+Other Options
+• Option U800X-AUT Custom Power On (available only upon purchase with main model)
+• E3600A-100 Test lead kit
+• Option 1CM Rack-mount kit
+
+Rack-mount Kits
+• To rack-mount a single instrument:
+  - Adapter kit (P/N 5063-9240)
+• To rack-mount two instruments side-by-side:
+  - Lock-link kit (P/N 5061-9694)
+  - Flange kit (P/N 5063-9212)
+• To rack-mount two instruments in a sliding support shelf:
+  - Support shelf (P/N 5063-9255)
+  - Slide kit (P/N 1494-0015)
+```
+
+=== Page 8 ===
+I'm unable to extract text from this image.

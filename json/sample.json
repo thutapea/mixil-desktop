@@ -1,0 +1,92 @@
+[
+  {
+    "page_content": "The Agilent Technologies EXA Signal Analyzer (Model N9010A, 10Hz-7GHz) is located at the UAV Bench.",
+    "metadata": {
+      "make": "Agilent Technologies",
+      "model": "N9010A",
+      "category": "Signal Analyzer",
+      "location": "UAV Bench",
+      "source": "Lab Inventory"
+    }
+  },
+  {
+    "page_content": "The Agilent Technologies InfiniVision Mixed Signal Oscilloscope (Model MSO-X 2024A) is located at the UAV Bench.",
+    "metadata": {
+      "make": "Agilent Technologies",
+      "model": "MSO-X 2024A",
+      "category": "Oscilloscope",
+      "location": "UAV Bench",
+      "source": "Lab Inventory"
+    }
+  },
+  {
+    "page_content": "The Agilent U8002A Single Output DC Power Supply is located at the BIO Bench.",
+    "metadata": {
+      "make": "Agilent",
+      "model": "U8002A",
+      "category": "Power Supply",
+      "location": "BIO Bench",
+      "source": "Lab Inventory"
+    }
+  },
+  {
+    "page_content": "The Agilent N5230A PNA-L Network Analyzer is located at the BIO Bench.",
+    "metadata": {
+      "make": "Agilent",
+      "model": "N5230A",
+      "category": "Network Analyzer",
+      "location": "BIO Bench",
+      "source": "Lab Inventory"
+    }
+  },
+  {
+    "page_content": "The National Instruments NI-USB 6229 (Multifunction DAQ) location is currently unspecified.",
+    "metadata": {
+      "make": "National Instruments",
+      "model": "NI-USB 6229",
+      "category": "DAQ",
+      "location": "Unspecified",
+      "source": "Lab Inventory"
+    }
+  },
+  {
+    "page_content": "The Thorlabs TC200 Temperature Controller location is currently unspecified.",
+    "metadata": {
+      "make": "Thorlabs",
+      "model": "TC200",
+      "category": "Temperature Controller",
+      "location": "Unspecified",
+      "source": "Lab Inventory"
+    }
+  },
+  {
+    "page_content": "The Agilent E3631A Triple Output DC Power Supply location is currently unspecified.",
+    "metadata": {
+      "make": "Agilent",
+      "model": "E3631A",
+      "category": "Power Supply",
+      "location": "Unspecified",
+      "source": "Lab Inventory"
+    }
+  },
+  {
+    "page_content": "The Amput Counting Scale location is currently unspecified.",
+    "metadata": {
+      "make": "Amput",
+      "model": "Unknown",
+      "category": "Scale",
+      "location": "Unspecified",
+      "source": "Lab Inventory"
+    }
+  },
+  {
+    "page_content": "The U.S. Solid Electronic Balance (SLSC) location is currently unspecified.",
+    "metadata": {
+      "make": "U.S. Solid",
+      "model": "SLSC",
+      "category": "Balance",
+      "location": "Unspecified",
+      "source": "Lab Inventory"
+    }
+  }
+]

@@ -1,0 +1,1124 @@
+=== Page 1 ===
+I'm unable to extract text from images or documents directly. However, if you provide me with the text or specific information you're looking for, I would be glad to assist you!
+
+=== Page 2 ===
+```
+Table of Contents
+
+Chapter 1 Warning Symbol Definitions ........................................................................................... 1
+Chapter 2 Description ..................................................................................................................... 2
+Chapter 3 Safety .................................................................................................................................. 3
+Chapter 4 Features ............................................................................................................................ 4
+4.1. Front and Rear Panel .......................................................................................................... 4
+4.2. Operation ............................................................................................................................... 5
+Chapter 5 Stand-Alone Operation .................................................................................................. 7
+5.1. Initial Setup ............................................................................................................................. 7
+5.2. Turning the Controller On ..................................................................................................... 7
+5.3. Enabling the Heater................................................................................................................ 7
+5.4. Adjusting the Temperature in NORMAL Mode ................................................................. 7
+5.5. Turning the Heater Off .......................................................................................................... 8
+5.6. Navigating the Front Panel .................................................................................................. 8
+5.6.1. Overview ....................................................................................................................... 8
+5.6.2. Selecting and Adjusting the Gains: P, I, D, and Tune ............................................. 8
+5.6.3. Selecting the Temperature Sensor: PTC100 vs. PTC1000 vs. TH10K ................ 10
+5.6.4. Selecting and Adjusting the Maximum Temperature and Power: TMAX and PMAX .... 11
+5.6.5. Selecting the Units Displayed: Celsius vs. Fahrenheit vs. Kelvin ....................... 11
+5.6.6. Selecting the Operating Mode: NORMAL vs. CYCLE ......................................... 12
+5.7. CYCLE Mode ......................................................................................................................... 13
+5.8. TUNE Function ...................................................................................................................... 14
+5.9. TMAX Function ...................................................................................................................... 14
+5.10. Sensor Alarm ......................................................................................................................... 15
+5.11. Setting the PID Gains ......................................................................................................... 15
+Chapter 6 Operating from a Computer ........................................................................................ 16
+6.1. Overview ................................................................................................................................... 16
+6.2. Installation .............................................................................................................................. 16
+6.2.1. Software and USB Driver Installation .......................................................................... 17
+6.3. The Command Line Interface ............................................................................................. 20
+6.3.1. Setup and Connection .................................................................................................... 20
+6.3.2. Terminal Commands and Queries .............................................................................. 21
+Chapter 7 Output Connector Pin-Outs ....................................................................................... 25
+Chapter 8 Temperature Sensor Specifications ......................................................................... 26
+8.1. PT100 and PT1000 .............................................................................................................. 26
+8.2. TH10K ......................................................................................................................................... 26
+```
+
+=== Page 3 ===
+```
+Temperature Controller
+
+Chapter 9 Troubleshooting ...................................................................................................... 27
+Chapter 10 General Maintenance ............................................................................................... 28
+10.1. AC Line Voltage ............................................................................................................. 28
+10.2. Installing Fuses ............................................................................................................ 28
+10.3. General Maintenance .................................................................................................... 28
+10.4. Cleaning ........................................................................................................................... 28
+Chapter 11 Auxiliary Output ........................................................................................................ 29
+11.1. Operating the Gas Cell Heater .................................................................................... 29
+11.2. Alternate Use of the Auxiliary Output ....................................................................... 29
+Chapter 12 Specifications ............................................................................................................ 30
+12.1. Accessories ..................................................................................................................... 30
+Chapter 13 Warranty .................................................................................................................... 31
+Chapter 14 Regulatory .................................................................................................................. 32
+Chapter 15 Certifications and Compliance ............................................................................. 33
+Chapter 16 Thorlabs Worldwide Contacts ............................................................................ 34
+```
+
+=== Page 4 ===
+```
+Chapter 1  Warning Symbol Definitions
+
+Note: Throughout this manual, references to temperature are with respect to °C, even though the TC200 can be set to display °C, °F, or K.
+
+Below is a list of warning symbols you may encounter in this manual or on your device.
+
+Symbol                          Description
+-------------------------------------------------------
+-                               Direct Current
+∿                               Alternating Current
+⏣                               Both Direct and Alternating Current
+⏚                               Earth Ground Terminal
+⏑                               Protective Conductor Terminal
+⏤                               Frame or chassis Terminal
+⏙                               Equipotentiality
+⏻                               On (Supply)
+⏼                               Off (Supply)
+⬤                               In Position of a Bi-Stable Push Control
+⬩                               Out Position of a Bi-Stable Push Control
+⚡                               Caution, Risk of Electric Shock
+🔥                               Caution, Hot Surface
+⚠                               Caution, Risk of Danger
+🔴                               Warning, Laser Radiation
+⚙                               Caution, Spinning Blades May Cause Harm
+
+Rev P, February 21, 2019
+Page 1
+```
+
+=== Page 5 ===
+```
+Chapter 2  Description
+
+The TC200 Temperature Controller is a bench top controller intended for use with resistive heating elements rated up to 18 Watts. This general purpose instrument can drive various types of heaters, including foil and resistive coil types. It accepts feedback from either positive or negative temperature coefficient thermistors, has programmable P, I, and D gains, and will display the temperature in °C, °F, or K. In addition, it can be programmed for up to five sequential temperature settings along with associated ramp and hold times for each level. A user-programmable maximum temperature limit provides protection to the device being heated, and a user-programmable power limit protects the heating element from being over driven.
+
+•  Capable of stand-alone operation from a simple keypad interface, the TC200 can be interfaced with a PC using a standard USB Type B connector and our TC200 Application Program. Interfacing with a PC can also be achieved by using LabView® or LabWindows® with a simple command-line interface from any terminal window.
+
+Contents of Package
+
+Each TC200 is shipped with the following standard accessories:
+
+•  TC200 User Guide
+•  IEC 320-Compatible 120 VAC Line Cord for North American AC Wall Sockets (with the TC200) or
+•  230 VAC Line Cord for Europe (with the TC200-EC)
+•  CD-ROM Containing TC200 Application Software and USB Drivers
+•  USB Standard B Cable
+
+Page 2  TTN051989-D02
+```
+
+=== Page 6 ===
+# Chapter 3  Safety
+
+**SHOCK WARNING**  
+**HIGH VOLTAGE INSIDE**  
+To avoid electrical shock, the power cord protective grounding conductor must be connected to ground. Do not operate without cover installed. Refer servicing to qualified personnel.
+
+Thorlabs provides the proper 120 VAC power input cable with each TC200 for use in the United States and the proper 230 VAC power input cable with each TC200-EC for use in Europe. If using this unit anywhere else, the user will need to supply a properly grounded power cable to power the unit.
+
+**ATTENTION**  
+Do not obstruct the air ventilation slots in the housing.
+
+All statements regarding safety of operation and technical data in this instruction manual will only apply when the unit is operated correctly.
+
+**WARNING**  
+Before applying power to your TC200 system, make sure that the protective conductor of the 3 conductor mains power cord is correctly connected to the protective earth contact of the socket outlet! Improper grounding can cause electric shock resulting in severe injury or even death.
+
+Make sure that the line voltage rating marked on the rear panel agrees with your local supply and that the appropriate fuses are installed. Changing of the mains fuse can be done by the user (see page 28 for details).
+
+**ATTENTION**  
+This unit must not be operated in explosive environments.
+
+With the exception of the mains fuses, there are no user-serviceable parts in this product.
+
+This device can only be returned when packed into the **complete original packaging**, including all foam packing inserts. If necessary, ask for a replacement package.
+
+Mobile telephones, cellular phones or other radio transmitters are not to be used within the range of three meters of this unit since the electromagnetic field intensity may exceed the maximum allowed disturbance values according to EN50082-1.
+
+=== Page 7 ===
+```
+Chapter 4  Features
+
+4.1.  Front and Rear Panel
+
+Figure 1  TC200 Front and Rear Panel
+
+1.  Power On Indicator  – When this text is lit, power is applied to the unit.
+
+2.  LCD Display  – Provides status and temperature information when in the main screen as shown above. Various programmable mode screens are accessible via the Keypads (4). See Navigating the Front Panel on page 8 for more details.
+
+3.  Power Switch  – Turns the unit On and Off.
+
+4.  Heater On Indicator  – When this text is lit, the output relay is energized, and the heater controller is enabled. Note: there are situations where the indicator (and relay) will NOT be on, yet the heater controller will still be enabled – See Maximum Temperature Shutdown on page 6.
+
+5.  Keypads  – Used to adjust the temperature set-point (Temp Set), enable and disable the output, and navigate through the various Mode screens.
+
+6.  Cooling Fan
+
+7.  Auxiliary Output  – This output is intended for use only with Thorlabs' GCH Gas Cell Heaters. It provides an unregulated output current proportional to the Main Output current. See page 29 for more information.
+```
+
+=== Page 8 ===
+```
+8. Main Output – Use this output to connect to the heating system. See page 25 for connector information.
+
+9. AC Input Connector
+
+10. USB Connector – Use this connector for all serial interface connections.
+
+4.2 Operation
+1. Programmable Proportional (P), Integral (I), and Derivative (D) gain settings – The P, I, and D gains can each be set to values from 0 to 250 (I and D) and 1 to 250 (P gain only). These values indicate representative shares of each gain stage, not absolute gain values (which are fixed internally). Adjust each of the gains accordingly to affect the best response from the particular heating system being controlled. See page 9 for more details.
+
+2. Automatic Offset Tune – Often times P, I, or D controllers will not perform as one would hope, leaving either an offset value or constant oscillations about the set-point. The TUNE function allows the user to tune the output of the TC200 exactly to the set-point value without having to adjust the P, I or D controls. Ideally the I gain and D gain settings should be set to zero and only the P gain should be adjusted to provide a stable temperature. Once the temperature has reached its maximum value (which should be slightly less than the set-point), enabling the TUNE function will digitally calculate the offset and adjust the output to meet the set-point.
+
+3. Selectable Resistive Sensors – The TC200 allows the use of three different types of resistive temperature sensors: platinum PT100 and PT1000 resistors with Positive Temperature Coefficients (PTC), and a standard Negative Temperature Coefficient (NTC) TH10K 10 kΩ resistor. When selecting TH10K as the sensor, you can also enter the Beta value for the device to provide more accurate operation. The default Beta value supplied with the unit is 3970. See page 26 for more information on the sensors.
+
+4. Maximum Temperature Limit – A value for a maximum temperature limit (TMAX) can be programmed into the TC200. TMAX can range from 20.0 to 205.0 °C. The set-point value is limited to a maximum of TMAX or 200.0 °C, whichever is lower. If TMAX is set to a value that is below the current set-point temperature, the set-point will automatically be lowered to the TMAX value, along with stopping temperatures programmed into the cycle parameters that are greater than TMAX. Note: The capability to attain Maximum Temperature is load dependent.
+
+5. Maximum Power Limit – A value for a maximum output power (PMAX) can be programmed into the TC200. Based on a maximum output voltage of 24 VDC, the PMAX value will provide the proper current limit to the output current source that is required to limit the maximum power to the heating device.
+
+6. Selectable Temperature Display Units – All temperature values displayed on the front panel LCD display can be presented in either °C, °F, or K. Internally, the unit operates strictly on °C formats. Due to the conversion factor used, values displayed in °F will not increment at even 0.1° steps as they do with °C and K.
+
+7. NORMAL vs. CYCLE Modes – Two operating modes are possible with the TC200. In NORMAL mode, the unit operates as a single point controller, maintaining the set-point for as long as the user requires. In CYCLE mode, the user can program one to five distinct temperature levels. A “ramp” time (in minutes) can be programmed for each step to determine how long it will take to get from the starting temperature to the stopping temperature. A “hold” time (also in minutes) can be programmed to determine how long the system will stay at the stopping temperature before moving on to the next step. During the course of any step, CYCLE Mode can be paused, stopping the ramp or hold timers at their present count. Removing the paused function will resume the cycle at the same point at which it was paused.
+
+8. Sensor Alarms – The TC200 can determine whether a temperature sensing element is short circuited or not installed (open circuit). If a short or open circuit occurs, the TEMP ACTUAL field in the main LCD
+```
+
+=== Page 9 ===
+```
+Temperature Controller
+Chapter 4: Features
+
+display screen will read !SENSOR! If the sensor alarm occurs during normal operation, the output will immediately be disabled. The unit cannot become enabled again until the error is resolved.
+
+ATTENTION
+The TC200 can only determine shorted or open sensor connections; it cannot determine if the installed sensor does not match the programmed sensor selection. Care must be taken to ensure that the settings match the actual sensor used, or damage will occur to the heating system.
+
+9. Maximum Temperature Shutdown – Based on the setting of the TMAX parameter discussed above, if the TC200 reads back a temperature value that equals or exceeds TMAX, the output relay will be opened and !TMAX! will be displayed in the MODE field of the main LCD display screen. The controller, however, will remain enabled. Once the system temperature lowers down to the set-point value, the output relay will be closed, connecting the controller to the heater again. If the temperature increases past TMAX again, the relay will open. If this cycle occurs three times, on the third time, the relay will open and the controller will automatically disable. The TMAX text will continue to be displayed until it is cleared manually by the user by either pressing the SELECT keypad while in the main screen, or by pressing the ENABLE keypad.
+
+Page 6
+TTN051989-D02
+```
+
+=== Page 10 ===
+```
+Temperature Controller                              Chapter 5: Stand-Alone Operation
+
+Chapter 5      Stand-Alone Operation
+
+5.1. Initial Setup
+1. Place the unit on a dry, level working surface.
+2. Make sure the POWER switch on the front of the unit is in the OFF position (0).
+3. Plug the female end of the provided AC line cord into the AC Input Receptacle on the rear of the unit. Plug the male end into a properly grounded AC socket.
+4. Connect the heater to be controlled to the MAIN OUTPUT connector on the rear panel of the unit. Refer to page 25 for information on proper connections to the output connectors.
+
+5.2. Turning the Controller On
+1. Press the POWER switch to the ON position (|). If the AC line voltage is sufficient and the internal power supply in the unit is fully functional, the PWR ON indicator will light up and the LCD screen will display a brief message stating the model number and the firmware revision. After approximately 2 seconds, this message will scroll off of the screen and the main LCD screen will appear.
+2. The default power-up settings for the main screen are always NORMAL Mode, heater disabled, the last active sensor type used, and the last temperature set-point that was active on the unit. To change these settings, see Navigating the Front Panel on page 8.
+3. All parameters from the last working session with the controller will be loaded during unit initialization. These include: PID gain settings, “Tuning” offset, sensor selection (including the TH10K Beta value if applicable), Maximum Temperature TMAX setting, Maximum Power PMAX setting, the last display units used (°C, °F, or K), and all cycle mode parameters for the five programmable cycle steps.
+4. If the heater has not been operated yet, the TEMP ACTUAL field on the LCD display should show a value appropriate for a “cold” system (somewhere around room ambient temperature). If it is noticeably different, you should double-check that the selected sensor (PTC100, PTC1000, TH10K) matches the actual sensor used in your heating system.
+
+5.3. Enabling the Heater
+1. Press and release the ENABLE keypad on the front panel to turn on the heater. At this time, the Heater ON indicator will immediately light up. If not, see page 27 for troubleshooting suggestions.
+2. If successfully enabled, the STATUS field in the LCD screen will read “ENABLED” and the MODE field will read either “NORMAL” or “CYCLE” depending on the particular mode chosen.
+
+5.4. Adjusting the Temperature in NORMAL Mode
+The set-point temperature can be changed at any time while in NORMAL Mode, regardless of whether the controller is enabled, simply by pressing the UP or DOWN arrow keypads. Pressing the UP arrow will increment the temperature by 0.1°, and pressing the DOWN arrow will decrement the temperature by 0.1°. As with all of the numeric adjustments that can be done on the TC200, holding the arrow keypads down will accelerate the rate of increase or decrease the longer the arrow keypad is held down.
+
+Rev P, February 21, 2019                       Page 7
+```
+
+=== Page 11 ===
+```
+5.5. Turning the Heater Off
+• When necessary, the heater output can be turned off by either pressing and releasing the ENABLE keypad or pressing the POWER switch to the OFF (0) position, which will turn off the entire unit.
+• The heater will also turn off immediately if a shorted or open temperature sensor is detected. In that case, !SENSOR! will be displayed on the LCD screen.
+• Whenever the unit is ON and the heater is not enabled, the status will be indicated as “DISABLED” on the LCD and the HEATER ON indicator will be turned off.
+
+5.6. Navigating the Front Panel
+5.6.1. Overview
+• The front panel contains six keypads that can be used for various functions depending on what menu screen is actively displayed.
+• The Main Display screen displays the selected temperature sensor, the basic operating mode (NORMAL or CYCLE), the current temperature set-point, the current actual temperature, and various status messages such as ENABLED, DISABLED, !TMAX!, and !SENSOR! alarms.
+• There are five MODE screens: PID parameters, Sensor Select, TMAX/PMAX values, Units Display (°C, °F, or K), and NORMAL vs. CYCLE Mode.
+• There is a sixth sub-menu for programming the CYCLE Mode parameters: Stop Temp, Ramp Time, and Hold Time.
+• Use the MODE keypad to access the Mode screens.
+• While a menu is displayed, use the SELECT keypad to move the flashing cursor to the various selection options.
+• Pressing the ENTER keypad while in the Main Display screen and in NORMAL mode has no effect.
+• Pressing the ENTER keypad while in the Main Display screen and CYCLE Mode will PAUSE the cycle. See CYCLE Mode on page 13 for more details.
+• Pressing the ENTER keypad while in a Mode menu screen will accept and save the option that corresponds to the flashing cursor and advance you to the next menu screen or back to the MAIN screen, depending on the situation.
+• Use the UP and DOWN keypads to change the set-point temperature while in the Main screen.
+• Use the UP and DOWN keypads to change numerical options while in any of the Mode screens.
+• Pressing the MODE keypad at any time while in a mode menu will do one of the following:
+  o If you are in the PID Mode screen, pressing the MODE keypad will advance to the Sensor Select menu without changing any of the current PID values.
+  o If you are in the Sensor Select screen, pressing the MODE keypad will advance to the TMAX/PMAX Mode screen without changing the sensor selection.
+  o If you are in the TMAX/PMAX Mode screen, pressing the MODE key will advance to the Display Units Selection screen without changing the units.
+```
+
+=== Page 12 ===
+```
+Temperature Controller                                      Chapter 5: Stand-Alone Operation
+
+o If you are in the Display Units Selection screen, pressing the MODE keypad will advance to the NORMAL vs. CYCLE Mode screen without changing the units.
+
+o If you are in the NORMAL vs. CYCLE Mode screen, pressing the MODE keypad will advance to the Main screen without changing the Operating Mode selection.
+
+* Pressing the ENABLE keypad at any time, in any screen* will either enable or disable the heater, depending on its current status.
+
+* While in the Cycle Parameters screen, you can only disable the heater.
+
+* Special Functions – While in the Main Display screen, the SELECT keypad will perform two special functions:
+  o If you are using Thorlabs’ gas cell heaters in conjunction with the auxiliary output, pressing the SELECT key will momentarily display the auxiliary heater's temperature. This function only works when the PTC100 sensor is selected.
+  
+  o If a TMAX error occurs, pressing the SELECT keypad will clear the error.
+
+5.6.2. Selecting and Adjusting the Gains: P, I, D, and Tune
+Changing the P, I, or D Gains
+
+1. While in the Main Screen press the MODE keypad once.
+
+2. The screen will now display the P, I, and D values as well as the text “TUNE” or “DETUNE”.
+
+3. The cursor will be flashing over the “P” for the proportional gain value.
+
+4. Adjust the P gain using the UP or DOWN arrow keypads. The P gain is adjustable from 1 to 250.
+
+5. Press the SELECT keypad to move the cursor to the “I” for integral gain.
+
+6. Adjust the I gain using the UP or DOWN arrow keypads. The I gain is adjustable from 0 to 250.
+
+7. Press the SELECT keypad to move the cursor to the “D” for derivative gain.
+
+8. Adjust the D gain using the UP or DOWN arrow keypads. The D gain is adjustable from 0 to 250.
+
+9. Press the MODE keypad to escape to the next Mode screen (Sensor Select) without making any changes to the current parameters.
+
+10. Alternatively, press the ENTER keypad to accept any changes made to the P, I, or D values and return to the Main Display screen.
+
+Note: The PID screen is the only Mode screen that will return directly to the Main Display screen upon pressing the ENTER keypad. All other Mode screens will save changes and advance to the next Mode screen.
+
+Rev P, February 21, 2019                                             Page 9
+```
+
+=== Page 13 ===
+```
+Temperature Controller                                  Chapter 5: Stand-Alone Operation
+
+Activating or Deactivating the TUNE Function
+
+Note: The TUNE function is only accessible in NORMAL mode when the heater is enabled. It cannot be accessed at any time in CYCLE mode or when the heater is disabled.
+
+1. While in the Main Display screen, press the MODE keypad once.
+2. The screen will now display the PID values and “TUNE” or “DETUNE” depending on the status of the TUNE function.
+3. Press the SELECT key three times to advance to the TUNE/DETUNE text.
+4. Press the ENTER keypad once.
+5. The MAIN screen will now be displayed.
+6. Please refer to TUNE Function on page 14 for more information on tuning the TC200.
+
+5.6.3. Selecting the Temperature Sensor: PTC100 vs. PTC1000 vs. TH10K
+
+Programming the Appropriate Temperature Sensor
+
+1. While in the Main Display screen press the MODE keypad twice.
+2. The screen will now display PTC100, PTC1000, TH10K, and the Beta value.
+3. The cursor will be flashing over the “P” for PTC100.
+4. Pressing the ENTER keypad at this time will select the PTC100 and advance you to the next Mode screen (TMAX/PMAX).
+5. Otherwise, press the SELECT keypad to move the cursor to the “P” for PTC1000.
+6. Pressing the ENTER keypad at this time will select the PTC1000 and advance you to the next Mode screen (TMAX/PMAX).
+7. Otherwise, press the SELECT keypad to move the cursor to the “T” for TH10K.
+8. Pressing the ENTER keypad at this time will select the TH10K and advance you to the “B” for the Beta value within the same Mode screen.
+9. Use the UP or DOWN keypads to adjust the Beta value in increments of 10 from 2000 to 6000. For entering exact Beta values, see The Command Line Interface on page 16 or The TC200 Application Software on page 16.
+10. Pressing the ENTER keypad at this time will accept the Beta value and advance you to the next Mode screen (TMAX/PMAX).
+11. Press the MODE keypad to escape to the next Mode screen (TMAX/PMAX) without making any changes to the current parameters.
+
+Note: Any attempt to change the sensor while the heater is enabled will immediately disable the heater.
+
+Page 10                                            TTN051989-D02
+```
+
+=== Page 14 ===
+```
+5.6.4. Selecting and Adjusting the Maximum Temperature and Power: TMAX and PMAX
+Changing the TMAX or PMAX Values
+1. While in the Main Screen display, press the MODE keypad three times.
+2. The screen will now display the TMAX and PMAX values.
+3. The cursor will be flashing over the “T” for the TMAX value.
+4. Adjust the TMAX value using the UP or DOWN arrow keypads. TMAX is adjustable from 20.0 °C to 205.0 °C.
+5. Press the SELECT Key to move the cursor to the “P” for the PMAX value.
+6. Adjust the PMAX value using the UP or DOWN arrow keypads. PMAX is adjustable from 0.1 Watts to 18.0 Watts.
+7. Press the MODE keypad to escape to the next Mode screen (Units Select) without making any changes to the current parameters.
+8. Alternatively, press the ENTER keypad to accept any changes made to the TMAX or PMAX values, and then advance to the next mode screen (Units Select).
+
+5.6.5. Selecting the Units Displayed: Celsius vs. Fahrenheit vs. Kelvin
+The Main screen and Mode screens display various information regarding the output temperature. These values can be displayed as °C, °F, or K, depending on the user’s preferences.
+Changing the Format of the Temperature Display
+1. While in the Main Display screen, press the MODE keypad four times.
+2. The screen will now display the Display Units Selection menu with the text “CELSIUS”, “KELVIN”, and “FAHRENHEIT”.
+3. The cursor will be flashing over the “C” in CELSIUS.
+4. Pressing the ENTER keypad at this time will select Celsius and advance you to the next Mode screen (NORMAL vs. CYCLE Mode).
+5. Otherwise press the SELECT keypad to move the cursor to the “K” for KELVIN.
+6. Pressing the ENTER keypad at this time will select Kelvin and advance you to the next Mode screen (NORMAL vs. CYCLE Mode).
+7. Otherwise press the SELECT keypad to move the cursor to the “F” for Fahrenheit.
+8. Pressing the ENTER keypad at this time will select Fahrenheit and advance you to the next Mode screen (NORMAL vs. CYCLE Mode).
+9. Pressing the MODE keypad at any time will advance you to the next Mode screen without changing the display format.
+```
+
+=== Page 15 ===
+# 5.6.6. Selecting the Operating Mode: NORMAL vs. CYCLE
+
+## Changing the Operating Mode
+
+1. While in the Main screen press the **MODE** keypad five times.
+2. The screen will now display “NORMAL MODE” and “CYCLE MODE”.
+3. The cursor will be flashing over the “N” for NORMAL mode.
+4. Pressing the **ENTER** keypad at this time will select NORMAL mode and advance you to the MAIN screen.
+5. Press the **MODE** keypad to escape to the Main screen without making any changes to the current mode.
+6. Otherwise, press the **SELECT** keypad to move the cursor to the “C” for CYCLE mode.
+7. Press the **MODE** keypad to escape to the Main screen without changing to CYCLE mode.
+8. Pressing the **ENTER** keypad at this time will select CYCLE Mode and advance you to the Cycle Parameters screen described in the following section.
+
+## Changing the Cycle Parameters
+
+The Cycle Parameters menu is a sub-menu of the NORMAL vs. CYCLE Mode menu that can only be accessed if CYCLE Mode has been selected.
+
+The Cycle Parameters can only be adjusted if the heater is disabled. You can navigate and review the parameter settings while a cycle is in progress, however.
+
+Once you have accessed the Cycle Parameters menu you can make adjustments as follows:
+
+1. Use the **SELECT** keypad to move the cursor to the parameter that you wish to change:
+   - The **STOP Temperature** is located in the upper left, “T=nnn.n”.
+   - The **RAMP** time is located in the upper right, “Rt=nnn m”
+   - The **HOLD** time is in the lower left, “Ht=nnn m”
+   - The **STEP #** is in the lower right.
+
+2. Use the **UP** and **DOWN** arrow keypads to increase or decrease the parameters.
+3. Use the **SELECT** keypad to advance to the various parameters.
+   - The valid range for the **STOP** temperature is 20.0 °C to **TMAX** or 200.0 °C, whichever is lower.
+   - The valid range for the **RAMP** and **HOLD** times is 1 to 999 minutes.
+
+4. Pressing the **ENTER** keypad at any time will accept the changes and advance you to the next step’s parameter screen. After step 5, you will be returned to the Main screen.
+5. Pressing the **MODE** keypad at any time will return you to the Main screen without changes.
+
+**Note:** The cycles will initiate the next time the heater is enabled.
+
+=== Page 16 ===
+```
+5.7. CYCLE Mode
+• The STOP temperature determines the final temperature that the system will try to go to in the amount of time determined by the Ramp time value.
+
+• The RAMP time is how long it will take to go from a starting temperature to a stopping temperature.
+
+• The HOLD time is how long the cycle will stay at the STOP temperature before advancing to the next step, also known as “dwell time”.
+
+• The initial starting temperature is determined to be whatever the TEMP SET value is at the start of a cycle. After that, the starting temperature of the subsequent step is the stopping temperature from the previous step. That is, the stopping temperature for step 1 will be the starting temperature for step 2, and so forth.
+
+• The number of steps can be reduced by programming in the same STOP Temperature for any steps that you don’t need. That is, if you only want one cycle that ramps from TEMP SET to the STOP temperature over a certain amount of time, simply program in the same STOP temperature for steps 2 – 5. Once the step 1 HOLD time expires, the cycle will “jump” over steps 2 – 5 and resume operation in NORMAL mode.
+
+• NOTE: By the same token, if your starting value for TEMP SET is the same as your stopping value for step 1, then step 1 will appear to be jumped over. If ALL off your stopping values are the same as your TEMP SET value then it will appear as though the cycle never happened.
+
+• During the course of a cycle, the following actions can be taken:
+1. While in the Main screen, pressing the ENTER keypad at any time will cause the scan to pause. Once paused, the cycle will hold at the current ramp or hold time count and remain there with the heater still enabled. Pressing the ENTER keypad again will cause the scan to resume at the current channel.
+
+2. While in any screen, pressing the ENABLE keypad at any time will cause the cycle to terminate completely, turning off the heater, disabling the output, and changing the operating mode to NORMAL.
+
+3. At no time during an active cycle can the set-point be adjusted from the Main screen using the UP or DOWN arrow keypads.
+
+4. At no time during an active cycle can any of the cycle parameters be adjusted.
+
+• CYCLE Mode will be terminated and changed back to NORMAL Mode as follows:
+  o Letting a cycle completely run its course will change the mode back to NORMAL, and the temperature will remain at the last stopping temperature with the heater still enabled.
+
+  o Pressing the ENABLE keypad during an active cycle will terminate the cycle and disable the heater.
+
+From the main screen, press the MODE keypad five times:
+  ▪ The NORMAL vs. CYCLE Mode menu will come on, with NORMAL mode as the active selection.
+
+  ▪ Pressing the ENTER keypad at this point will terminate the cycle at the current temperature and return you to the Main screen. The heater will remain enabled.
+```
+
+=== Page 17 ===
+```
+5.8. TUNE Function
+• The TUNE function is a manually enabled feature that digital calculates the offset between the TEMP SET value and the TEMP ACTUAL value. The offset is only calculated at one time and is not actively adjusted after that point.
+
+• Once the TUNE function is activated, the TEMP ACTUAL value should slowly adjust to within 0.1 °C of the TEMP SET value. The rate of adjustment and accuracy depends on the PID settings.
+
+• The TUNE function should only be set once the output has reached a final value and has settled completely. Activating a TUNE function while the temperature is changing will result in less than ideal performance.
+
+• If the unit is being DETUNED, the output will develop an offset between the set-point and actual temperatures.
+
+Note: For best results, the I and D values should be set to zero. The output must be completely settled before starting a TUNE function. If for whatever reason the output needs to be retuned, you must select DETUNE from the Gains mode screen, wait for the offset to settle out, and then select TUNE again.
+
+• The offset value calculated by any tune function will be saved to memory and will be loaded on the next power up of the unit.
+
+• To determine if an offset value exists from a tuning action, simply enter the PID Gains mode screen. If the text reads DETUNE, then there is an offset present.
+
+In general, the offset should be consistent for a large range of temperatures for the same heating system. It may be necessary, however, to detune and then re-tune after changing set points.
+
+• Adjustments to the P, I, or D gains will affect the offset value and therefore, if the P, I, or D values are adjusted after a tuning action has been done, the offset will be detuned.
+
+• The TUNE function can only be set while in NORMAL Mode. It is not accessible while operating in CYCLE Mode. Once an offset is tuned in NORMAL mode, however, the tuning action will still apply to the target temperatures set in the cycle parameters.
+
+5.9. TMAX Function
+• The TMAX function allows the user to set the maximum temperature to which the control will operate.
+
+• The TEMP SET set-point temperature will be limited to the current TMAX or 200.0 °C, whichever is lowest. If the TMAX value is adjusted to a value lower than the current TEMP SET value, the TEMP SET value will be changed to match TMAX. Note: The capability to attain Maximum Temperature is load dependent.
+
+• The STOP temperature values in the cycle parameters are limited to the current TMAX or 200.0 °C, whichever is lowest. If the TMAX value is adjusted to a value lower than any of the current STOP temperature values, the STOP temperature values will be changed to match TMAX.
+
+• If the TC200 reads back a temperature value that equals or exceeds TMAX, the output relay will be opened and !TMAX! will be displayed in the MODE field of the Main Display screen. The controller, however, will remain enabled. Once the system temperature reduces down to the TEMP SET set-point value, the output relay will re-close, connecting the controller to the heater again. If the temperature increases past TMAX again, the relay will re-open. If this cycle occurs three times, on the third time, the relay will open and the controller will automatically disable. The TMAX text will continue to be displayed.
+```
+
+=== Page 18 ===
+### Temperature Controller  
+**Chapter 5: Stand-Alone Operation**
+
+- until it is cleared manually by the user by either pressing the **SELECT** key while in the Main screen, or pressing the **ENABLE** keypad.
+
+- If the temperature stabilizes to **TEMP SET** after having crossed the **TMAX** threshold less than three times, the **!TMAX!** alarm will remain active in the Main Display screen to alert a user to the fact that the system exceeded **TMAX** momentarily. The **!TMAX!** display can be cleared by pressing the **SELECT** keypad while in the Main Display screen.
+
+- Pressing the **SELECT** keypad while in the Main Display screen will always clear the **TMAX** count and resets the alarm.
+
+- Pressing the **ENABLE** keypad at any time with a **TMAX** alarm present will disable the heater and clear and reset the **TMAX** alarm.
+
+#### 5.10. Sensor Alarm
+
+- The TC200 can determine whether a temperature sensing element is short circuited or not installed (open circuit). If this occurs, the **TEMP ACTUAL** field in the Main LCD display screen will read **!SENSOR!** If the sensor alarm occurs during normal operation, the output will immediately be disabled. The unit cannot become enabled again until the error is resolved.
+
+**ATTENTION**  
+The TC200 can only determine shorted or open sensor connections; it cannot determine if the installed sensor does not match the programmed sensor selection. Care must be taken to ensure that the settings match the actual sensor used, or damage will occur to the heating system.
+
+- A common sense approach to verifying the proper sensor is selected is to simply connect a heating system to a unit that has been sitting at room ambient temperature for a while. Observe the **TEMP ACTUAL** value displayed on the TC200. If the sensor has been properly programmed, the display will show a value corresponding to the room ambient temperature.
+
+#### 5.11. Setting the PID Gains
+
+- The PID gains determine the overall stability and accuracy of the entire heating system. Incorrect values, especially for the Integral (I) gain, could result in undesired overshoots and instabilities.
+
+- A good approach to setting these values is to start with a mid-range value (125) for the P gain and to set both I and D gains to zero (0).
+
+- Enable the heater and observe the response and settling times. Typically, the system will undershoot the set-point and settle to a value below **TEMP SET**. Despite the offset, the temperature should remain fairly stable.
+
+- If the temperature offset is too great (greater than 3 to 4°), an increase in P gain might be required.
+
+- The offset can now be adjusted out by setting the I gain to a suitable value. Always start with a low value (typically less than 10). Observe any changes in the system response after each adjustment to I gain. If the value is too large, you will observe overshoot and oscillations about the set-point. If it is too low, you will not remove the offset.
+
+- After arriving at a value for I gain, apply a Step function to the system by increasing the **TEMP SET** value by a few degrees. Observe the response and adjust the gains accordingly.
+
+- The D gain is the hardest to observe any influence on, as it generally affects the rate at which the system responds to disturbances. For most small heater systems being controlled by the TC200, a value of zero (0) for the D gain is sufficient for good operation.
+
+**Rev P, February 21, 2019**  
+**Page 15**
+
+=== Page 19 ===
+```
+Chapter 6         Operating from a Computer
+
+6.1. Overview
+- The TC200 Temperature Controller is fully operational from a remote computer via a USB interface.
+- Connection from the computer to the TC200 is made with a standard B, USB cable.
+- The TC200 can be accessed directly using a command line interface and any Terminal Communications software, such as HyperTerminal.
+- The TC200 can also be controlled using the TC200 Application Software provided with the unit.
+
+6.2. Installation
+Please note that you will require administrative rights on the Computer on which you plan to install the TC200 Software.
+
+Prior to connecting the TC200 to your computer, the USB drivers must be installed. Insert the CD packed with the TC200 into the CD drive of your PC and you should be presented with the following “AutoPlay” dialog box:
+
+Click the Launch Thorlabs, Inc. CD item to start the CD Starter application, you should then be presented with the following “CD-Starter” dialog box:
+```
+
+=== Page 20 ===
+```
+Temperature Controller
+Chapter 6: Operating from a Computer
+
+Figure 2 CD Starter Screen
+
+6.2.1. Software and USB Driver Installation
+
+Please click “Install Software and Drivers” to begin installation of the Application and drivers, please follow the On-Screen instructions and dialog boxes presented, to complete the installation.
+
+Note: The USB interface is performed using an RS232 to USB converter. Your computer will reflect this as a COM Port in your Device Manager, not a USB port.
+
+Note: If using Windows XP, you may be presented with the following dialog box:
+
+Figure 3 Admin Control – Windows XP
+
+You may choose which user(s) are granted access to the TC200 software. To install the software for all users, you must have administrative rights, if you do not, please contact your Computer Admin. If you have trouble installing the software as noted above, you may have to Un-Check “Protect my computer and data from unauthorized program activity”.
+
+Rev P, February 21, 2019
+Page 17
+```
+
+=== Page 21 ===
+**Set-Up and Connection**
+
+In order for the TC200 to communicate with the computer please make sure the USB Driver are installed. Refer to section 6.2.1 for further details.
+
+When the TC200 is connected to the Computer, it is assigned a “COM Port Number”. It may be necessary to know which “COM” port number the Computer has assigned the TC200, since the software looks for particular number in order to communicate. Use to guide below to help determine which “COM Port” number your Computer has assigned the TC200.
+
+**Windows XP:**
+
+1. Right-Click on My Computer and click Properties to open System Properties.
+2. In the System Properties window click the Hardware tab.
+3. In the Hardware tab, click the Device Manager Button.
+
+**Windows 7:**
+
+1. Right-Click on My Computer and click Properties to open System Properties.
+2. Click on Device Manager.
+
+=== Page 22 ===
+**Temperature Controller**  
+**Chapter 6: Operating from a Computer**
+
+**Figure 5** Windows 7  
+3. In Device Manager, double-click Ports (COM & LPT)  
+4. Find “USB Serial Port” and note the COM Port Number in parenthesis.
+
+**Figure 6** Windows XP  
+
+**Rev P, February 21, 2019**  
+**Page 19**
+
+=== Page 23 ===
+```
+6.3. The Command Line Interface
+
+6.3.1. Setup and Connection
+1. Open your terminal interface program and, referring to documentation specific to your program, set up the terminal for the COM Port to which you have connected. Refer to Section 6.2.3 to determine the COM Port number:
+
+| Parameter       | Value                      |
+|------------------|---------------------------|
+| Baud Rate        | 115200 Bits Per Second     |
+| Data Bits        | 8                         |
+| Parity           | None                      |
+| Stop Bits        | 1                         |
+| Flow Control     | None                      |
+
+2. Apply AC power to the TC200, turn the TC200 on (see page 7), and wait for the unit to complete its power-on initialization.
+
+3. Press the ENTER keypad on your computer. If the connection is working, you will receive the following message on your terminal:
+
+   o Command error CMD_NOT_DEFINED
+
+4. Followed immediately by the prompt:
+
+   o >
+```
+
+=== Page 24 ===
+```
+Temperature Controller                             Chapter 6: Operating from a Computer
+
+• The basic command structure consists of two types: commands and queries, both of which are sent to the TC200 by a carriage return (CR) or by pressing the ENTER key on your computer.
+
+• Most commands follow a format of:
+    o Command = Argument (CR)
+
+• Command is a keyword and Argument is a numerical value always followed by a carriage return (CR). The following section gives a listing of all command keywords.
+
+• All queries follow a format of:
+    o query? (CR)
+
+• Query is a keyword always followed by a question mark (?) and carriage return (CR). The following section gives a listing of all query keywords.
+
+6.3.2. Terminal Commands and Queries
+• All commands and queries are in lower case letters.
+
+• All temperature inputs and read backs are in °C only, regardless of what the display units are for the front panel LCD of the TC200.
+```
+
+=== Page 25 ===
+```
+Temperature Controller                     Chapter 6: Operating from a Computer
+
+Command/Query          Function                              Description
+--------------------------------------------------------------------------------------------------------
+ens                    Toggle Enable State                   If the unit is disabled, ens will enable the unit. 
+                                                           Otherwise, it will disable.
+tset                   Set Temperature                        tset=nnn.n (20.0 to 200.0 to TMAX)
+tset?                  Get TEMP SET Value                    Returns the current value of TEMP SET.
+tact?                  Get Current Temperature                Returns the current value of TEMP ACTUAL.
+temps?                 Get TEMP SET and TEMP ACTUAL values   Returns TEMP SET and TEMP ACTUAL.
+stat?                  Status Query                           Returns the Status Byte (see page 23).
+mode                   Assign Operating Mode                  mode=normal or mode=cycle
+pgain                  Set P Gain                             pgain=nnn (1 to 250)
+igain                  Set I Gain                             igain=nnn (1 to 250)
+dgain                  Set D Gain                             dgain=nnn (1 to 250)
+pid?                   Get PID Gains                          Returns P, I, D values, respectively.
+unit                   Set Degree Units - ºC, ºF, or K       unit=c, unit=k, or unit=f
+sns                    Select Sensor                          sns=ptc100 or sns=ptc1000 or sns=th10k
+sns?                   Get Sensor                            Returns current sensor selection.
+beta?                  Set TH10K Beta Value                  beta=nnnn (2000 to 6000)
+PMAX                   Set Max Power                          PMAX=nn.n (0.1 to 18.0)
+TMAX                   Set Max Temperature                    TMAX=nn.n (20.0 to 205.0)
+PMAX?                  Get Max Power                          Returns current PMAX value.
+TMAX?                  Get Max Temperature                    Returns current TMAX value.
+beta?                  Get TH10K Beta Value                  Returns current Beta value.
+stop                   Set StopTmp                            stop=nnn.n (20.0 to 200.0 or TMAX- see page 23)
+ramp                   Set Ramptime                           ramp=nnn (1 to 999- see page 23)
+hold                   Set Holdtime                           hold=nnn (1 to 999- see page 23)
+cycle                  Set Step Number                        cycle=n (1 to 5- see page 23)
+cycles?                Cycle Mode Parameters                  Returns cycle parameters for all 5 steps.
+                                                           (see page 23)
+pause                  Pause Cycle                            pause (cr). initiates or terminates 
+                                                           a pause to cycle mode.
+config?                Get Current Configuration              Returns all pertinent set-up parameters 
+                                                           (see page 24).
+tune                   Tune Temperature                        tun(cr). Initiates or terminates 
+                                                           (detunes) a tuning function.
+tune?                  Is Tune Function Set?                  Returns offset value. “0” represents 
+                                                           no tune performed.
+commands?             Commands Query                         Returns a list of available commands.
+id?                    Identification Query                   Returns the unit identification string.
+*id?                   Identification Query                   Returns the unit identification string.
+tau?                   Get Temperature of Auxiliary Heater    Returns the current value of Aux Temp.
+
+Page 22                          TTN051989-D02
+```
+
+=== Page 26 ===
+```
+Temperature Controller Chapter 6: Operating from a Computer
+
+The Status Byte
+The “Status Byte” is an 8-bit hexadecimal value that is returned as part of the stat? query. Each bit corresponds to the following definitions to provide a snapshot of the status of the unit at any given time:
+
+Status Byte Definitions
+Bit 0  0 = Disabled           1 = Enabled
+Bit 1  0 = Normal Mode       1 = Cycle Mode
+Bit 2  0 = TH10K            1 = PTC100 (sensor select bit one)
+Bit 3  0 = See Bit2         1 = PTC1000 (sensor select bit two)
+Bit 4  0 = See Bit5         1 = degrees C (unit select bit one)
+Bit 5  0 = Degrees K        1 = Degrees F (unit select bit two)
+Bit 6  0 = No Sensor Alarm   1 = Sensor Alarm
+Bit 7  0 = Cycle Not Paused  1 = Cycle Paused
+
+If a TMAX alarm is also present when the stat? query is sent, the text “TMAX ERROR” will also be returned.
+
+Setting the CYCLE Parameters from the Command Line
+The CYCLE parameters (STOP temp, RAMP time, and HOLD time) can be programmed from the command line interface as follows:
+
+1. Set the Step number to which the three parameters will apply by typing cycle=n, where n represents the Step number (1 to 5).
+
+2. Enter valid values for the STOP temp by typing stop=nnn.n (20.0 to 200.0 or TMAX)
+
+3. Enter valid values for the RAMP time by typing ramp=nnn (1 to 999)
+
+4. Enter valid values for the HOLD time by typing hold=nnn (1 to 999)
+
+Until the CYCLE number is changed to another value, any values entered for STOP, RAMP, or HOLD will apply to the current value of CYCLE.
+
+Typing the cycles? query will return a string of fifteen comma-delimited numbers: five groups of three values. Each group of three values represents the STOP temp, RAMP time, and HOLD time for each successive cycle step. The value of the STOP temp is an integer value ten times greater than the actual temperature value. For example, a value of 600 represents 60.0 degrees.
+
+Rev P, February 21, 2019 Page 23
+```
+
+=== Page 27 ===
+```
+Temperature Controller                      Chapter 6: Operating from a Computer
+
+The Configuration Command
+
+Typing config? into the command line interface will return a list of all of the pertinent set up parameters to allow a user to view all items at a glance. The following is a typical return:
+
+> config?
+Tset = 54.3 C
+Pgain = 126, |gain = 0, Dgain = 0
+Sensor = PTC100
+TMAX = 200.0 C
+PMAX = 15.9 Watts
+Temperature Display Units are CELSIUS
+Unit is Normal Mode
+Step1:
+StopTemp = 60.0 C, RampTime = 1 m, HoldTime = 5 m
+Step2:
+StopTemp = 70.0 C, RampTime = 5 m, HoldTime = 5 m
+Step3:
+StopTemp = 80.0 C, RampTime = 5 m, HoldTime = 5 m
+Step4:
+StopTemp = 90.0 C, RampTime = 5 m, HoldTime = 5 m
+Step5:
+StopTemp = 100.0 C, RampTime = 5 m, HoldTime = 5 m
+
+Page 24                                   TTN051989-D02
+```
+
+=== Page 28 ===
+```
+Chapter 7 Output Connector Pin-Outs
+
+Figure 8 Detail of Main and Auxiliary Connector (HIROSE HR10A-7R-6S) 
+As Viewed from the Rear Panel
+
+Pin Assignments
+Pin 1  Heater Output Positive
+Pin 2  Heater Output Return (Ground)
+Pin 3  Reserved (Do Not Connect to this Pin)
+Pin 4  Sensor Input (+)
+Pin 5  Sensor Input (Ground)
+Pin 6  Reserved (Do Not Connect to this Pin)
+
+Use HIROSE connector HR10A-7P-6P (73) to mate with the TC200 output connectors.
+
+Rev P, February 21, 2019  Page 25
+```
+
+=== Page 29 ===
+```
+Chapter 8 Temperature Sensor Specifications
+The TC200 is compatible with two types of Platinum Thermistors: PT100 and PT1000. The TC200 is also compatible with the TH10K thermistor. The following specifications are used for determining the set-point and read back values for these types of thermistors.
+
+8.1. PT100 and PT1000
+For the temperature range of 0 to 850 °C:
+
+RT = R0(1 + A * T + B * T2)
+
+Where:
+A = 3.9083 x 10^-3 °C^-1
+B = -5.775 x 10^-7 °C^-2
+RT is the resistance in Ω at temperature T
+T is the temperature in °C
+R0 = 100 Ω for the PT100
+R0 = 1000 Ω for the PT1000
+
+8.2. TH10K
+
+RT = 10,000 * e^(β(1/T) - (1/298))
+
+Where:
+RT is the resistance in Ω at temperature T
+T is the temperature in K
+β is the constant associated with the particular thermistor
+```
+
+=== Page 30 ===
+```
+Chapter 9 Troubleshooting
+
+The following table describes some typical problems that may be encountered while using the TC200 and possible solutions to these problems.
+
+Problem                                      Solution
+Unit does not turn on when switching        1. Make sure AC line cord is fully inserted into the AC Input
+the power switch to the ON position.        receptacle and plugged into an outlet providing 100 to 240
+                                            VAC.
+                                            2. Fuse(s) may be open. Refer to page 3228 for information on 
+                                            replacing open fuses. If the problem persists, please return the 
+                                            unit to Thorlabs for evaluation.
+
+Unit does not enable the heater when        Make sure that a compatible temperature sensor is installed. If 
+pressing the ENABLE keypad.                one is not, you should see a message that says “ISENSOR!” on 
+                                            the front panel LCD.
+
+I can’t adjust the TEMP SET value           If you are operating in CYCLE mode, you will not be able to 
+using the UP/DOWN arrow keypads.           make adjustments to the set-point using the UP/DOWN keypads in 
+                                            Main screen. If you need to make adjustments, first terminate 
+                                            CYCLE mode and either re-program the CYCLE parameters (see 
+                                            page 12) or operate the unit in NORMAL mode.
+
+I can’t adjust the TEMP SET value           The TEMP SET value is limited by the TMAX maximum 
+above a certain value that is below the     temperature setting. If you need to operate at a higher 
+200.0 degree maximum capability.           temperature, you must first increase TMAX.
+
+When I reach my TEMP SET value, the        The TMAX value is the same as the TEMP SET value. Either 
+unit displays !TMAX!                       increase the TMAX value or lower the TEMP SET value.
+
+The unit appears to be holding the         The unit exceeded the TMAX setting at some point, but during the
+TEMP SET value, but there is a !TMAX!      reset phase it settled to the correct level. This is normal; simply
+message on the display.                    press the SELECT keypad from the Main screen to clear the 
+                                            alarm.
+
+The unit is enabled but does not seem      1. the PMAX value is too low. Increase the PMAX value to the
+to be driving the heater.                  maximum rating of the heater you are driving.
+                                            2. The output connector is not fully inserted into the MAIN
+                                            OUTPUT connector.
+
+The unit overshoots the set-point by       1. Check your I gain setting. It may be too high and if so, should
+a large amount.                            be lowered.
+                                            2. You have a sensor installed, but it is the wrong type.
+
+I can’t connect to the TC200 over          1. Make sure that the com port is configured correctly for the unit.
+the USB com port.                         Refer to page 24 for the correct com port settings.
+                                            2. The incorrect com port is selected on your terminal program or
+                                            TC200 application.
+                                            3. USB driver was not installed. See Page 17.
+```
+
+=== Page 31 ===
+```
+Chapter 10   General Maintenance
+
+10.1.  AC Line Voltage
+Your TC200 Series Temperature Controller will operate from AC line voltages ranging from 100 VAC to 240 VAC at 50 – 60 Hz. There is no need to configure the unit for specific line voltages.
+
+ATTENTION
+Use only 250 mA, 250 VAC, Type T, 5x20 mm style fuse.
+(IEC 60127-2/III, Low Breaking capacity, slow blow)
+
+10.2.  Installing Fuses
+If for some reason you need to replace an open fuse, you must perform the following procedure:
+
+1. Remove any AC Input cords that may be connected to the unit.
+
+2. Remove the cover of the unit by removing the two 4-40 Phillips head screws located on the bottom rear of the unit and sliding the cover off.
+
+3. Refer to Figure 9 below. Locate the two Fuse Holders near the AC Input Module towards the back of the unit. Remove the cover to each fuse holder. The fuse is installed in the cover. Remove the existing fuse and install the appropriate replacement fuse.
+
+4. Reinstall the cover and replace the two 4-40 Phillips head screw.
+
+Figure 9  Location of Fuse Holders
+Fuse Holders
+Fuses are installed in the covers.
+
+10.3.  General Maintenance
+Aside from the AC Input fuses, there are no user-serviceable parts in the TC200. If you suspect something has failed on the unit, and if you have first referred to Troubleshooting on page 27, please contact Thorlabs for advice on returning the unit for evaluation.
+
+10.4.  Cleaning
+The unit can be cleaned using a soft, slightly damp cloth. Avoid using any solvents on or near the unit.
+
+Page 28
+TTN051989-D02
+```
+
+=== Page 32 ===
+```
+Chapter 11  Auxiliary Output
+
+The TC200 provides a secondary output to enable operation of multiple Thorlabs' Gas Cell Heaters using only one control unit. The Auxiliary Output shares the total output current of the unit proportionally with the Main Output. The Main Output current is regulated via the feedback from the temperature sensor in the main heater. The Auxiliary Output is not regulated and follows the changes in current made to the Main Output. For best results, both heaters should have similar heater resistances (within a few ohms).
+
+The Auxiliary heater temperature can be momentarily shown on the LCD display by pressing and holding the SELECT keypad. The temperature will be shown under the ACTUAL TEMP text on the Front Panel display. The Auxiliary temperature can also be viewed from the command line interface by typing taux?.
+
+Note: The Auxiliary temperature is only updated once every five seconds and only when the sensor is of the PTC100 type.
+
+Note: The Auxiliary input is only compatible with PT100 sensors.
+
+11.1.  Operating the Gas Cell Heater
+
+Due to the unbalanced nature of the Auxiliary Output, it is best to connect the heater with the least resistance to the Main Output and the higher resistance heater to the Auxiliary Output. This will ensure that the Auxiliary heater does not exceed the TMAX (which is only monitored on the Main Output).
+
+Determine the main heater by connecting both heaters to the unit, setting the target temperature, and enabling the TC200. Once the main heater starts to show an increase in temperature, press the SELECT keypad to view the Auxiliary temperature. If the Auxiliary temperature is greater than the Main temperature, disable the heater, turn off the power, and exchange the two heaters by connecting the original main heater into the Auxiliary Output. Repeat this process once the temperatures have settled to verify proper balance.
+
+11.2.  Alternate Use of the Auxiliary Output
+
+The Auxiliary output can also be used as an input for a second PT100 temperature sensor placed elsewhere in your thermal system, without the use of a secondary heater load.
+
+Connect the sensor as shown on page 25. Pressing the SELECT keypad while in the Main Display screen will now show the secondary sensor temperature.
+```
+
+=== Page 33 ===
+```plaintext
+Chapter 12  Specifications
+
+Item #                       TC200
+                            Min      Typical   Max
+Input Voltagea              100 VAC  -          240 VAC
+Input Power                 -        -          25 VA
+Output Power                -        -          18 Watts DC
+Output Current              -        -          750 mADC
+Output Voltage              -        -          24 VDC
+Temperature Control Rangeb,f  20.0 °C  -        200.0 °C
+Set-Point Resolution        0.1 °C   -          -
+Actual Temp. Display Accuracyc -     ±0.1 °C   ±0.5 °C
+Temperature Stability, 24 hoursd -    ±0.1 °C   -
+
+a Universal input 50 – 60 Hz; no line switching required. The TEC200 is supplied with a 115 V parallel blade line cord for North American use only, while the TC200-EC is shipped with a 230 VAC line cord for European use. For all other applications, use an IEC 320 compatible line cord fitted with a plug appropriate for your particular AC wall socket. 
+b Heating mode only. Ambient temperature must always be less than set-point temperature. 
+c Does not account for errors due to sensor tolerances. 
+d Measured in a constant ambient temperature. Accuracy is strongly dependent on the individual heating system and P, I, and D gain parameters. 
+e All technical data valid at 23 ± 5 °C and 45 ± 15% humidity. 
+f The capability to attain Maximum Temperature is load dependent.
+
+TC200
+
+Sensor Types                Platinum 100 Ω, Platinum 1000 Ω, TH10K
+Output Connector            HIROSE HR10A-7R-6S
+Mating Connector            HIROSE HR10A-7P-6P (73)
+USB Interface               USB 2.0, Standard B Plug
+Operating / Storage Temperatures  10 – 40 °C / 0 – 50 °C
+Dimensions (L x W x H)     11.79" x 6.04" x 3.22" 
+                            (299.4 mm x 153.5 mm x 81.8 mm)
+Weight                      5 lbs
+
+12.1. Accessories
+The following accessories are directly compatible with the TC200 Temperature Controller:
+
+1.  PPLN Ovens
+    o PV10: PPLN Oven for 10 mm Long Crystals
+    o PV20: PPLN Oven for 20 mm Long Crystals
+    o PV40: PPLN Oven for 40 mm Long Crystals
+
+2.  Gas Cell Heaters
+    o GCH09-150: Heater for 9 x 150 mm Reference Cell
+    o GCH09-50:  Heater for 9 x 50 mm Reference Cell
+    o GCH09-75:  Heater for 9 x 75 mm Reference Cell
+    o GCH19-100: Heater for 19 x 100 mm Reference Cell
+    o GCH19-75:  Heater for 19 x 75 mm Reference Cell
+    o GCH25: Heater for 25 x 75 Reference Cell
+```
+
+=== Page 34 ===
+```
+Chapter 13  Warranty
+
+Thorlabs, Inc. warrants the material and production of the TC200 Temperature Controller for a period of 24 months from the date of shipment. During this warranty period, Thorlabs, Inc. will repair or exchange any units found to be defective in material or workmanship.
+
+For warranty repairs or service, the unit must be returned to Thorlabs, Inc. or one of our worldwide offices. All returns must be accompanied by a Returned Material Authorization (RMA) number issued by Thorlabs. The customer is responsible for all costs incurred to ship the unit back to Thorlabs; in the case of warranty repairs, Thorlabs will cover the cost of shipment back to the customer.
+
+In the case of shipments from outside of the United States, duties, taxes etc. shall be the responsibility of the customer.
+
+Thorlabs, Inc. warrants all firmware and software used for the TC200 to operate fault-free, provided they are used in accordance with the requirements stated in this manual. However, Thorlabs does not warrant a fault-free operation for special applications.
+
+Thorlabs, Inc. does not guarantee that this manual is error free and reserves the right to change this manual, the specifications, or the data of the described unit at any time, without notice.
+
+Thorlabs, Inc. is not liable for any incidental damage caused by failure of this unit.
+
+This warranty does not cover errors in operation, defects, or damage caused by the use of software not supplied by Thorlabs, modification or misuse, or damage caused if the unit is used outside the operating parameters specified in this manual.
+
+This warranty does not cover failure due to incorrectly connected heater and/or sensor elements, or failure of heater and/or sensor elements.
+
+ATTENTION
+The TC200 is not intended for use in medical and/or life support situations.
+```
+
+=== Page 35 ===
+```
+Chapter 14  Regulatory
+
+As required by the WEEE (Waste Electrical and Electronic Equipment Directive) of the European Community and the corresponding national laws, Thorlabs offers all end users in the EC the possibility to return “end of life” units without incurring disposal charges.
+
+• This offer is valid for Thorlabs electrical and electronic equipment:
+  • Sold after August 13, 2005
+  • Marked correspondingly with the crossed out “wheelie bin” logo (see right)
+  • Sold to a company or institute within the EC
+  • Currently owned by a company or institute within the EC
+  • Still complete, not disassembled and not contaminated
+
+As the WEEE directive applies to self-contained operational electrical and electronic products, this end of life take back service does not refer to other Thorlabs products, such as:
+
+• Pure OEM products, that means assemblies to be built into a unit by the user (e. g. OEM laser driver cards)
+• Components
+• Mechanics and optics
+• Left over parts of units disassembled by the user (PCB’s, housings etc.).
+
+If you wish to return a Thorlabs unit for waste recovery, please contact Thorlabs or your nearest dealer for further information.
+
+Waste Treatment is Your Own Responsibility
+
+If you do not return an “end of life” unit to Thorlabs, you must hand it to a company specialized in waste recovery. Do not dispose of the unit in a litter bin or at a public waste disposal site.
+
+Ecological Background
+
+It is well known that WEEE pollutes the environment by releasing toxic products during decomposition. The aim of the European RoHS directive is to reduce the content of toxic substances in electronic products in the future.
+
+The intent of the WEEE directive is to enforce the recycling of WEEE. A controlled recycling of end of life products will thereby avoid negative impacts on the environment.
+
+Page 32  TTN051989-D02
+```
+
+=== Page 36 ===
+# Chapter 15  Certifications and Compliance
+
+### Category
+| EC Declaration of Conformity – EMC |  |
+| ----------- | ----------- |
+| -EN 61326 | Meets intent of Directive 89/336/EEC for Electromagnetic Compatibility. Compliance is given to the following specifications as listed in the Official Journal of the European Communities: |
+| -IEC 61000-4-2 | Electrostatic Discharge Immunity (Performance Criterion C) |
+| -IEC 61000-4-3 | Radiated RF Electromagnetic Field Immunity (Performance Criterion B) |
+| -IEC 61000-4-4 | Electrical Fast Transient / Burst Immunity (Performance Criterion B) |
+| -IEC61000-4-5 | Power Line Surge Immunity (Performance Criterion C) |
+| -IEC61000-4-6 | Conducted RF Immunity (Performance Criterion B) |
+| -IEC 61000-4-11 | Voltage Dips and Interruptions Immunity (Performance Criterion C) |
+| -EN 61000-3-2 | AC Power Line Harmonic Emissions |
+
+### Australia/New Zealand Declaration of Conformity – EMC
+|  |  |
+| ----------- | ----------- |
+| -AS/NZS 2064 | Industrial, Scientific, and Medical Equipment: 1992 |
+| -FCC EMC Compliance | Emissions comply with the Class A limits of FCC Code of Federal Regulations 47, Part 15, Subpart B |
+
+### EC Declaration of Conformity – Low Voltage
+Compliance is given to the following specification as listed in the Official Journal of the European Communities: Low Voltage Directive 73/23/EEC, amended by 93/68/EEC
+|  |  |
+| ----------- | ----------- |
+| EN 61010-1/A2: 1995 | Safety requirements for electrical equipment for measurement control and laboratory use. |
+
+### U.S. Nationally Recognized Testing Laboratory Listing
+|  |  |
+| ----------- | ----------- |
+| -UL3111-1 | Standard for electrical measuring and test equipment. |
+| -ANSI/ISA S82.01:1994 | Safety standard for electrical and electronic test, measuring, controlling, and related equipment. |
+
+### Canadian Certification
+|  |  |
+| ----------- | ----------- |
+| CAN/CSA C22.2 No. 1010.1 | Safety requirements for electrical equipment for measurement, control, and laboratory use. |
+
+### Additional Compliance
+|  |  |
+| ----------- | ----------- |
+| IEC61010-1/A2:1995 | Safety requirements for electrical equipment for measurement, control and laboratory use. |
+
+### Equipment Type
+|  |  |
+| ----------- | ----------- |
+| Test and Measuring |  |
+
+### Safety Class
+Class 1 (As Defined in IEC 61010-1, Annex H) – Grounded Product
+
+a Using high-quality shielded interface cables  
+b Emissions, which exceed the levels required by these standards, may occur when this equipment is connected to a test object.  
+c Minimum Immunity Test requirement.  
+Rev P, February 21, 2019  
+Page 33
+
+=== Page 37 ===
+```
+Chapter 16   Thorlabs Worldwide Contacts
+For technical support or sales inquiries, please visit us at www.thorlabs.com/contact for our most up-to-date contact information.
+
+USA, Canada, and South America
+Thorlabs, Inc.
+sales@thorlabs.com
+techsupport@thorlabs.com
+
+Europe
+Thorlabs GmbH
+europe@thorlabs.com
+
+France
+Thorlabs SAS
+sales.fr@thorlabs.com
+
+Japan
+Thorlabs Japan, Inc.
+sales@thorlabs.jp
+
+UK and Ireland
+Thorlabs Ltd.
+sales.uk@thorlabs.com
+techsupport.uk@thorlabs.com
+
+Scandinavia
+Thorlabs Sweden AB
+scandinavia@thorlabs.com
+
+Brazil
+Thorlabs Vendas de Fotônicos Ltda.
+brasil@thorlabs.com
+
+China
+Thorlabs China
+chinasales@thorlabs.com
+```
+
+=== Page 38 ===
+I'm unable to extract text from that image.

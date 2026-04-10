@@ -1,0 +1,419 @@
+=== Page 1 ===
+```
+Test Equipment Solutions Datasheet
+
+Test Equipment Solutions Ltd specialise in the second user sale, rental and distribution of quality test & measurement (T&M) equipment. We stock all major equipment types such as Spectrum Analyzers, Signal Generators, Oscilloscopes, Power Meters, Network Analyzers etc from all the major suppliers such as Keysight, Tektronix, Anritsu and Rohde & Schwarz.
+
+We are focused at the professional end of the marketplace, primarily working with customers for whom high performance, quality and service are key, whilst realising the cost savings that second user equipment offers. We fully test & refurbish equipment in our in-house, traceable Lab. Items are supplied with manuals, accessories and typically a full no-quibble 1 year warranty. Our staff have extensive backgrounds in T&M which enables us to deliver industry-leading service and support. We endeavour to be customer focused in every way right down to the detail, such as offering free delivery on sales, presenting flexible technical + commercial solutions and supplying a loan unit during warranty repair, if available.
+
+As well as the headline benefit of cost saving, second user offers shorter lead times, higher reliability and multivendor solutions. Rental, of course, is ideal for shorter term needs and offers fast delivery, flexibility, try-before-you-buy, zero capital expenditure, lower risk and off balance sheet accounting. Both second user and rental improve the key business measure of Return On Capital Employed.
+
+We are based in at Oakley, Bedfordshire in the UK from where we supply test equipment worldwide. Our facility incorporates Sales, Support, Admin, Logistics and our own in-house Lab.
+
+All products supplied by Test Equipment Solutions include:
+- No-quibble parts & labour warranty (we provide transport for UK mainland addresses).
+- Free loan equipment during warranty repair, if available.
+- Full electrical, mechanical and safety refurbishment in our 40GHz in-house Lab.
+- Certificate of Conformance (calibration available on request).
+- Manuals and accessories required for normal operation.
+- Free insured delivery to your UK mainland address (sales).
+- Support from our team of seasoned Test & Measurement engineers.
+- ISO9001 quality assurance.
+
+Test Equipment Solutions Ltd 
+Unit 3 Highfield Court 
+Highfield Road 
+Oakley 
+Bedfordshire 
+MK43 7TA 
+
+Telephone: 01183 800 800
+
+Email: info@TestEquipmentHQ.com 
+Web: www.TestEquipmentHQ.com
+```
+
+=== Page 2 ===
+```
+2015, 2015-P, 2016, 2016-P
+
+6½-Digit THD Multimeters  
+6½-Digit Audio Analyzing Multimeters
+
+The Models 2015-P and 2016-P Audio Analyzing Digital Multimeters and the Models 2015 and 2016 Total Harmonic Distortion Multimeters combine audio band quality measurement and analysis with a full-function 6½-digit DMM. Test engineers can make a broad range of voltage, resistance, current, frequency, and distortion measurements, all with the same compact, half-rack measurement instrument. The Model 2016 and 2016-P have twice the sine wave generator output of the Model 2015 for applications that require test signals greater than 8Vrms. The Model 2015-P and 2016-P offer additional processing capacity for frequency spectrum analysis.
+
+Frequency Domain Distortion Analysis
+For applications such as assessing non-linear distortion in components, devices, and systems, DSP based processing allows the Models 2015, 2016, and 2016-P to provide frequency domain analysis in conventional time domain instruments. 
+
+They can measure Total Harmonic Distortion (THD) over the complete 20Hz to 20kHz audio band. They also measure over a wide input range (up to 750Vrms) and low residual distortion (≈-87dB). The THD reading can be expressed either in decibels or as a percentage. 
+
+In addition to THD, the Models 2015, 2015-P, 2016, and 2016-P can compute THD+Noise and Signal-to-Noise plus Distortion (SINAD). For analyses in which the individual harmonics are the criteria of greatest interest, the instruments can report any of the (up to 64) harmonic magnitudes that can be included in the distortion measurements. The user can program the actual number of harmonics to be included in a computation, so accuracy, speed, and complexity can be optimized for a specific application. (See Figure 1.)
+
+APPLICATIONS
+• Wireless communication device audio quality testing  
+• Component reliability testing  
+• Lighting and ballast THD limit conformance testing  
+• Telephone and automotive speaker testing  
+
+1.888.KEITHLEY (U.S. only)  
+www.keithley.com  
+```
+
+=== Page 3 ===
+```
+2015, 2015-P, 2016, 2016-P
+
+6½-Digit THD Multimeters
+6½-Digit Audio Analyzing Multimeters
+
+Figure 2. Total Harmonic Distortion Analysis and Frequency Response of a Portable Wireless Telecommunication Device
+
+Device Under Test
+
+Figures 2, 3, and 4 demonstrate how the Models 2015, 2015-P, 2016, or 216-P can provide both time domain and frequency domain measurements in a single test protocol. Figure 2 shows a sample test system schematic with a telecommunication device in a loop back mode test. The Audio Analyzing DMM’s source provides a stimulus frequency sweep, and the Audio Analyzing DMM measures the response from the microphone circuit. Figure 3 shows the resulting frequency domain analysis of the THD and the first three harmonics as a function of frequency. Figure 4 shows the time domain analysis of microphone circuit output voltage as a function of frequency.
+
+Ordering Information
+2015         Total Harmonic Distortion 6½-Digit Multimeter
+2015-P       Audio Analyzing DMM
+2016         Total Harmonic Distortion 6½-Digit DMM w/9V Source Output
+2016-P       Audio Analyzing DMM w/9V Source Output
+
+These products are available with an Extended Warranty.
+
+Accessories Supplied
+Model 1751 Safety Test Leads, User Manual, Service Manual.
+
+1.888.KEITHLEY (U.S. only)
+www.keithley.com
+
+Optimized for Production Testing
+The Models 2015, 2015-P 2016, and 2016-P can perform fast frequency sweeps for characterizing audio-band circuitry in production test systems. For example, the instruments can execute a single sweep of 30 frequencies and transmit both ms voltage readings and THD readings to a computer in only 1.1 seconds. With that data, a complete frequency response analysis and a harmonic distortion vs. frequency analysis can be performed in a very short time. Thus high speed testing of the audio performance of a high volume device such as a cellular telephone can be performed without reducing the number of tests or reducing the measurements in each test. With these instruments, which are optimized for production testing, test engineers can lower test times, in comparison to test speeds achievable with general purpose audio analyzers, without sacrificing production test quality.
+
+Dual Output Source
+The Models 2015, 2015-P 2016, and 2016-P include an internal audio band sine wave source for generating stimulus signals. A second output, the inverse of the first output, is also available, simplifying the testing of differential input circuits for common mode or noise cancellation performance.
+```
+
+=== Page 4 ===
+```
+2015, 2015-P, 2016, 2016-P
+6½-Digit THD Multimeters
+6½-Digit Audio Analyzing Multimeters
+
+Figure 5a. C-Message Weighting Filter
+Gain (dB)
+Frequency (Hz)
+
+Figure 5b. A Weighting Filter
+Gain (dB)
+Frequency (Hz)
+
+Figure 5c. CCIR Weighting Filter
+Gain (dB)
+Frequency (Hz)
+
+Figure 5d. CCITT Weighting Filter
+Gain (dB)
+Frequency (Hz)
+
+Figure 5e. CCIR/ARM
+Gain (dB)
+Frequency (Hz)
+
+The Models 2015 and 2015-P have a 4Vrms single-ended output and 8Vrms differential source output. For tests that require a higher stimulus signal, the Model 2016 and 2016-P provide a 9.5Vrms single-ended output and a 19Vrms differential output.
+
+Wide Selection of Audio Filters
+Five industry-standard bandpass filters are provided for shaping the input signal for audio and telecommunications applications. Available filters include the CCITT weighting filter, CCIR filter, C-message filter, and A weighting filter (see Figures 5a–5e). The Models 2015, 2015-P, and 2016-P provide programmable, high cutoff (low pass) and low cutoff (high pass) filters. Furthermore, the two filters can be implemented together to form a bandpass filter. The programmable filters can be used to filter out noise generated by electromechanical machinery on the production floor or to simulate other types of system distortion characteristics.
+
+Broad Measurement Flexibility
+In addition to their THD, THD+Noise, SINAD, and individual harmonic measurement capabilities, the instruments provide a comprehensive set of DMM functions, including DCV, ACV, DCI, ACI, 2Ω, 4Ω, temperature, frequency, period, dB, dBm, and continuity measurements, as well as diode testing. This multi-functional design minimizes added equipment costs when configuring test setups.
+
+1.888.KEITHLEY (U.S. only)
+www.keithley.com
+
+A GREATER MEASURE OF CONFIDENCE
+```
+
+=== Page 5 ===
+```
+2015, 2015-P, 2016, 2016-P
+
+6½-Digit THD Multimeters
+6½-Digit Audio Analyzing Multimeters
+
+Wide Band or Narrow Band Noise Measurements  
+The Models 2015, 2015-P, 2016, and 2016-P are capable of measuring both wide band noise and narrow band noise. Alternatively, these instruments' DSP (digital signal processing) capabilities allow users to make frequency domain measurements of RMS voltage noise over the 20Hz–20kHz frequency audio band or a narrow portion of the band. Furthermore, noise measurements can be extracted in the presence of a stimulus signal for fast signal-to-noise computations.
+
+Spectrum Analysis  
+The Model 2015-P and 2016-P have internal computational capabilities that allow them to characterize an acquired signal spectrum. These instruments can identify and report the frequency and amplitude of the highest value in a complete spectrum or within a specified frequency band. It can also identify additional peaks in descending order of magnitude (see figure 6). The Model 2015-P and 2016-P's on-board capabilities make it simple to obtain a thorough analysis of a frequency spectrum more quickly and with little or no need for external analysis software.
+
+Frequency Spectrum  
+Between 1.0kHz and 1.4kHz
+
+M a g n i t u d e ( d B V )  
+Maximum  
+2nd peak  
+3rd peak  
+4th peak  
+Maximum left of 4th peak  
+Maximum right of 4th peak  
+
+1.0kHz      1.1kHz      1.2kHz      1.3kHz      1.4kHz  
+
+Figure 6. The Model 2015-P and 2016-P directly identify peak values of the frequency spectrum.
+
+ACCESSORIES AVAILABLE
+
+CABLES/ADAPTERS  
+700-7          Shielded IEEE-488 Cable, 1m (3 ft)  
+700-8          Shielded IEEE-488 Cable, 2m (6.6 ft)  
+58101, 58102   Trigger Link Adapter (3.5m (11.5 ft))  
+8509           Trigger Link Cable to 2 BNCs, 1m (3.3 ft)  
+70095          25Ω Cable
+
+RACK MOUNT KITS  
+4281-1         Single Fixed Rack Mount Kit  
+4281-2         Dual Fixed Rack Mount Kit  
+
+OTHER  
+KPLCI-488     IEEE-488 InterfaceController for the PCI Bus  
+KUSB-488      IEEE-488.2 USB-6/GB Interface Adapter  
+TestPoint      Test Development Software  
+1050           Padded Carrying Case  
+2015-EW       1 Year Warranty Extension  
+2016-EW       1 Year Warranty Extension  
+2015-EPW      1 Year Warranty Extension  
+2016-EPW      1 Year Warranty Extension  
+
+Rear panel of all models
+
+1.888.KEITHLEY (U.S. only)  
+www.keithley.com  
+```
+
+=== Page 6 ===
+```
+2015, 2015-P, 2016, 2016-P
+6½-Digit THD Multimeters
+6½-Digit Audio Analyzing Multimeters
+
+DISTORTION CHARACTERISTICS
+
+VOLTAGE RANGE: 100mV, 1V, 10V, 100V (user selectable). 
+INPUT IMPEDANCE: 1M parallel to 80pF
+DISPLAY RANGE: 0.001% or 0.0001%
+RESOLUTION: 0.00015% or 0.0001%
+FUNDAMENTAL FREQUENCY RANGE: 20Hz–20kHz.
+HARMONIC FREQUENCY RANGE: 40Hz–50kHz.
+FREQUENCY RESOLUTION: 0.01%
+FREQUENCY ACCURACY: ±0.08% of reading.
+FREQUENCY TEMPERATURE COEFFICIENT: ≤100ppm over operating temperature range.
+
+MEASUREMENT
+MODE                       ACCURACY                RESIDUAL DISTORTION
+                           (Year, 25°C ±5°C)
+THD and harmonic
+  individual                ±0.6 dB              0.04% at 2 kHz*
+THD + n                   ±0.15 dB              0.05% at 2 kHz*
+SINAD                     ±1.5 dB                     16 dB
+AC Level                  ±0.1% of reading +  
+V rms                      20 Hz to 20 kHz 
+
+DISTORTION MEASUREMENT AUDIO FILTERS
+
+None                      M-CLEAR
+Weighting                C-RARM
+CCIR                     X-Weighted
+NUMBER OF HARMONICS INCLUDED IN THD CALCULATION: 2 to 6 (user selectable).
+HARM AND LO CUT OFF FILTERS (user selectable): 20Hz–50kHz. Can be forced to form brick wall bandwidth filters.
+
+DISTORTION MEASUREMENT READING RATE†
+FUNDAMENTAL         FREQUENCY          MINIMUM READINGS
+ACQUISITION          RANGE              PER SECOND
+MODE
+Single acquisition    20 Hz to 20 kHz       100
+or stored value      100 Hz to 10 kHz       12
+                         1 kHz to 20 kHz        8
+Automatic            20 Hz to 30 Hz        5.5
+                         30 Hz to 60 Hz        6.6
+
+FREQUENCY SWEEP RATING RATE
+NUMBER OF FREQUENCIES        TIME (seconds)†
+                                  1
+1                             0.2
+30                            1.1
+100                        1.9
+200                        6.9
+
+NOTES
+1. Input signal at full scale.
+2. V2, 2nd degree distortion conditions > 45dB.
+3. Specs are for external operating conditions > 45dB, and display of zero range of heavy data transfer; 3 digits 60Hz.
+4. Total noise for frequencies on 0 volts; range blank; THD (dB) = Display Off; Auto Range Off/ On has returned to THD measurement plus AC voltage.
+
+1.888.KEITHLEY (U.S. only)
+www.keithley.com
+
+GENERATOR CHARACTERISTICS
+
+FREQUENCY RANGE: 20–20kHz.
+FREQUENCY RESOLUTION: 0.01%
+FREQUENCY ACCURACY: ±(0.05% of reading + 0.007%).
+FREQUENCY TEMPERATURE COEFFICIENT: ≤100ppm over operating temperature range.
+
+SOURCE OUTPUT:
+WAVEFORM: Sinewave.
+AMPLITUDE RANGE: 2015, 2015-P: 27 mV (500 and 600Ω) or 85 mV (HI Z).
+             2016, 2016-P: 0.5V mV (500 and 600Ω) or 5 mV (HI Z).
+AMPLITUDE ACCURACY: 2015, 2015-P: ±0.5% (500 and 600Ω) or ±1 mV (HI Z).
+AMPLITUDE RESOLUTION: 2015, 2015-P: 12.5 mV (500 and 600Ω) or 2.5 mV (HI Z).
+AMPLITUDE FLATNESS: ±0.1 dB†.
+OUTPUT IMPEDANCE: Sine to Output Source setting.
+TITLE: -6dB.
+NOISE: 2015, 2015-P: 100 μV rms†.
+            2016, 2016-P: 250 μV rms†.
+DC OFFSET VOLTAGE: 2015, 2015-P: ±1.5V (±1.5mV max).
+                           2016, 2016-P: ±1.5V max†.
+
+INV/PULSE OUTPUT (SINEWAVE):
+FREQUENCY: Sine as source output.
+DUTY CYCLE: ±5% as source.
+OUTPUT IMPEDANCE: Same output impedance as the source output.
+AMPLITUDE: 0.00V to 0.7V to 3.0V pulse circuit†.
+OVERSHOOT: 0.1V maximum pulse circuit load†.
+UNDERSHOOT: 1.1V maximum pulse open circuit†.
+0.5V maximum with 100Ω load pulse open circuit†.
+
+NOTES
+1. Measure Vout = Vc with gain 100 amplifier and 2-pole Sallen low pass filter, in sinewave mode, 
+with 1 Hz output impedance and load.
+3. With 1Ω output impedance and 1Ω load.
+4. 1V output impedance and 1Ω load.
+5. 5 V output.
+6. THD measurement includes harmonics 2 through 5, 1V rms output, 1Hz to load.
+```
+
+=== Page 7 ===
+```
+2015, 2015-P, 2016, 2016-P
+6½-Digit THD Multimeters
+6½-Digit Audio Analyzing Multimeters
+
+DC VOLTAGE
+ACCURACY 23°C ± 5°C
+±(ppm of rdg + ppm of range) INPUT RESISTANCE
+                  90 Day   1 Year
+100.0000 mV   1.0 μV  ±  4  ±  5  > 10 GΩ
+1.000000 V     10 μV    25 ±  5  30 ±  5  > 10 GΩ
+10.00000 V     100 μV   300 ±  7  350 ±  5  > 10 GΩ
+100.0000 V     1 mV     35 ±  6  40 ±  5  10 MΩ ±15%
+
+RESISTANCE
+ACCURACY 23°C ± 5°C
+±(ppm of rdg + ppm of range)      TEST CURRENT
+                     90 Day   1 Year
+100.0000 Ω    1.0 Ω   100 ± 2  100 ± 10
+1.000000 kΩ   10 mΩ    20 ± 3  30 ± 10
+10.00000 kΩ   100 mΩ   15 ± 5  20 ± 10
+100.0000 kΩ   1 Ω      8 ± 10  10 ± 10
+1.000000 MΩ   10 Ω     5 ± 20  10 ± 10
+10.00000 MΩ   100 Ω    5 ± 60  7 ± 10
+100.0000 MΩ   1 kΩ     2 ± 200  3 ± 100
+
+DC CURRENT
+ACCURACY 23°C ± 5°C
+±(ppm of rdg + ppm of range)    BURDEN VOLTAGE
+                   90 Day   1 Year
+100.0000 μA   10 nA   400 ± 80  800 ± 80  < 0.6 Ω
+1.000000 mA    100 nA   600 ± 80  800 ± 80  < 0.2 Ω
+10.00000 mA    1 μA     600 ± 80  800 ± 80  < 0.1 Ω
+100.0000 mA    10 μA    600 ± 80  800 ± 80  < 0.1 Ω
+1.000000 A     100 μA   600 ± 80  800 ± 80  < 0.1 Ω
+10.00000 A     1 mA     600 ± 80  800 ± 80  < 0.1 Ω
+
+CONTINUITY 2W
+ACCURACY 23°C ± 5°C
+±(ppm of rdg + ppm of range)    TEST CURRENT
+                    90 Day    1 Year
+1 kΩ          102 10 ± 100  100 ± 1
+
+DIODE TEST
+ACCURACY 23°C ± 5°C
+±(ppm of rdg + ppm of range)   TEST CURRENT
+                     90 Day   1 Year
+3.00000 V    10 μV   100 ± 2   100 ± 10
+10.00000 V    100 μV   30 ± 7   40 ± 10
+
+DC OPERATING CHARACTERISTICS
+FUNCTION                    DIGITS   READINGS/s   PLCs
+DCV (all ranges)             6½      50        1
+DCI (all ranges)             6½      50        1
+2W Ohms (all ranges)         5½      200       0.01
+
+DC SYSTEM SPEEDS
+RANGE CHANGE: 50 ms.
+FUNCTION CHANGE: 45 ms.
+ASCII READINGS TO RS-232 (μA load): 55 ms.
+MAX. INTERNAL TRIGGER RATE: 200/s.
+MAX. EXTERNAL TRIGGER RATE: 400/s.
+
+TRUE RMS VOLTAGE AND CURRENT CHARACTERISTICS
+ACV
+RANGE                    RESOLUTION
+100 mV to 750 V  0.1 mV to 1 mV
+FREQUENCY RANGE  ±( % of range)
+        20 Hz to 10 kHz 0.5 ± 0.05
+        200 Hz to 20 kHz 0.1 ± 0.05
+        20 kHz to 200 kHz 0.6 ± 0.08
+        100 kHz to 1 MHz  ± 4 ± 5
+
+AC OPERATING CHARACTERISTICS
+FUNCTION                          DIGITS  READINGS/s  RATE         BANDWIDTH
+ACV (all ranges), and
+AC I (all ranges)                6½       2.4  SLOW   5 Hz - 300 kHz
+                                 6½       1.8  MED   20 Hz - 300 kHz
+                                 6½       1.5  FAST  300 Hz - 20 MHz
+                                 6½       25   FAST  30 Hz - 300 kHz
+
+FREQUENCY AND PERIOD CHARACTERISTICS
+ACV        FREQUENCY           PERIOD          GATE
+RANGE      RANGE               TIME        ±(ppm of rdg) 
+AC 33 Hz  0.1 mV  0.2 s (MS)  ±3.01
+AC 10 Hz  33 μV (MS)  0.2 s (MED)  ±3.33
+AC 10 Hz  30 μV (FAST)  10 ms (FAST)  ± 8.3
+
+AC AND FREQUENCY NOTES
+1. The input impedance must be > 10% of AC range. Input is 25V on the 
+   high range setting.
+   
+TEMPERATURE CHARACTERISTICS
+THERMOCOUPLE
+TYPE         RANGE                    RESOLUTION
+J           -200 °C to +760 °C   0.001 °C  ±0.5 °C
+K           -200 °C to +1372 °C  0.001 °C  ±2.5 °C
+T           -200 °C to +400 °C   0.001 °C  ±0.5 °C
+
+GENERAL SPECIFICATIONS
+POWER SUPPLY: 100V/ 120V/ 230V/ 240V.
+LINE FREQUENCY: 50Hz to 60Hz and 400Hz, automatically sensed at power-up.
+POWER CONSUMPTION: 40VA.
+OPERATING ENVIRONMENT: Specified for 0°C to 50°C. Specified for 80% RH at 35°C and at 
+    altitude up to 2000m.
+STORAGE ENVIRONMENT: -40°C to 70°C.
+WARRANTY: 3 years.
+SAFETY: Complies with European Union Directive 73/23/EEC, EN 61010-1.
+EMC: Complies with European Union Directive 89/336/EEC, EN 61326-1.
+WARRANTY: 1 hour rated accuracy.
+DIMENSIONS: Back Mounting: 89mm high × 213mm wide × 370mm deep (3½" x 8½" x 
+    14½"). 
+Bench Configuration (with handle end feet): 101mm high × 288mm wide × 370mm deep 
+    (4" x 9" x 14½").
+NET WEIGHT: 8.6 kg (18 lb).
+SHIPPING WEIGHT: 5.5 kg (12 lb).
+WATT HERTZ PRODUCT: 63 or 60 Hz.
+ACCESSORIES SUPPLIED: Model 1751 Safety Test Leads, User Manual.
+
+1.888.KEITHLEY (U.S. only)
+www.keithley.com
+
+A GREATER MEASURE OF CONFIDENCE
+```

@@ -1,0 +1,1019 @@
+=== Page 1 ===
+**Keysight Technologies**  
+**N9010A EXA X-Series Signal Analyzer**  
+10 Hz to 3.6, 7.0, 13.6, 26.5, 32, or 44 GHz  
+
+**Data Sheet**  
+
+=== Page 2 ===
+```
+Table of Contents
+Definitions and Conditions .............................................................................................. 3
+Frequency and Time Specifications ................................................................................... 4
+Amplitude Accuracy and Range Specifications ..................................................................... 6
+Dynamic Range Specifications ........................................................................................... 9
+PowerSuite Measurement Specifications ............................................................................ 15
+General Specifications ........................................................................................................ 16
+Inputs and Outputs .............................................................................................................. 17
+I/Q Analyzer ........................................................................................................................ 19
+Related Literature ............................................................................................................... 20
+
+This data sheet is a summary of the specifications and conditions for N9010A EXA X-Series signal analyzers. For the complete specifications guide, visit: 
+www.keysight.com/find/exa_specifications
+```
+
+=== Page 3 ===
+**Definitions and Conditions**
+
+Specifications describe the performance of parameters covered by the product warranty and apply to the full temperature range of 0 to 55 °C*, unless otherwise noted.
+
+95th percentile values indicate the breadth of the population (approx. 2 σ) of performance tolerances expected to be met in 95 percent of the cases with a 95 percent confidence, for any ambient temperature in the range of 20 to 30 °C. In addition to the statistical observations of a sample of instruments, these values include the effects of the uncertainties of external calibration references. These values are not warranted. These values are updated occasionally if a significant change in the statistically observed behavior of production instruments is observed.
+
+Typical describes additional product performance information that is not covered by the product warranty. It is performance beyond specifications that 80 percent of the units exhibit with a 95 percent confidence level over the temperature range 20 to 30 °C. Typical performance does not include measurement uncertainty.
+
+Nominal values indicate expected performance, or describe product performance that is useful in the application of the product, but are not covered by the product warranty.
+
+The analyzer will meet its specifications when:
+
+- It is within its calibration cycle
+- Under auto couple control, except when Auto Sweep Time Rules = Accy
+- Signal frequencies < 10 MHz, with DC coupling applied
+- The analyzer has been stored at an ambient temperature within the allowed operating range for at least two hours before being turned on; if it had previously been stored at a temperature range inside the allowed storage range, but outside the allowed operating range
+- The analyzer has been turned on at least 30 minutes with Auto Align set to normal, or, if Auto Align is set to off or partial, alignments must have been run recently enough to prevent an Alert message; if the Alert condition is changed from Time and Temperature to one of the disabled duration choices, the analyzer may fail to meet specifications without informing the user
+
+For the complete specifications guide, visit: www.keysight.com/find/exa_specifications
+
+1. For earlier instruments (Serial number prefix < MY/SG/US5052), the full temperature ranges from 5 to 50 °C.
+
+=== Page 4 ===
+```
+Frequency and Time Specifications
+
+Frequency range        DC coupled          AC coupled
+Option 503            10 Hz to 3.6 GHz    10 MHz to 3.6 GHz
+Option 507            10 Hz to 7 GHz      10 MHz to 7 GHz
+Option 513            10 Hz to 13.6 GHz   10 MHz to 13.6 GHz
+Option 526            10 Hz to 26.5 GHz    10 MHz to 26.5 GHz
+Option 532            10 Hz to 32 GHz      NA
+Option 544            10 Hz to 44 GHz      NA
+
+Band   LO multiple (N)
+0      1                10 Hz to 3.6 GHz
+1      1                3.5 to 7.0 GHz
+1      1                3.5 to 8.4 GHz
+2      2                8.4 to 13.6 GHz
+3      2               13.5 to 17.1 GHz
+4      4               17 to 26.5 GHz
+5      4               26.4 to 34.5 GHz
+6      8               34.4 to 44 GHz
+
+Frequency reference
+Accuracy                ± {(time since last adjustment x aging rate) + temperature stability + calibration accuracy}¹
+Aging rate              Option PFR          Standard            w/J703A AFR
+                        ± 1.0 x 10⁻⁷/year  ± 1 x 10⁻⁶/year     ± 1 x 10⁻⁹/year
+                        ± 1.5 x 10⁻²/year
+Temperature stability   Option PFR          Standard            w/J703A AFR
+20 to 30 °C            ± 1.5 x 10⁻⁸      ± 2 x 10⁻⁶          ± 5 x 10⁻¹⁰/year
+Full temperature range  ± 5 x 10⁻⁸       ± 2 x 10⁻⁶
+
+Achievable initial calibration accuracy
+                        Option PFR          Standard            w/J703A AFR
+                        ± 4 x 10⁻⁸        ± 1.4 x 10⁻⁶       ± 5 x 10⁻¹/year
+
+Example frequency reference accuracy (with Option PFR)
+1 year after last adjustment = ± 1.9 x 10⁻⁷
+
+Residual FM
+Option PFR             ≤ (0.25 Hz x N) p-p in 20 ms nominal 
+Standard              ≤ (10 Hz x N) p-p in 20 ms nominal
+
+Frequency readout accuracy (start, stop, center, marker)
+                        ± (marker frequency x frequency reference accuracy + 0.25 % x span + 5 % x RBW
+                          + 2 Hz + 0.5 x horizontal resolution²)
+
+Marker frequency counter
+Accuracy                ± (marker frequency x frequency reference accuracy + 0.100 Hz)
+Delta counter accuracy   ± (delta frequency x frequency reference accuracy + 0.141 Hz)
+Counter resolution       0.001 Hz
+
+Frequency span (FFT and swept mode)
+Range                  0 Hz (zero span), 10 Hz to maximum frequency of instrument
+Resolution             2 Hz
+Accuracy               Sw swept ± (0.25 % x span + horizontal resolution)
+                       FFT ± (0.10 % x span + horizontal resolution)
+
+1. When used with external frequency reference 1 pulse-per-second (PPS), such as the J703A atomic frequency reference (AFR), the frequency tracking accuracy needs to be taken into account for calculation of the overall frequency accuracy. Refer to the N9010A EXA signal analyzer specifications guide (part number: N9010-90205) for more details. 
+2. Horizontal resolution is span/sweep points - 1.
+```
+
+=== Page 5 ===
+```
+Sweep time and triggering
+Range
+  Span = 0 Hz                            1 µs to 6000 s
+  Span ≥ 10 Hz                          1 ms to 4000 s
+Accuracy
+  Span ≥ 10 Hz, swept                     ± 0.01% nominal
+  Span ≥ 10 Hz, FFT                       ± 0.40% nominal
+  Span = 0 Hz                             ± 0.01% nominal
+Trigger
+  Free run, line, video, external 1, external 2, RF burst, periodic timer
+Trigger Delay
+  Span = 0 Hz or FFT                  –150 to +500 ms
+  Span ≥ 10 Hz, swept                   0 to 500 ms
+Resolution                               0.1 µs
+
+Time gating
+Gate methods                           Gated L0; gated video; gated FFT
+Gate length range (except method = FFT) 100.0 ns to 5.0 s
+Gate delay range                        0 to 100.0 s
+Gate delay jitter                       33.3 ns p-p nominal
+
+Sweep (trace) point range
+All spans                                1 to 40001
+
+Resolution bandwidth (RBW)
+Range (–3.01 dB bandwidth)             1 Hz to 3 MHz (10 % steps), 4, 5, 6, 8 MHz
+Bandwidth accuracy (power)
+  1 Hz to 750 kHz                        ± 1.0% (± 0.044 dB)
+  820 kHz to 1.2 MHz (x 3.6 GHz CF)      ± 2.0% (± 0.088 dB)
+  1.3 to 2 MHz (x 3.6 GHz CF)            ± 0.07 dB nominal
+  2.2 to 3 MHz (x 3.6 GHz CF)            ± 0.15 dB nominal
+  4 to 8 MHz (x 3.6 GHz CF)              ± 0.25 dB nominal
+RBW range                               1 Hz to 1.3 MHz                          ± 2 % nominal
+Selectivity (–60 dB /–3 dB)            4.1:1 nominal
+EMI bandwidth (CISPR compliant)        200 Hz, 9 kHz, 120 kHz, 1 MHz (Option EMC or N6141A required)
+EMI bandwidth (MIL STD 461E compliant) 10 Hz, 100 Hz, 1 kHz, 10 kHz, 
+                                        (Option EMC or N6141A required)
+                                        100 kHz, 1 MHz
+
+Analysis bandwidth¹
+Maximum bandwidth
+  Option B40                            40 MHz
+  Option B25 (standard)                 25 MHz
+  Standard                              10 MHz
+
+Video bandwidth (VBW)
+Range                                   1 Hz to 3 MHz (10 % steps), 4, 5, 6, 8 MHz, and wide open (labeled 50 MHz)
+Accuracy                                ± 6 % nominal
+
+Measurement speed²                      Standard nominal       Option PC4 nominal
+Local measurement and display update rate 11 ms (90/s)         4 ms (250/s)
+Remote measurement and LAN transfer rate  6 ms (167/s)         5 ms (200/s)
+Marker peak search                       5 ms                    1.5 ms
+Center frequency tune and transfer (R)   22 ms                   20 ms
+Center frequency tune and transfer (µW)  49 ms                   47 ms
+Measurement/mode switching                75 ms                   39 ms
+
+1. Analysis bandwidth is the instantaneous bandwidth available around a center frequency over which the input signal can be digitized for further analysis or processing in the time, frequency, or modulation domain.
+2. Sweep points = 101.
+```
+
+=== Page 6 ===
+```
+Amplitude Accuracy and Range Specifications
+
+Amplitude range
+Measurement range                     Displayed average noise level (DANL) to +23 dBm
+Input attenuator range                 (10 Hz to 4 GHz)
+Standard                               0 to 60 dB in 10 dB steps
+Option FSA                             0 to 60 dB in 2 dB steps
+
+Electronic attenuator (Option EA3)
+Frequency range                        10 Hz to 3.6 GHz
+Attenuation range                      Electronic attenuator range
+                                       0 to 24 dB, 1 dB steps
+                                       Full attenuation range
+                                       (mechanical + electronic)
+                                       0 to 84 dB, 1 dB steps
+
+Maximum safe input level
+Average total power                    +30 dBm (1 W)
+(with and without preamp)
+Peak pulse power                       < 10 μs pulse width, < 1 % duty cycle +50 dBm (100 W) and input attenuation ≥ 30 dB
+
+DC volts
+DC coupled                             ± 0.2 Vdc
+AC coupled                             ± 100 Vdc
+
+Display range
+Log scale                              0.1 to 1 dB/division in 0.1 dB steps
+                                       1 to 20 dB/division in 1 dB steps (10 display divisions)
+Linear scale                           10 divisions
+Scale units                            dBm, dBmV, dBµV, dBmA, dBµA, V, W, A
+```
+
+=== Page 7 ===
+```
+Frequency response                                             Specification                       95th percentile (≈ 2s)
+(10 dB input attenuation, 20 to 30 °C, presselector centering applied, s = nominal standard deviation)
+RF/MW
+(Option 503, 507, 513, 526)                                   9 kHz to 10 MHz                     ± 0.8 dB            ± 0.4 dB
+                                                            10 MHz to 3.6 GHz                     ± 0.6 dB            ± 0.21 dB
+                                                            3.5 to 7.0 GHz                        ± 2.0 dB            ± 0.69 dB
+                                                            6.9 to 13.6 GHz                       ± 2.5 dB            ± 0.72 dB
+                                                            13.5 to 22.0 GHz                      ± 3.0 dB            ± 1.11 dB
+                                                            22.0 to 26.5 GHz                      ± 3.2 dB            ± 1.42 dB
+
+Millimeter-wave
+(Option 532, 544)                                           9 kHz to 10 MHz                     ± 0.6 dB            ± 0.28 dB
+                                                            10 to 50 MHz                          ± 0.45 dB           ± 0.21 dB
+                                                            50 MHz to 3.6 GHz                     ± 0.45 dB           ± 0.20 dB
+                                                            3.5 to 5.2 GHz                        ± 1.7 dB            ± 0.91 dB
+                                                            5.2 to 8.4 GHz                        ± 1.5 dB            ± 0.61 dB
+                                                            8.3 to 13.6 GHz                       ± 2.0 dB            ± 0.61 dB
+                                                            13.5 to 17.1 GHz                      ± 2.0 dB            ± 0.67 dB
+                                                            17.0 to 22.0 GHz                      ± 2.0 dB            ± 0.78 dB
+                                                            22.0 to 26.5 GHz                      ± 2.5 dB            ± 0.72 dB
+                                                            26.4 to 34.5 GHz                      ± 2.5 dB            ± 1.11 dB
+                                                            34.4 to 44 GHz                        ± 3.2 dB            ± 1.42 dB
+
+Preamp on (P03, P07, P13, P26)
+RF/MW
+(Option 503, 507, 513, 526)                                   100 kHz to 3.6 GHz                  ± 0.28 dB nominal
+                                                            3.6 to 7.0 GHz                       ± 0.67 dB nominal
+                                                            7.0 to 26.5 GHz                      ± 0.80 dB nominal
+
+Preamp on (P03, P07, P32, P44)
+Millimeter-wave
+(Option 532, 544)                                           100 kHz to 3.6 GHz                   ± 0.28 dB nominal
+                                                            3.5 to 8.4 GHz                       ± 0.67 dB nominal
+                                                            8.4 to 26.5 GHz                      ± 0.80 dB nominal
+                                                            26.4 to 44 GHz                       ± 0.80 dB nominal
+
+1. DC coupling required to meet specifications below 50 MHz. With AC coupling, specifications apply at frequencies of 50 MHz and higher. Statistical observations at 10 MHz with AC coupling show that most instruments meet the DC-coupled specifications, however, a small percentage of instruments are expected to have errors exceeding 0.5 dB at 10 MHz at the temperature extreme. The effect at 20 to 50 MHz is negligible but not warranted.
+```
+
+=== Page 8 ===
+```
+Input attenuation switching uncertainty
+Specifications
+Attenuation > 2 dB, preamp off
+50 MHz (reference frequency) ± 0.20 dB ± 0.08 dB typical
+Relative to 10 dB 
+(reference setting)
+9 kHz to 3.6 GHz ± 0.3 dB nominal
+3.5 to 7.0 GHz ± 0.5 dB nominal
+6.9 to 13.6 GHz ± 0.7 dB nominal
+13.5 to 26.5 GHz ± 0.7 dB nominal
+> 26.5 GHz ± 1.0 dB nominal
+
+Total absolute amplitude accuracy
+(10 dB attenuation, 20 to 30 °C, 1 Hz < RBW ≤ 1 MHz, input signal –10 to –50 dBm, all settings auto-coupled except Auto Swp Time = Accy, any reference level, any scale, s = nominal standard deviation)
+At 50 MHz ± 0.40 dB
+At all frequencies ± (0.40 dB + frequency response)
+9 kHz to 3.6 GHz ± 0.27 dB (95th percentile = 2σ)
+Preamp on
+100 kHz to 3.6 GHz ± (0.39 dB + frequency response)
+
+Input voltage standing wave ratio (VSWR) (to 10 dB input attenuation)
+Options 503, 507, 513, 526
+Options 532, 544
+10 MHz to 3.6 GHz < 1.2:1 nominal 1.2:1 nominal
+3.6 to 26.5 GHz < 1.8:1 nominal 1.5:1 nominal
+26.5 to 44 GHz N/A < 1.8:1 nominal
+
+Resolution bandwidth switching uncertainty (referenced to 30 kHz RBW)
+1 Hz to 3 MHz RBW ± 0.10 dB
+4, 6, 8, 10 kHz RBW ± 1.0 dB
+
+Reference level
+Range
+Log scale –170 to +23 dBm in 0.01 dB steps
+Linear scale Same as Log (707 pV to 3.16 V)
+Accuracy 0 dB
+
+Display scale switching uncertainty
+Switching between linear and log 0 dB
+Log scale/dly switching 0 dB
+Display scale fidelity
+Between –10 dBm and –80 dBm input mixer level ± 0.15 dB total
+
+Trace detectors
+Normal, peak, sample, negative peak, log power average, RMS average, and voltage average
+Preamplifier (Option P03, P07, P13, P26, P32, P44)
+Frequency range
+Option P03 100 kHz to 3.6 GHz
+Option P07 100 kHz to 7 GHz
+Option P13 100 kHz to 13.6 GHz
+Option P26 100 kHz to 26.5 GHz
+Option P32 100 kHz to 32 GHz
+Option P44 100 kHz to 44 GHz
+Gain
+100 kHz to 3.6 GHz +20 dB nominal
+3.6 to 7.0 GHz +35 dB nominal
+> 7 GHz +40 dB nominal
+Noise figure
+100 kHz to 3.6 GHz 8 to 12 dB nominal (proportional to frequency)
+3.6 to 8.4 GHz 9 dB nominal
+8.4 to 13.6 GHz 10 dB nominal
+> 13.6 GHz DANL + 176.24 dB nominal
+```
+
+=== Page 9 ===
+```
+Dynamic Range Specifications
+
+1 dB gain compression (two-tone)
+
+RF/MW
+(Option 503, 507, 513, 526)
+20 MHz to 26.5 GHz  +9 dBm nominal
+
+Millimeter-wave 
+(Option 532, 544)
+20 MHz to 26.5 GHz  +6 dBm nominal
+26.5 to 44 GHz  0 dBm nominal
+
+Total power at preamp input
+
+Preamp on 
+10 MHz to 3.6 GHz  -14 dBm nominal
+3.6 to 26.5 GHz 
+Tone spacing: 100 kHz to 20 MHz  -28 dBm nominal
+Tone spacing: 0 to 70 MHz  -20 dBm nominal
+> 26.5 GHz  -30 dBm nominal
+
+Displayed average noise level (DANL)
+(Input terminated, sample or average detector, averaging type = Log, 0 dB input attenuation, IF Gain = High, 20 to 30 °C)
+
+Specification                          Typical
+RF/MW 
+(Option 503, 507, 513, 526)
+1 to 10 MHz                           -147 dBm
+10 MHz to 21 GHz                      -148 dBm
+2.1 to 3.6 GHz                       -147 dBm
+3.6 to 7.0 GHz                       -147 dBm
+7.0 to 13.6 GHz                      -143 dBm
+13.6 to 17.1 GHz                    -137 dBm
+17.1 to 22 GHz                       -137 dBm
+22 to 26.5 GHz                       -134 dBm
+
+Preamp on, RF/MW 
+(Option 503, 507, 513, 526)
+10 MHz to 21 GHz                     -161 dBm
+2.1 to 3.6 GHz                      -160 dBm
+3.6 to 7.0 GHz                       -160 dBm
+7.0 to 13.6 GHz                      -160 dBm
+13.5 to 17.1 GHz                    -157 dBm
+17.0 to 20.0 GHz                    -155 dBm
+20.0 to 26.5 GHz                     -150 dBm
+
+Millimeter-wave 
+(Option 532, 544)
+9 kHz to 1 MHz                       -130 dBm
+1 MHz to 1.2 GHz                    -152 dBm
+1.2 to 2.1 GHz                      -151 dBm
+2.1 to 3.6 GHz                      -149 dBm
+3.5 to 4.2 GHz                      -144 dBm
+4.2 to 8.4 GHz                      -145 dBm
+8.3 to 13.6 GHz                     -147 dBm
+13.5 to 20 GHz                      -145 dBm
+20 to 26.5 GHz                      -142 dBm
+26.4 to 34 GHz                      -140 dBm
+34.4 to 44 GHz                      -135 dBm
+```
+
+=== Page 10 ===
+```
+Displayed average noise level (DANL) (continued)
+Preamp on, millimeter-wave
+(Option 532, 544)
+100 kHz to 1 MHz        –145 dBm  –148 dBm
+1 MHz to 1.2 GHz        –164 dBm  –165 dBm
+1.2 to 2.1 GHz          –163 dBm  –164 dBm
+2.1 to 3.2 GHz         –162 dBm  –163 dBm
+3.5 to 7 GHz           –160 dBm  –162 dBm
+7 to 20 GHz            –160 dBm  –162 dBm
+20 to 26.5 GHz         –158 dBm  –160 dBm
+26.5 to 32 GHz         –156 dBm  –159 dBm
+32 to 34 GHz           –156 dBm  –159 dBm
+33.9 to 40 GHz         –153 dBm  –155 dBm
+40 to 44 GHz           –149 dBm  –153 dBm
+
+DANL with Noise Floor Extension (Option NFE) improvement
+DANL improvement exceeds 7 dB with 95% confidence in the average of all bands, with or without the preamplifier.
+
+DANL with Noise Floor Extension (Option NFE On)
+RF/MW (Option 503, 507, 513, 526)
+Frequency                         Preamp Off     Preamp On
+Band 0, f > 20 MHz               –158 dBm       –170 dBm
+Band 1                           –157 dBm       –168 dBm
+Band 2                           –157 dBm       –168 dBm
+Band 3                           –151 dBm       –168 dBm
+Band 4                           –144 dBm       –163 dBm
+
+DANL with Noise Floor Extension (Option NFE On)
+Millimeter-Wave (Option 532, 544)¹
+Frequency                         Preamp Off     Preamp On
+Band 0, f > 20 MHz               –160 dBm       –170 dBm
+Band 1                           –158 dBm       –168 dBm
+Band 2                           –158 dBm       –170 dBm
+Band 3                           –159 dBm       –170 dBm
+Band 4                           –154 dBm       –168 dBm
+Band 5                           –153 dBm       –166 dBm
+Band 6                           –147 dBm       –158 dBm
+
+1. When Option B40, DP2, or MPB is installed some aspects of the analyzer performance change. Please refer to the N9010A EXA specifications guide for more details.
+```
+
+=== Page 11 ===
+**Spurious responses**
+
+Residual responses (input terminated and 0 dB attenuation)  
+200 kHz to 8.4 GHz (swept)  –100 dBm  
+Zero span or FFT or other frequencies  –100 dBm nominal  
+
+**Tuned frequency (f)**  
+**Mixer level**  
+**Response**  
+Image responses  
+(Excitation freq. = f + 645 MHz)  
+10 MHz to 3.6 GHz  –10 dBm  –80 dBc (-107 dBc typical)  
+3.6 to 13.6 GHz  –10 dBm  –75 dBc (-87 dBc typical)  
+13.6 to 17.1 GHz  –10 dBm  –71 dBc (-85 dBc typical)  
+17.1 to 22 GHz  –10 dBm  –68 dBc (-82 dBc typical)  
+22 to 26.5 GHz  –10 dBm  –66 dBc (-78 dBc typical)  
+26.5 to 34.5 GHz  –30 dBm  –70 dBc (-94 dBc typical)  
+34.5 to 44 GHz  –30 dBm  –60 dBc (-79 dBc typical)  
+
+**LO related spurious**  
+(f ≥ 600 MHz from carrier, 10 MHz to 3.6 GHz)  
+10 MHz to 3.6 GHz  –90 dBc + 20 logN 1 typical  
+
+**Other spurious responses**  
+**Mixer level**  
+**Response**  
+Carrier frequency > 26.5 GHz  
+First RF order  –10 dBm  –80 dBc + 20 log(N 1) Including IF feedthrough, LO harmonic mixing responses  
+Higher RF order (f ≥ 10 MHz from carrier)  –40 dBm  –80 dBc + 20 log(N 1) Including higher order mixer responses  
+
+Carrier frequency ≤ 26.5 GHz  
+First RF order (f ≥ 10 MHz from carrier)  –30 dBm  –90 dBc nominal  
+Higher RF order (f ≥ 10 MHz from carrier)  –30 dBm  –90 dBc nominal  
+
+1. N is the LO multiplication factor.
+
+=== Page 12 ===
+```
+Second harmonic distortion (SHI)  
+Source frequency                       SHI (nominal)  
+RF/MW  
+(Option 503, 507, 513, 526)  
+10 MHz to 1.8 GHz                      +45 dBm  
+1.75 to 7.0 GHz                        +65 dBm  
+7.0 to 11.0 GHz                        +55 dBm  
+11.0 to 13.25 GHz                      +50 dBm  
+Millimeter-wave  
+(Option 532, 544)  
+10 MHz to 1.8 GHz                      +45 dBm  
+1.8 to 6.5 GHz                         +65 dBm  
+6.5 to 10 GHz                          +60 dBm  
+10.0 to 13.25 GHz                      +55 dBm  
+13.25 to 22 GHz                        +50 dBm  
+
+Third-order intermodulation distortion (TOI)  
+(Two -18 dBm tones at input mixer with tone separation > 5 times IF prefilter bandwidth, 20 to 30 °C, see Specifications Guide for IF prefilter bandwidths)  
+TOI                                    TOI (typical)  
+RF/MW1  
+(Option 503, 507, 513, 526)  
+100 to 400 MHz                        +13 dBm               +17 dBm  
+400 MHz to 3.6 GHz                     +14 dBm               +18 dBm  
+3.6 to 13.6 GHz                       +14 dBm               +18 dBm  
+13.6 to 26.5 GHz                       +12 dBm               +16 dBm  
+
+Preamp on, RF/MW  
+(Option 503, 507, 513, 526)  
+30 MHz to 3.6 GHz (two -45 dBm tones at preamp)  0 dBm nominal  
+3.6 to 26.5 GHz (two -50 dBm tones at preamp) -18 dBm nominal  
+
+Millimeter-wave  
+(Option 532, 544)  
+100 MHz to 3.95 GHz                    +15 dBm               +19 dBm  
+3.95 to 8.4 GHz                        +15 dBm               +18 dBm  
+8.3 to 13.6 GHz                        +15 dBm               +18 dBm  
+13.5 to 17.1 GHz                       +11 dBm               +17 dBm  
+17.0 to 26.5 GHz                        +10 dBm (nominal)  
+26.5 to 44 GHz                         -                     +13 dBm (nominal)  
+
+Preamp on, millimeter-wave  
+30 MHz to 3.6 GHz (two -45 dBm tones at preamp)  0 dBm (nominal)  
+3.6 to 26.5 GHz (two -50 dBm tones at preamp) -18 dBm (nominal)  
+
+1. Apply for instruments with Serial number prefix > MY/SG/SUS304. Those instruments ship standard with N9010A-EP3 or N9010A-EP5 as the identifier. For earlier instruments refer to the N9010A EXA specifications guide.
+```
+
+=== Page 13 ===
+```
+Nominal dynamic range for Options 503, 507, 513 and 526
+
+Figure 1. Nominal dynamic range – Band 0, for second and third order distortion, 9 kHz to 3.6 GHz
+
+Nominal Range at 1 GHz
+DANL and distortion relative to mixer level (dBm)
+          -60
+          -70
+          -80
+          -90
+          -100
+          -110
+          -120
+          -130
+          -80  -70  -60  -50  -40  -30  -20  -10
+                            Mixer Level (dBm)
+                            DANL (1 Hz RBW)
+                            2nd Harmonic Distortion
+                            3rd Order Intermodulation
+
+Figure 2. Nominal dynamic range – Bands 1 to 4, for second and third order distortion, 3.6 GHz to 26.5 GHz
+
+Nominal Dynamic Range Bands 1-4
+DANL and distortion relative to mixer level (dBm)
+          -60
+          -70
+          -80
+          -90
+          -100
+          -110
+          -120
+          -130
+          -80  -70  -60  -50  -40  -30  -20  -10
+                            Mixer Level (dBm)
+                            DANL (1 Hz RBW)
+                            2nd Harmonic Distortion
+                            3rd Order Intermodulation
+```
+
+=== Page 14 ===
+```
+Phase noise¹
+Noise sidebands
+(20 to 30 °C, CF = 1 GHz)
+
+| Offset | Specification       | Typical        |
+|--------|---------------------|----------------|
+| 100 Hz | –87 dBc/Hz          | –102 dBc/Hz    |
+| 1 kHz  | –                   | –110 dBc/Hz nominal |
+| 10 kHz | –107 dBc/Hz        | –109 dBc/Hz    |
+| 100 kHz| –115 dBc/Hz        | –118 dBc/Hz    |
+| 1 MHz  | –134 dBc/Hz        | –136 dBc/Hz    |
+| 10 MHz | –                   | –148 dBc/Hz nominal² |
+
+1. Apply for instruments with Serial number prefix 2: MY/SG/US5648. Those instruments ship standard with N9010A-EP5 as the identifier. For nominal phase noise values at other center frequencies refer to Figure 3. For earlier instruments refer to the N9010A EXA specifications guide.  
+2. –147 dBc/Hz (nominal), for option 503, 507, 513 or 526.
+
+Nominal phase noise at different center frequencies
+with RBW selectivity curves, optimized phase noise versus offset frequency
+
+Option MPB, microwave preselector bypass¹
+Frequency range 
+
+| Model     | Frequency Range   |
+|-----------|-------------------|
+| N9010A-507 | 3.6 to 7 GHz     |
+| N9010A-513 | 3.6 to 13.6 GHz  |
+| N9010A-526 | 3.6 to 26.5 GHz  |
+| N9010A-532 | 3.6 to 32 GHz    |
+| N9010A-544 | 3.6 to 44 GHz    |
+
+1. When Option MPB is installed and enabled, some aspects of the analyzer performance changes. Please refer to the N9010A EXA specification guide for more details.
+```
+
+=== Page 15 ===
+```
+PowerSuite Measurement Specifications
+
+Channel power
+Amplitude accuracy, W-CDMA or IS95 (20 to 30 °C, attenuation = 10 dB)
+± 1.04 dB (± 0.27 dB 95th percentile)
+
+Occupied bandwidth
+Frequency accuracy
+± {span/1000} nominal
+
+Adjacent channel power
+Adjacent			Alternate
+Accuracy, W-CDMA (ACLR)
+(at specific mixer levels and ACLR ranges)
+MS					± 0.18 dB		± 0.23 dB
+BTS					± 0.79 dB		± 0.61 dB
+Dynamic range (typical)
+Without noise correction			-68 dB		-74 dB
+With noise correction				-73 dB		-76 dB
+Offset channel pairs measured		1 to 6
+ACP measurement and transfer time (fast method)	14 ms nominal (σ = 0.2 dB)
+Multiple number of carriers measured	Up to 12
+
+Power statistics CCDF
+Histogram resolution				0.01 dB
+
+Harmonic distortion
+Maximum harmonic number			10th
+Result						Fundamental power (dBm), relative harmonics power (dBc), total harmonic distortion in %
+
+Intermod (TOI)
+Measure the third-order products and intercepts from two tones
+
+Burst power
+Methods					Power above threshold, power within burst width
+Results					Single burst output power, average output power, maximum power, minimum power within burst, burst width
+
+Spurious emission
+W-CDMA (1 to 3.6 GHz) table-driven spurious signals; search across regions
+Relative dynamic range (1 MHz RBW)	76.9 dB		77.4 dB typical
+Absolute sensitivity					–82.5 dBm	–86.5 dBm typical
+
+Spectrum emission mask (SEM)
+cdma2000® (750 kHz offset)
+Relative dynamic range (30 kHz RBW)	74.3 dB		81.4 dB typical
+Absolute sensitivity					–97.7 dBm	–101.7 dBm typical
+Relative accuracy					± 0.11 dB
+
+3GPP W-CDMA (2.515 MHz offset)
+Relative dynamic range (30 kHz RBW)	78.5 dB		84.2 dB typical
+Absolute sensitivity					–97.7 dBm	–101.7 dBm typical
+Relative accuracy					± 0.15 dB
+```
+
+=== Page 16 ===
+```
+General Specifications
+
+Temperature range
+Operating                               0 to 55 °C
+Storage                                 −40 to 70 °C
+
+EMC
+Complies with the essential requirements of the European EMC Directive as well as current editions of the following standards (dates and editions are cited in the Declaration of Conformity):
+– IEC/EN 61326-1 or IEC/EN 61326-2-1
+– CISPR 11 Group 1, Class A
+– AS/NZS CISPR 11:2002
+– ICES/NMB-001
+This ISM device complies with Canadian ICES-001
+Cet appareil ISM est conforme à la norme NMB-001 du Canada
+
+Safety
+Complies with European Low Voltage Directive 2006/95/EC
+– IEC/EN 61010-1 3rd Edition
+– Canada: CSA C22.2 No. 61010-1 2nd
+– U.S.A.: UL 61010-1 3rd Edition
+
+Acoustic statement (European Machinery Directive 2006/42/EC, 1.7.4.2u)
+Acoustic noise emission
+LpA < 70 dB
+Operator position
+Normal position
+Per ISO 7779
+
+Environmental stress
+Samples of this product have been type tested in accordance with the Keysight Environmental Test Manual and verified to be robust against the environmental stresses of storage, transportation, and end-use; those stresses include, but are not limited to, temperature, humidity, shock, vibration, altitude, and power line conditions; test methods are aligned with IEC 60068-2 and levels are similar to MIL-PRF-28800F Class 3.
+
+Power requirements
+Voltage and frequency                    100 to 120 V, 50/60/400 Hz
+                                          220 to 240 V, 50/60 Hz
+Power consumption
+On                                       350 W maximum
+Standby                                  20 W
+
+Display
+Resolution                              1024 × 768, XGA
+Size                                     213 mm (8.4 in.) diagonal (nominal)
+
+Data storage
+Internal                                ≥ 120 GB nominal (removable solid-state drive)
+External                                Supports USB 2.0 compatible memory devices
+
+Weight (without options)
+Net                                      18 kg (40 lbs) nominal
+Shipping                                 30 kg (66 lbs) nominal
+
+Dimensions
+Height                                   177 mm (7.0 in)
+Width                                    426 mm (16.8 in)
+Length                                   368 mm (14.5 in)
+
+Warranty
+The EXA signal analyzer is supplied with a standard 3-year warranty
+
+Calibration cycle
+The recommended calibration cycle is two years; calibration services are available through Keysight service centers
+```
+
+=== Page 17 ===
+```
+Inputs and Outputs
+
+Front panel
+RF input connector
+Standard (Option 503, 507, 513, or 526)       Type-N female, 50 Ω nominal
+Standard (Option 532 or 544)                   2.4 mm male, 50 Ω nominal
+
+Probe power
+Voltage/current                             ±15 Vdc, ± 7 % at 150 mA max nominal  
+                                            –12.6 Vdc, ± 10 % at 150 mA max nominal
+
+USB 2.0 ports
+Master (2 ports)
+Standard                                     Compatible with USB 2.0  
+Connector                                    USB Type-A female  
+Output current                               0.5 A nominal  
+
+External mixing, Option EXM (available only with EXA millimeter wave, Option 532 or 544)
+Connection port
+Connector                                    SMA, female  
+Impedance                                   50 Ω nominal  
+Functions                                    Triplexed for mixer bias, IF input and LO output  
+
+Mixer bias range                             ± 10 mA in 10 µA step  
+
+IF input center frequency
+Narrowband IF path                          322.5 MHz  
+40 MHz IF path                              250 MHz  
+LO output frequency range                    3.75 to 14.0 GHz  
+
+Rear panel
+10 MHz out
+Connector                                    BNC female, 50 Ω nominal  
+Output amplitude                             ≥ 0 dBm nominal  
+Frequency                                    10 MHz ± (10 MHz x frequency reference accuracy)  
+
+Ext Ref In
+Connector                                    BNC female, 50 Ω nominal  
+Input amplitude range                        –5 to 10 dBm nominal  
+Input frequency                             10 MHz nominal  
+Frequency lock range                        ± 5 x 10–6 of specified external reference input frequency  
+
+Trigger 1 and 2 inputs
+Connector                                    BNC female  
+Impedance                                   > 10 kΩ nominal  
+Trigger level range                          –5 to 5 V  
+
+Trigger 1 and 2 outputs
+Connector                                    BNC female  
+Impedance                                   50 Ω nominal  
+Level                                       5 V TTL nominal  
+
+Monitor output
+Connector                                    VGA compatible, 15-pin mini D-SUB  
+Format                                       XGA (60 Hz vertical sync rates, non-interlaced) analog RGB  
+Resolution                                   1024 x 768  
+```
+
+=== Page 18 ===
+```
+Rear panel
+Noise source drive +28 V (pulsed)
+Connector                          BNC female
+SNS Series noise source connector   For use with Keysight SNS Series noise sources
+
+Analog out
+Connector                          BNC female (used with N9063A analog demod app and Option YAS)
+
+USB 2.0 ports
+Master (3 ports)
+Standard                          Compatible with USB 2.0
+Connector                         USB Type-A female
+Output current                    0.5 A nominal
+
+Slave (1 port)
+Standard                          Compatible with USB 2.0
+Connector                         USB Type-B female
+Output current                    0.5 A nominal
+
+GPIB interface
+Connector                         IEEE-488 bus connector
+GPIB codes                        SH1, AH1, T6, SR1, RL1, PPO, DC1, C1, C2, C3, C28, D11, L4, C0
+GPIB mode                         Controller or device
+
+LAN TCP/IP interface
+Standard                          1000Base-T
+Connector                         RJ45 Ethertwist
+
+IF output
+Connector                         SMA female, shared by Option CR3 and CRP
+Impedance                         50 Ω nominal
+
+Wideband IF output, Option CR3
+Center frequency
+SA mode or I/Q analyzer with IF BW ≤ 25 MHz with Option B40                         322.5 MHz
+250 MHz
+
+Conversion gain                   -1 to +4 dB (nominal) plus RF frequency response
+Bandwidth
+Low band                         Up to 140 MHz (nominal)
+High band, with preselector                         Depends on center frequency
+High band, with preselector bypassed¹          Up to 410 MHz (nominal)
+
+Programmable IF output, Option CRP
+Center frequency
+Range                             10 to 75 MHz (user selectable)
+Resolution                        0.5 MHz
+
+Conversion gain                   -1 to +4 dB (nominal) plus RF frequency response
+Bandwidth
+Output at 70 MHz center
+Low band or high band with preselector bypassed 1       100 MHz (nominal)
+Preselected band                 Depends on RF center frequency
+Lower output frequencies          Subject to folding
+Residual output signals          ≤ -88 dBm (nominal)
+
+1. Option MPB installed and enabled.
+```
+
+=== Page 19 ===
+# I/Q Analyzer
+
+## Frequency
+**Frequency span**  
+Standard: 10 Hz to 10 MHz  
+Option B25 (standard): 10 Hz to 25 MHz  
+Option B40: 10 Hz to 40 MHz  
+
+## Resolution bandwidth (spectrum measurement)  
+**Range**  
+Overall: 100 MHz to 3 MHz  
+Span = 1 MHz: 50 Hz to 1 MHz  
+Span = 10 kHz: 1 Hz to 10 kHz  
+Span = 100 Hz: 100 MHz to 100 Hz  
+
+## Window shapes
+Flat top, Uniform, Hanning, Gaussian, Blackman, Blackman-Harris, Kaiser Bessel (K-B 70 dB, K-B 90 dB and K-B 110 dB)
+
+## Analysis bandwidth  
+Standard: 10 Hz to 10 MHz  
+Option B25 (standard): 10 Hz to 25 MHz  
+Option B40: 10 Hz to 40 MHz  
+
+## IF frequency response (standard 10 MHz IF path)  
+**IF frequency response (demodulation and FFT response relative to the center frequency, 20 to 30 °C)**  
+| Center frequency (GHz) | Span (MHz) | Preselctor | Max. error | RMS |
+|------------------------|------------|------------|------------|-----|
+| < 3.6                  | ≤ 10      | n/a        | ± 0.40 dB  | 0.04 dB nominal |
+| ≥ 3.6                  | ≤ 10      | on         | ± 0.25 dB  | 0.25 dB nominal |
+| 2.6                    | ≤ 10      | off¹       | ± 0.45 dB  | 0.04 dB nominal |
+| > 2.6 (Option 532 or 544) | ≤ 10  | on         | ± 0.35 dB  |  |
+
+## IF phase linearity (deviation from mean phase linearity, nominal)  
+| Center frequency (GHz) | Span (MHz) | Preselctor | Peak-to-peak | RMS |
+|------------------------|------------|------------|--------------|-----|
+| < 3.6                  | ≤ 10      | n/a        | 0.4°         | 0.1° |
+| ≥ 3.6                  | ≤ 10      | off¹       | 0.4°         | 0.1° |
+| ≥ 2.6 (Option ≤ 526)   | ≤ 10      | on         | 1.0°         | 0.2° |
+
+## Data acquisition (10 MHz IF path)  
+Sample record IQ analyzer: 4,000,000 IQ sample pairs  
+Sample rate at ADC  
+Option DP2, B40 or MPB: 100 MSa/s  
+None of the above: 90 MSa/s  
+
+## ADC resolution  
+| Option DP2, B40 or MPB | 16 bits |
+|-------------------------|---------|
+| None of the above       | 14 bits |
+
+## Option B25 (standard) 25 MHz analysis bandwidth  
+**IF frequency response (demodulation and FFT response relative to the center frequency, 20 to 30 °C)**  
+| Center frequency (GHz) | Span (MHz) | Preselctor | Max. error | RMS |
+|------------------------|------------|------------|------------|-----|
+| < 3.6                  | 10 to ≤ 25 | n/a        | ± 0.45 dB  | 0.051 dB nominal |
+| ≥ 3.6                  | 10 to ≤ 25 | on         | ± 0.45 dB  | 0.458 dB nominal |
+| ≥ 3.6                  | 10 to ≤ 25 | off¹       | ± 0.45 dB  | 0.071 dB nominal |
+
+## IF phase linearity (deviation from mean phase linearity, nominal)  
+| Center frequency (GHz) | Span (MHz) | Preselctor | Peak-to-peak | RMS |
+|------------------------|------------|------------|--------------|-----|
+| 0.02 ≤ f < 3.6         | ≤ 25       | n/a        | 0.6°         | 0.14° |
+| ≥ 3.6                  | ≤ 25       | on         | 1.9°         | 0.4° |
+| ≥ 2.6 (Option 526)     | ≤ 25       | on         | 4.5°         | 1.2° |
+
+1. Option MPB is installed and enabled.
+
+=== Page 20 ===
+```
+Data acquisition (25 MHz IF path)
+Time record length (IQ pairs) I Q Analyzer             4,000,000 IQ sample pairs
+                                                       89600 software            32-bit packing      64-bit packing      Memory
+                                                       Option DP2, B40 or MPB    536 MSa            268 MSa           2 GB
+                                                       None of the above          4,000,000 IQ sample pairs (independent of data packing)
+
+Sample rate at ADC
+                                                       Option DP2, B40 or MPB     100 MSa/s
+                                                       None of the above          90 MSa/s
+
+ADC resolution
+                                                       Option DP2, B40 or MPB     16 bits
+                                                       None of the above          14 bits
+
+Option B910A 40 MHz analysis bandwidth
+IF frequency response (demodulation and FFT response relative to the center frequency, 20 to 30 ºC), nominal
+                                                       IF frequency (GHz)         Span (MHz)     Preselector      Max. error      RMS
+                                                       0.03 < f < 3.6            ≤ 40            n/a             ± 0.3 dB       0.08 dB
+                                                       3.6 ≤ f < 26.5            ≤ 40            off†            ± 0.25 dB      0.08 dB
+                                                       > 26.5                     ≤ 40            off†            ± 0.25 dB      0.12 dB
+IF phase linearity (deviation from near phase linearity, nominal)
+                                                       Center frequency (GHz)     Span (MHz)     Preselector      Peak-to-peak    RMS
+                                                       0.02 < f < 3.6            40              n/a             0.2°           0.05°
+                                                       ≥ 3.6                      40              off†            5°             1.4°
+
+Data acquisition (40 MHz IF path)
+Time record length (IQ pairs) I Q Analyzer              4,000,000 samples (I/Q pairs)
+                                                       89600 VSA software         32-bit packing      64-bit packing      2 GB total memory (nominal)
+                                                       Length (IQ sample pairs)    536 MSa            268 MSa
+                                                       Length (time units)        Samples/(span x 1.28) (nominal)
+
+Sample rate
+                                                       At ADC                     200 MSa/s
+                                                       IQ pairs                   Span x 1.28 (nominal)
+
+ADC resolution
+                                                       12 bits
+
+Related Literature
+Publication title                                       Publication number
+EXA X-Series Signal Analyzer N9010A - Brochure        5989-6527EN
+N9010A EXA X-Series Signal Analyzer - Configuration Guide   5989-6531EN
+
+For more information or literature resources please visit the web:
+Product page: www.keysight.com/find/N9010A
+X-Series measurement applications: www.keysight.com/find/X-Series_Apps
+X-Series signal analyzers: www.keysight.com/find/X-Series
+```
+
+=== Page 21 ===
+```
+Evolving Since 1939
+Our unique combination of hardware, software, services, and people can help you reach your next breakthrough. We are unlocking the future of technology. From Hewlett-Packard to Agilent to Keysight.
+
+myKeysight
+www.keysight.com/find/mykeysight
+A personalized view into the information most relevant to you.
+
+http://www.keysight.com/find/emt_product_registration
+Register your products to get up-to-date product information and find warranty information.
+
+KEYSIGHT SERVICES
+Accelerate Technology Adoption
+Lower costs.
+
+Keysight Services
+www.keysight.com/find/service
+Keysight Services can help from acquisition to reveal across your instrument’s lifecycle. Our comprehensive service offerings—one-stop calibration, repair, asset management, technology refresh, consulting, training and more—helps you improve product quality and lower costs.
+
+Keysight Assurance Plans
+www.keysight.com/find/AssurancePlans
+Up to ten years of protection and no budgetary surprises to ensure your instruments are operating to specification, so you can rely on accurate measurements.
+
+Keysight Channel Partners
+www.keysight.com/find/channelpartners
+Get the best of both worlds: Keysight's measurement expertise and product breadth, combined with channel partner convenience.
+
+cdma2000 is a registered certification mark of the Telecommunications Industry Association. Used under license.
+
+www.keysight.com/find/N9010A
+
+For more information on Keysight Technologies’ products, applications or services, please contact your local Keysight office. The complete list is available at: www.keysight.com/find/contactus
+
+Americas
+Canada (877) 894 4414
+Brazil 55 11 3351 7010
+Mexico 001 800 254 2440
+United States (800) 829 4444
+
+Asia Pacific
+Australia 1 800 629 485
+China 800 810 0189
+Hong Kong 800 938 683
+India 1 800 11 6266
+Japan 0120 (421) 345
+Korea 080 769 0800
+Malaysia 1 800 888 848
+Singapore 1 800 375 8100
+Taiwan 0800 047 866
+Other AP Countries (65) 6375 8100
+
+Europe & Middle East
+Austria 0800 001122
+Belgium 0800 58580
+Finland 0800 523252
+France 0805 980333
+Germany 0800 6270999
+Ireland 1800 832700
+Israel 1 800 343051
+Italy 800 599100
+Luxembourg +32 800 58580
+Netherlands 0800 0233200
+Russia 8800 5009296
+Spain 800 000514
+Sweden 0200 882255
+Switzerland 0800 805353
+Opt. 1 (DE)
+Opt. 2 (FR)
+Opt. 3 (IT)
+United Kingdom 0800 0260637
+
+For other unlisted countries: www.keysight.com/find/contactus (BP-9-7-17)
+
+DEKRA Certified
+www.keysight.com/go/quality
+Keysight Technologies, Inc. DEKRA Certified ISO 9001:2015 Quality Management System
+```
